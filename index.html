@@ -79,65 +79,6 @@
             border-color: var(--primary-blue);
         }
 
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 60px;
-            color: var(--white);
-            font-weight: bold;
-            border: 4px solid var(--primary-blue);
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
-        }
-
-        h1 {
-            color: var(--primary-blue);
-            margin-bottom: 10px;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(37, 99, 235, 0.1);
-        }
-
-        .subtitle {
-            color: var(--gray-dark);
-            font-size: 1.3em;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--primary-blue);
-            text-decoration: none;
-            transition: all 0.3s;
-            padding: 8px 15px;
-            border-radius: 8px;
-            background: rgba(37, 99, 235, 0.1);
-            border: 2px solid var(--primary-blue);
-            font-weight: 500;
-        }
-
-        .contact-item:hover {
-            background: var(--primary-blue);
-            color: var(--white);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
-        }
-
         .tabs {
             display: flex;
             justify-content: center;
@@ -469,23 +410,6 @@
                 <button onclick="switchLanguage('de')" id="lang-de" class="lang-btn active">🇩🇪 DE</button>
                 <button onclick="switchLanguage('en')" id="lang-en" class="lang-btn">🇬🇧 EN</button>
             </div>
-            <div class="profile-image">MB</div>
-            <h1>Mohammadhossein Bikineh</h1>
-            <p class="subtitle" id="subtitle">IT-Spezialist & M.Sc. Technische Informatik</p>
-            <div class="contact-info">
-                <a href="tel:+4915752457684" class="contact-item">
-                    📞 +49 157 52457684
-                </a>
-                <a href="mailto:bikineh.work@gmail.com" class="contact-item">
-                    ✉️ bikineh.work@gmail.com
-                </a>
-                <a href="https://www.linkedin.com/in/mohammadhossein-bikineh-b697b31b6" target="_blank" class="contact-item">
-                    💼 LinkedIn
-                </a>
-                <span class="contact-item" id="location">
-                    📍 Rostock, Deutschland
-                </span>
-            </div>
         </header>
 
         <button class="menu-toggle" onclick="toggleMenu()">☰ Menü</button>
@@ -727,8 +651,6 @@
 
         const translations = {
             de: {
-                subtitle: 'IT-Spezialist & M.Sc. Technische Informatik',
-                location: '📍 Rostock, Deutschland',
                 'tab-about': 'Über mich',
                 'tab-projects': 'Projekte',
                 'tab-skills': 'Kompetenzen',
@@ -795,8 +717,6 @@
                 'avail-interests': '<strong>Interessen:</strong> Fußball, Schwimmen, kontinuierliche Weiterbildung in IT-Trends'
             },
             en: {
-                subtitle: 'IT Specialist & M.Sc. Technical Computer Science',
-                location: '📍 Rostock, Germany',
                 'tab-about': 'About Me',
                 'tab-projects': 'Projects',
                 'tab-skills': 'Skills',
