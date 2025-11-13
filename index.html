@@ -36,16 +36,16 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 15px;
         }
 
         header {
             background: var(--white);
-            padding: 50px 40px;
-            border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 30px 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             position: relative;
         }
 
@@ -53,48 +53,49 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         .avatar {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 48px;
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+            font-size: 40px;
+            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
             border: 4px solid var(--white);
         }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 1.8em;
             font-weight: 700;
             color: var(--primary);
             margin: 0;
+            line-height: 1.2;
         }
 
         .subtitle {
-            font-size: 1.3em;
+            font-size: 1.1em;
             color: var(--gray-700);
             font-weight: 500;
         }
 
         .language-switcher {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 15px;
+            right: 15px;
             display: flex;
-            gap: 8px;
+            gap: 6px;
             background: var(--gray-100);
-            padding: 6px;
-            border-radius: 12px;
+            padding: 5px;
+            border-radius: 10px;
         }
 
         .lang-btn {
-            padding: 10px 18px;
+            padding: 8px 16px;
             border: none;
             background: transparent;
             color: var(--gray-700);
@@ -102,7 +103,7 @@
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            font-size: 0.95em;
+            font-size: 0.9em;
         }
 
         .lang-btn:hover {
@@ -117,25 +118,28 @@
         .tabs {
             display: flex;
             justify-content: center;
-            gap: 12px;
-            margin-bottom: 30px;
+            gap: 8px;
+            margin-bottom: 20px;
             flex-wrap: wrap;
             background: var(--white);
-            padding: 20px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         }
 
         .tab-button {
-            padding: 16px 32px;
+            padding: 14px 20px;
             background: var(--gray-50);
             border: 2px solid var(--gray-200);
-            border-radius: 12px;
+            border-radius: 10px;
             cursor: pointer;
-            font-size: 1em;
+            font-size: 0.95em;
             font-weight: 600;
             color: var(--gray-700);
             transition: all 0.3s;
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
         }
 
         .tab-button:hover {
@@ -148,15 +152,15 @@
             background: var(--primary);
             color: var(--white);
             border-color: var(--primary);
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
         }
 
         .tab-content {
             display: none;
             background: var(--white);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 25px 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             animation: fadeIn 0.5s;
         }
 
@@ -177,11 +181,11 @@
 
         h2 {
             color: var(--primary);
-            margin-bottom: 30px;
-            font-size: 2.2em;
+            margin-bottom: 20px;
+            font-size: 1.6em;
             font-weight: 700;
             position: relative;
-            padding-bottom: 15px;
+            padding-bottom: 12px;
         }
 
         h2::after {
@@ -189,146 +193,149 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 80px;
-            height: 4px;
+            width: 60px;
+            height: 3px;
             background: var(--primary);
             border-radius: 2px;
         }
 
         h3 {
             color: var(--primary-dark);
-            margin-top: 30px;
-            margin-bottom: 20px;
-            font-size: 1.6em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
             font-weight: 600;
         }
 
         .experience-item, .education-item {
-            margin-bottom: 30px;
-            padding: 28px;
+            margin-bottom: 20px;
+            padding: 20px;
             background: var(--gray-50);
-            border-radius: 16px;
-            border-left: 5px solid var(--primary);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
             transition: all 0.3s;
         }
 
         .experience-item:hover, .education-item:hover {
-            transform: translateX(8px);
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+            transform: translateX(5px);
+            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.15);
         }
 
         .date {
             color: var(--white);
             font-weight: 600;
-            font-size: 0.9em;
+            font-size: 0.85em;
             background: var(--primary);
-            padding: 8px 16px;
-            border-radius: 8px;
+            padding: 6px 12px;
+            border-radius: 6px;
             display: inline-block;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .company {
             color: var(--gray-900);
             font-weight: 600;
-            font-size: 1.15em;
-            margin: 8px 0;
+            font-size: 1.1em;
+            margin: 6px 0;
         }
 
         ul {
-            margin-left: 25px;
-            margin-top: 15px;
+            margin-left: 20px;
+            margin-top: 12px;
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: var(--gray-700);
+            font-size: 0.95em;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
         }
 
         .skill-category {
             background: var(--gray-50);
-            padding: 28px;
-            border-radius: 16px;
-            border-top: 4px solid var(--primary);
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 3px solid var(--primary);
             transition: all 0.3s;
         }
 
         .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.15);
         }
 
         .skill-category h4 {
             color: var(--primary-dark);
-            margin-bottom: 15px;
-            font-size: 1.25em;
+            margin-bottom: 12px;
+            font-size: 1.1em;
             font-weight: 600;
         }
 
         .project-card {
             background: var(--gray-50);
-            padding: 32px;
-            border-radius: 16px;
-            margin-bottom: 24px;
-            border-left: 5px solid var(--primary);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary);
             transition: all 0.3s;
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.15);
         }
 
         .project-link {
             display: inline-block;
-            margin-top: 15px;
-            margin-right: 12px;
-            padding: 12px 24px;
+            margin-top: 12px;
+            margin-right: 8px;
+            padding: 10px 18px;
             background: var(--primary);
             color: var(--white);
             text-decoration: none;
-            border-radius: 10px;
+            border-radius: 8px;
             transition: all 0.3s;
             font-weight: 600;
+            font-size: 0.9em;
         }
 
         .project-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
             background: var(--primary-dark);
         }
 
         .cta-section {
             background: var(--primary);
             color: var(--white);
-            padding: 40px;
-            border-radius: 20px;
+            padding: 25px 20px;
+            border-radius: 16px;
             text-align: center;
-            margin-top: 40px;
+            margin-top: 30px;
         }
 
         .cta-button {
             display: inline-block;
-            margin: 12px 8px;
-            padding: 16px 32px;
+            margin: 8px 6px;
+            padding: 12px 20px;
             background: var(--white);
             color: var(--primary);
             text-decoration: none;
-            border-radius: 12px;
+            border-radius: 10px;
             font-weight: 600;
             transition: all 0.3s;
+            font-size: 0.9em;
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
         }
 
         .menu-toggle {
@@ -336,11 +343,11 @@
             background: var(--primary);
             color: var(--white);
             border: none;
-            padding: 16px;
-            border-radius: 12px;
-            font-size: 1.1em;
+            padding: 14px;
+            border-radius: 10px;
+            font-size: 1em;
             cursor: pointer;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             width: 100%;
             text-align: center;
             font-weight: 600;
@@ -351,24 +358,105 @@
             background: var(--primary-dark);
         }
 
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.3em;
+            transition: all 0.3s;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-3px);
+            background: var(--primary-dark);
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 3px;
+            background: var(--gray-200);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1001;
+        }
+
+        .progress-bar {
+            height: 3px;
+            background: var(--primary);
+            width: 0%;
+            transition: width 0.1s;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            color: var(--gray-700);
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        .info-box {
+            margin-top: 30px;
+            padding: 25px 20px;
+            background: var(--gray-50);
+            border-radius: 12px;
+            border: 2px solid var(--gray-200);
+        }
+
+        /* Mobile Optimierungen */
         @media (max-width: 768px) {
-            h1 { font-size: 2em; }
-            .subtitle { font-size: 1.1em; }
+            .container {
+                padding: 10px;
+            }
             
             header {
-                padding: 40px 25px;
+                padding: 25px 15px;
+                margin-bottom: 15px;
             }
-
+            
             .avatar {
-                width: 100px;
-                height: 100px;
-                font-size: 40px;
+                width: 80px;
+                height: 80px;
+                font-size: 32px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            .subtitle {
+                font-size: 1em;
+            }
+            
+            .language-switcher {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin-bottom: 15px;
+                justify-content: center;
+                width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
             }
             
             .tabs {
                 flex-direction: column;
                 display: none;
-                padding: 15px;
+                padding: 12px;
+                gap: 8px;
             }
             
             .tabs.active {
@@ -379,86 +467,112 @@
                 display: block;
             }
             
-            .tab-button { 
+            .tab-button {
                 width: 100%;
-                text-align: center;
+                padding: 12px 16px;
+                font-size: 0.9em;
             }
             
             .tab-content {
-                padding: 30px 20px;
+                padding: 20px 15px;
             }
             
-            .language-switcher {
-                position: relative;
-                top: 0;
-                right: 0;
-                margin-bottom: 20px;
-                justify-content: center;
+            h2 {
+                font-size: 1.4em;
+                margin-bottom: 15px;
             }
-
+            
+            h3 {
+                font-size: 1.2em;
+                margin-top: 20px;
+                margin-bottom: 12px;
+            }
+            
+            .experience-item, .education-item {
+                padding: 16px;
+                margin-bottom: 15px;
+            }
+            
+            .project-card {
+                padding: 16px;
+                margin-bottom: 15px;
+            }
+            
             .skills-grid {
                 grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .skill-category {
+                padding: 16px;
+            }
+            
+            .cta-section {
+                padding: 20px 15px;
+                margin-top: 25px;
+            }
+            
+            .cta-button {
+                display: block;
+                margin: 8px 0;
+                width: 100%;
+            }
+            
+            .project-link {
+                display: block;
+                width: 100%;
+                margin: 8px 0;
+                text-align: center;
+            }
+            
+            .info-box {
+                padding: 20px 15px;
+                margin-top: 25px;
+            }
+            
+            .scroll-to-top {
+                bottom: 15px;
+                right: 15px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.2em;
             }
         }
 
-        .scroll-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: var(--primary);
-            color: var(--white);
-            border: none;
-            border-radius: 50%;
-            width: 56px;
-            height: 56px;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 1.5em;
-            transition: all 0.3s;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        @media (max-width: 480px) {
+            .container {
+                padding: 8px;
+            }
+            
+            header {
+                padding: 20px 12px;
+            }
+            
+            h1 {
+                font-size: 1.3em;
+            }
+            
+            .subtitle {
+                font-size: 0.9em;
+            }
+            
+            .tab-content {
+                padding: 15px 12px;
+            }
+            
+            h2 {
+                font-size: 1.3em;
+            }
+            
+            h3 {
+                font-size: 1.1em;
+            }
+            
+            .experience-item, .education-item, .project-card {
+                padding: 14px;
+            }
         }
 
-        .scroll-to-top:hover {
-            transform: translateY(-5px);
-            background: var(--primary-dark);
-        }
-
-        .progress-container {
-            width: 100%;
-            height: 4px;
-            background: var(--gray-200);
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1001;
-        }
-
-        .progress-bar {
-            height: 4px;
-            background: var(--primary);
-            width: 0%;
-            transition: width 0.1s;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: var(--gray-700);
-            margin-top: 50px;
-            font-size: 0.95em;
-        }
-
-        .info-box {
-            margin-top: 40px;
-            padding: 35px;
-            background: var(--gray-50);
-            border-radius: 16px;
-            border: 2px solid var(--gray-200);
-        }
-        
         /* Verbesserungen für Barrierefreiheit */
         .sr-only {
             position: absolute;
@@ -481,6 +595,11 @@
         .scroll-to-top:focus {
             outline: 2px solid var(--primary);
             outline-offset: 2px;
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -518,7 +637,7 @@
         <main>
             <section id="about" class="tab-content active" role="tabpanel" aria-labelledby="tab-about">
                 <h2 id="about-title">Über mich</h2>
-                <p style="font-size: 1.15em; line-height: 1.8; margin-bottom: 35px;" id="about-intro">
+                <p style="font-size: 1.05em; line-height: 1.7; margin-bottom: 25px;" id="about-intro">
                     Als IT-Spezialist mit einem Master in Technischer Informatik bringe ich umfassende Expertise in 
                     <strong>Datenanalyse, Prozessoptimierung und Softwareentwicklung</strong> mit. Meine Leidenschaft 
                     liegt in der Digitalisierung und Automatisierung von Produktionsprozessen durch moderne Technologien.
@@ -708,14 +827,14 @@
 
             <section id="contact" class="tab-content" role="tabpanel" aria-labelledby="tab-contact">
                 <h2 id="contact-title">Kontakt aufnehmen</h2>
-                <p style="font-size: 1.2em; margin-bottom: 30px;" id="contact-intro">
+                <p style="font-size: 1.1em; margin-bottom: 25px;" id="contact-intro">
                     Ich freue mich darauf, von Ihnen zu hören! Ob für neue Projekte, Jobangebote 
                     oder einfach zum Netzwerken – kontaktieren Sie mich gerne.
                 </p>
 
                 <div class="cta-section">
                     <h3 style="color: white; margin-bottom: 20px;" id="contact-cta">Lassen Sie uns zusammenarbeiten!</h3>
-                    <p style="margin-bottom: 25px;" id="contact-cta-desc">
+                    <p style="margin-bottom: 20px;" id="contact-cta-desc">
                         Als motivierter IT-Spezialist mit fundierter Ausbildung und praktischer Erfahrung 
                         bin ich bereit, meine Kenntnisse in einem innovativen Team einzubringen.
                     </p>
@@ -781,7 +900,7 @@
                 'proj2-desc': 'Integration und Konfiguration des Warenwirtschaftssystems Winweb zur Optimierung betrieblicher Abläufe.',
                 'proj2-list': '<li>Anbindung von Produktionsmaschinen über OPC-Schnittstellen</li><li>Automatisierung von Datenaustauschprozessen</li><li>Schulung und Support für Endanwender</li>',
                 'proj3-title': 'Datenbank-Management & Business Intelligence',
-                'proj3-desc': 'Analyse, Optimierung und Verwaltung von SQL-Server-Datenbanken zur Verbesserung der Systemperformance und Datenqualität.',
+                'proj3-desc': 'Analyse, optimization und Verwaltung von SQL-Server-Datenbanken zur Verbesserung der Systemperformance und Datenqualität.',
                 'proj3-list': '<li>Performance-Optimierung von Datenbankabfragen</li><li>Entwicklung von Reporting-Lösungen</li><li>Datenvisualisierung für Management-Entscheidungen</li>',
                 'proj4-title': 'Feresthe - Web-Anwendung',
                 'proj4-desc': 'Entwicklung einer modernen Web-Anwendung mit benutzerfreundlicher Oberfläche.',
@@ -982,36 +1101,16 @@
             toggleScrollButton();
         });
 
-        // Tastatur-Navigation für Tabs
+        // Initialisierung
         document.addEventListener('DOMContentLoaded', () => {
-            const tabButtons = document.querySelectorAll('.tab-button');
-            
-            tabButtons.forEach((button, index) => {
-                button.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        const tabId = button.getAttribute('aria-controls');
-                        showTab(tabId, e);
-                    } else if (e.key === 'ArrowRight') {
-                        e.preventDefault();
-                        const nextIndex = (index + 1) % tabButtons.length;
-                        tabButtons[nextIndex].focus();
-                    } else if (e.key === 'ArrowLeft') {
-                        e.preventDefault();
-                        const prevIndex = (index - 1 + tabButtons.length) % tabButtons.length;
-                        tabButtons[prevIndex].focus();
-                    } else if (e.key === 'Home') {
-                        e.preventDefault();
-                        tabButtons[0].focus();
-                    } else if (e.key === 'End') {
-                        e.preventDefault();
-                        tabButtons[tabButtons.length - 1].focus();
-                    }
-                });
-            });
-            
             // Standard-Tab aktivieren
             showTab('about');
+            
+            // Menü-Button Text setzen
+            const menuToggle = document.querySelector('.menu-toggle');
+            if (window.innerWidth <= 768) {
+                menuToggle.textContent = '☰ Menü';
+            }
         });
     </script>
 </body>
