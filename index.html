@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammadhossein Bikineh - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
     <style>
         * {
             margin: 0;
@@ -11,11 +12,22 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary-blue: #2563eb;
+            --dark-blue: #1e40af;
+            --light-blue: #3b82f6;
+            --accent-blue: #60a5fa;
+            --white: #ffffff;
+            --gray-light: #f8fafc;
+            --gray-dark: #374151;
+            --text-dark: #1f2937;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #000000 0%, #2c2c2c 100%);
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
             min-height: 100vh;
         }
 
@@ -26,15 +38,15 @@
         }
 
         header {
-            background: rgba(255, 215, 0, 0.95);
+            background: rgba(255, 255, 255, 0.95);
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 10px 40px rgba(37, 99, 235, 0.2);
             text-align: center;
             margin-bottom: 30px;
             backdrop-filter: blur(10px);
             position: relative;
-            border: 3px solid #000;
+            border: 3px solid var(--primary-blue);
         }
 
         .language-switcher {
@@ -47,9 +59,9 @@
 
         .lang-btn {
             padding: 8px 15px;
-            border: 2px solid #000;
-            background: #ffd700;
-            color: #000;
+            border: 2px solid var(--primary-blue);
+            background: var(--white);
+            color: var(--primary-blue);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
@@ -57,40 +69,41 @@
         }
 
         .lang-btn:hover {
-            background: #000;
-            color: #ffd700;
+            background: var(--primary-blue);
+            color: var(--white);
         }
 
         .lang-btn.active {
-            background: #000;
-            color: #ffd700;
-            border-color: #000;
+            background: var(--primary-blue);
+            color: var(--white);
+            border-color: var(--primary-blue);
         }
 
         .profile-image {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #000000, #ffd700);
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
             font-size: 60px;
-            color: #ffd700;
+            color: var(--white);
             font-weight: bold;
-            border: 4px solid #000;
+            border: 4px solid var(--primary-blue);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
         }
 
         h1 {
-            color: #000;
+            color: var(--primary-blue);
             margin-bottom: 10px;
             font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.5);
+            text-shadow: 2px 2px 4px rgba(37, 99, 235, 0.1);
         }
 
         .subtitle {
-            color: #333;
+            color: var(--gray-dark);
             font-size: 1.3em;
             margin-bottom: 20px;
             font-weight: 600;
@@ -108,19 +121,21 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            color: #000;
+            color: var(--primary-blue);
             text-decoration: none;
             transition: all 0.3s;
             padding: 8px 15px;
             border-radius: 8px;
-            background: rgba(255, 255, 255, 0.8);
-            border: 2px solid #000;
+            background: rgba(37, 99, 235, 0.1);
+            border: 2px solid var(--primary-blue);
+            font-weight: 500;
         }
 
         .contact-item:hover {
-            background: #000;
-            color: #ffd700;
+            background: var(--primary-blue);
+            color: var(--white);
             transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
         }
 
         .tabs {
@@ -129,38 +144,34 @@
             gap: 10px;
             margin-bottom: 30px;
             flex-wrap: wrap;
-            background: rgba(255, 215, 0, 0.9);
+            background: rgba(255, 255, 255, 0.9);
             padding: 15px;
             border-radius: 15px;
-            border: 2px solid #000;
+            border: 2px solid var(--primary-blue);
         }
 
         .tab-button {
             padding: 15px 30px;
-            background: #000;
+            background: var(--primary-blue);
             border: none;
             border-radius: 10px;
             cursor: pointer;
             font-size: 1.1em;
             font-weight: 600;
-            color: #ffd700;
+            color: var(--white);
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
         }
 
         .tab-button:hover {
-            background: #ffd700;
-            color: #000;
+            background: var(--dark-blue);
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
         }
 
         .tab-button.active {
-            background: #ffd700;
-            color: #000;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+            background: var(--dark-blue);
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
         }
 
         .tab-content {
@@ -168,10 +179,10 @@
             background: rgba(255, 255, 255, 0.95);
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.2);
+            box-shadow: 0 10px 40px rgba(37, 99, 235, 0.1);
             backdrop-filter: blur(10px);
             animation: fadeIn 0.5s;
-            border: 2px solid #000;
+            border: 2px solid var(--primary-blue);
         }
 
         .tab-content.active {
@@ -184,20 +195,19 @@
         }
 
         h2 {
-            color: #000;
+            color: var(--primary-blue);
             margin-bottom: 20px;
             font-size: 2em;
-            border-bottom: 3px solid #ffd700;
+            border-bottom: 3px solid var(--primary-blue);
             padding-bottom: 10px;
-            text-shadow: 1px 1px 2px rgba(255, 215, 0, 0.3);
         }
 
         h3 {
-            color: #000;
+            color: var(--dark-blue);
             margin-top: 25px;
             margin-bottom: 15px;
             font-size: 1.5em;
-            background: linear-gradient(90deg, #ffd700, transparent);
+            background: linear-gradient(90deg, var(--accent-blue), transparent);
             padding: 10px;
             border-radius: 5px;
         }
@@ -205,30 +215,29 @@
         .experience-item, .education-item {
             margin-bottom: 30px;
             padding: 20px;
-            background: #fffae6;
+            background: var(--gray-light);
             border-radius: 10px;
-            border-left: 4px solid #ffd700;
-            border: 2px solid #000;
+            border-left: 4px solid var(--primary-blue);
             transition: all 0.3s;
         }
 
         .experience-item:hover, .education-item:hover {
             transform: translateX(5px);
-            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 5px 20px rgba(37, 99, 235, 0.2);
         }
 
         .date {
-            color: #000;
+            color: var(--white);
             font-weight: bold;
             font-size: 0.95em;
-            background: #ffd700;
+            background: var(--primary-blue);
             padding: 5px 10px;
             border-radius: 5px;
             display: inline-block;
         }
 
         .company {
-            color: #000;
+            color: var(--text-dark);
             font-weight: 600;
             font-size: 1.1em;
             margin: 5px 0;
@@ -246,10 +255,11 @@
         }
 
         li:before {
-            content: "▶";
-            color: #ffd700;
+            content: "▸";
+            color: var(--primary-blue);
             position: absolute;
             left: -15px;
+            font-weight: bold;
         }
 
         .skills-grid {
@@ -260,38 +270,36 @@
         }
 
         .skill-category {
-            background: #fffae6;
+            background: var(--gray-light);
             padding: 20px;
             border-radius: 10px;
-            border-top: 3px solid #ffd700;
-            border: 2px solid #000;
+            border-top: 3px solid var(--primary-blue);
             transition: all 0.3s;
         }
 
         .skill-category:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
         }
 
         .skill-category h4 {
-            color: #000;
+            color: var(--dark-blue);
             margin-bottom: 10px;
             font-size: 1.2em;
         }
 
         .project-card {
-            background: #fffae6;
+            background: var(--gray-light);
             padding: 25px;
             border-radius: 10px;
             margin-bottom: 20px;
-            border-left: 4px solid #ffd700;
-            border: 2px solid #000;
+            border-left: 4px solid var(--primary-blue);
             transition: all 0.3s;
         }
 
         .project-card:hover {
             transform: translateX(5px);
-            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 5px 20px rgba(37, 99, 235, 0.2);
         }
 
         .project-link {
@@ -299,56 +307,56 @@
             margin-top: 10px;
             margin-right: 10px;
             padding: 10px 20px;
-            background: linear-gradient(135deg, #000, #ffd700);
-            color: #ffd700;
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: var(--white);
             text-decoration: none;
             border-radius: 5px;
             transition: all 0.3s;
-            border: 2px solid #000;
+            border: 2px solid var(--primary-blue);
             font-weight: 600;
         }
 
         .project-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.6);
-            background: #ffd700;
-            color: #000;
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+            background: var(--white);
+            color: var(--primary-blue);
         }
 
         .cta-section {
-            background: linear-gradient(135deg, #000, #ffd700);
-            color: #000;
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: var(--white);
             padding: 30px;
             border-radius: 10px;
             text-align: center;
             margin-top: 30px;
-            border: 3px solid #000;
+            border: 3px solid var(--primary-blue);
         }
 
         .cta-button {
             display: inline-block;
             margin: 10px;
             padding: 15px 30px;
-            background: #000;
-            color: #ffd700;
+            background: var(--white);
+            color: var(--primary-blue);
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
             transition: all 0.3s;
-            border: 2px solid #ffd700;
+            border: 2px solid var(--white);
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.6);
-            background: #ffd700;
-            color: #000;
+            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+            background: transparent;
+            color: var(--white);
         }
 
         .menu-toggle {
             display: none;
-            background: #000;
-            color: #ffd700;
+            background: var(--primary-blue);
+            color: var(--white);
             border: none;
             padding: 15px;
             border-radius: 8px;
@@ -357,6 +365,7 @@
             margin-bottom: 20px;
             width: 100%;
             text-align: center;
+            font-weight: 600;
         }
 
         @media (max-width: 768px) {
@@ -395,14 +404,13 @@
             }
         }
 
-        /* Scroll to Top Button */
         .scroll-to-top {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: #000;
-            color: #ffd700;
-            border: 2px solid #ffd700;
+            background: var(--primary-blue);
+            color: var(--white);
+            border: 2px solid var(--white);
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -413,19 +421,19 @@
             font-size: 1.5em;
             transition: all 0.3s;
             z-index: 1000;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
         }
 
         .scroll-to-top:hover {
-            background: #ffd700;
-            color: #000;
+            background: var(--white);
+            color: var(--primary-blue);
             transform: translateY(-3px);
         }
 
-        /* Progress Bar */
         .progress-container {
             width: 100%;
-            height: 5px;
-            background: #333;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
             position: fixed;
             top: 0;
             left: 0;
@@ -433,10 +441,18 @@
         }
 
         .progress-bar {
-            height: 5px;
-            background: #ffd700;
+            height: 4px;
+            background: var(--accent-blue);
             width: 0%;
             transition: width 0.3s;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--white);
+            margin-top: 40px;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -689,7 +705,7 @@
                 <a href="https://www.linkedin.com/in/mohammadhossein-bikineh-b697b31b6" target="_blank" class="cta-button">💼 LinkedIn</a>
             </div>
 
-            <div style="margin-top: 40px; padding: 30px; background: #fffae6; border-radius: 10px; border: 2px solid #000;">
+            <div style="margin-top: 40px; padding: 30px; background: var(--gray-light); border-radius: 10px; border: 2px solid var(--primary-blue);">
                 <h3 id="avail-title">Standort & Verfügbarkeit</h3>
                 <p id="avail-location"><strong>📍 Aktueller Standort:</strong> Rostock, Deutschland</p>
                 <p id="avail-status"><strong>✓ Status:</strong> Umzugsbereit</p>
@@ -699,6 +715,10 @@
                 </p>
             </div>
         </div>
+
+        <footer>
+            <p>© 2024 Mohammadhossein Bikineh - Portfolio | Letztes Update: Dezember 2024</p>
+        </footer>
     </div>
 
     <script>
@@ -847,43 +867,31 @@
         function switchLanguage(lang) {
             currentLang = lang;
             
-            // Update active language button
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
             document.getElementById(`lang-${lang}`).classList.add('active');
             
-            // Update all translatable elements
             Object.keys(translations[lang]).forEach(key => {
                 const element = document.getElementById(key);
                 if (element) {
-                    if (key.includes('list')) {
-                        element.innerHTML = translations[lang][key];
-                    } else {
-                        element.innerHTML = translations[lang][key];
-                    }
+                    element.innerHTML = translations[lang][key];
                 }
             });
         }
 
         function showTab(tabName) {
-            // Hide all tab contents
             document.querySelectorAll('.tab-content').forEach(tab => {
                 tab.classList.remove('active');
             });
             
-            // Remove active class from all tab buttons
             document.querySelectorAll('.tab-button').forEach(button => {
                 button.classList.remove('active');
             });
             
-            // Show selected tab content
             document.getElementById(tabName).classList.add('active');
-            
-            // Add active class to clicked tab button
             event.currentTarget.classList.add('active');
 
-            // Close menu on mobile after selection
             if (window.innerWidth <= 768) {
                 toggleMenu();
             }
@@ -910,14 +918,12 @@
             });
         }
 
-        // Progress bar functionality
         window.onscroll = function() {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrolled = (winScroll / height) * 100;
             document.getElementById("progressBar").style.width = scrolled + "%";
 
-            // Show/hide scroll to top button
             const scrollButton = document.querySelector('.scroll-to-top');
             if (winScroll > 300) {
                 scrollButton.style.display = 'flex';
@@ -926,7 +932,6 @@
             }
         };
 
-        // Initialize with German language
         switchLanguage('de');
     </script>
 </body>
