@@ -13,40 +13,95 @@
         }
 
         :root {
-            --primary-blue: #2563eb;
-            --dark-blue: #1e40af;
-            --light-blue: #3b82f6;
-            --accent-blue: #60a5fa;
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
             --white: #ffffff;
-            --gray-light: #f8fafc;
-            --gray-dark: #374151;
-            --text-dark: #1f2937;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-700: #374151;
+            --gray-900: #111827;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--gray-900);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></svg>') repeat;
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            position: relative;
+            z-index: 1;
         }
 
         header {
             background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(37, 99, 235, 0.2);
+            padding: 50px 40px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
             text-align: center;
             margin-bottom: 30px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             position: relative;
-            border: 3px solid var(--primary-blue);
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+            border: 4px solid var(--white);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: var(--gray-700);
+            font-weight: 500;
         }
 
         .language-switcher {
@@ -54,76 +109,101 @@
             top: 20px;
             right: 20px;
             display: flex;
-            gap: 10px;
+            gap: 8px;
+            background: var(--gray-100);
+            padding: 6px;
+            border-radius: 12px;
         }
 
         .lang-btn {
-            padding: 8px 15px;
-            border: 2px solid var(--primary-blue);
-            background: var(--white);
-            color: var(--primary-blue);
+            padding: 10px 18px;
+            border: none;
+            background: transparent;
+            color: var(--gray-700);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
-            transition: all 0.3s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 0.95em;
         }
 
         .lang-btn:hover {
-            background: var(--primary-blue);
-            color: var(--white);
+            background: var(--white);
+            transform: translateY(-2px);
         }
 
         .lang-btn.active {
-            background: var(--primary-blue);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: var(--white);
-            border-color: var(--primary-blue);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
         }
 
         .tabs {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             margin-bottom: 30px;
             flex-wrap: wrap;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 15px;
-            border-radius: 15px;
-            border: 2px solid var(--primary-blue);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
         }
 
         .tab-button {
-            padding: 15px 30px;
-            background: var(--primary-blue);
-            border: none;
-            border-radius: 10px;
+            padding: 16px 32px;
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
             cursor: pointer;
-            font-size: 1.1em;
+            font-size: 1em;
             font-weight: 600;
-            color: var(--white);
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            color: var(--gray-700);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tab-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: -1;
         }
 
         .tab-button:hover {
-            background: var(--dark-blue);
+            border-color: var(--primary);
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2);
         }
 
         .tab-button.active {
-            background: var(--dark-blue);
-            box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            border-color: transparent;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .tab-button.active::before {
+            opacity: 1;
         }
 
         .tab-content {
             display: none;
             background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(37, 99, 235, 0.1);
-            backdrop-filter: blur(10px);
-            animation: fadeIn 0.5s;
-            border: 2px solid var(--primary-blue);
+            padding: 50px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .tab-content.active {
@@ -131,191 +211,233 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { 
+                opacity: 0; 
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0);
+            }
         }
 
         h2 {
-            color: var(--primary-blue);
-            margin-bottom: 20px;
-            font-size: 2em;
-            border-bottom: 3px solid var(--primary-blue);
-            padding-bottom: 10px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
         }
 
         h3 {
-            color: var(--dark-blue);
-            margin-top: 25px;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-            background: linear-gradient(90deg, var(--accent-blue), transparent);
-            padding: 10px;
-            border-radius: 5px;
+            color: var(--primary-dark);
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+            font-weight: 600;
         }
 
         .experience-item, .education-item {
             margin-bottom: 30px;
-            padding: 20px;
-            background: var(--gray-light);
-            border-radius: 10px;
-            border-left: 4px solid var(--primary-blue);
-            transition: all 0.3s;
+            padding: 28px;
+            background: var(--gray-50);
+            border-radius: 16px;
+            border-left: 5px solid var(--primary);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
         }
 
         .experience-item:hover, .education-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 5px 20px rgba(37, 99, 235, 0.2);
+            transform: translateX(8px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15);
+            background: var(--white);
         }
 
         .date {
             color: var(--white);
-            font-weight: bold;
-            font-size: 0.95em;
-            background: var(--primary-blue);
-            padding: 5px 10px;
-            border-radius: 5px;
+            font-weight: 600;
+            font-size: 0.9em;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 8px 16px;
+            border-radius: 8px;
             display: inline-block;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
         }
 
         .company {
-            color: var(--text-dark);
+            color: var(--gray-900);
             font-weight: 600;
-            font-size: 1.1em;
-            margin: 5px 0;
+            font-size: 1.15em;
+            margin: 8px 0;
         }
 
         ul {
-            margin-left: 20px;
-            margin-top: 10px;
+            margin-left: 25px;
+            margin-top: 15px;
         }
 
         li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             position: relative;
-            padding-left: 10px;
+            padding-left: 12px;
+            color: var(--gray-700);
         }
 
-        li:before {
-            content: "▸";
-            color: var(--primary-blue);
-            position: absolute;
-            left: -15px;
-            font-weight: bold;
+        li::marker {
+            color: var(--primary);
+            font-size: 1.2em;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
         }
 
         .skill-category {
-            background: var(--gray-light);
-            padding: 20px;
-            border-radius: 10px;
-            border-top: 3px solid var(--primary-blue);
-            transition: all 0.3s;
+            background: linear-gradient(135deg, var(--gray-50), var(--white));
+            padding: 28px;
+            border-radius: 16px;
+            border-top: 4px solid var(--primary);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
         .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.2);
+            border-top-color: var(--secondary);
         }
 
         .skill-category h4 {
-            color: var(--dark-blue);
-            margin-bottom: 10px;
-            font-size: 1.2em;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-size: 1.25em;
+            font-weight: 600;
         }
 
         .project-card {
-            background: var(--gray-light);
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            border-left: 4px solid var(--primary-blue);
-            transition: all 0.3s;
+            background: linear-gradient(135deg, var(--gray-50), var(--white));
+            padding: 32px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            border-left: 5px solid var(--primary);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
         .project-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 5px 20px rgba(37, 99, 235, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.2);
+            border-left-color: var(--secondary);
         }
 
         .project-link {
             display: inline-block;
-            margin-top: 10px;
-            margin-right: 10px;
-            padding: 10px 20px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            margin-top: 15px;
+            margin-right: 12px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: var(--white);
             text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s;
-            border: 2px solid var(--primary-blue);
+            border-radius: 10px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             font-weight: 600;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
         }
 
         .project-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
-            background: var(--white);
-            color: var(--primary-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+            background: linear-gradient(135deg, var(--primary-dark), var(--accent));
         }
 
         .cta-section {
-            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: var(--white);
-            padding: 30px;
-            border-radius: 10px;
+            padding: 40px;
+            border-radius: 20px;
             text-align: center;
-            margin-top: 30px;
-            border: 3px solid var(--primary-blue);
+            margin-top: 40px;
+            box-shadow: 0 15px 50px rgba(99, 102, 241, 0.3);
         }
 
         .cta-button {
             display: inline-block;
-            margin: 10px;
-            padding: 15px 30px;
+            margin: 12px 8px;
+            padding: 16px 32px;
             background: var(--white);
-            color: var(--primary-blue);
+            color: var(--primary);
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: all 0.3s;
-            border: 2px solid var(--white);
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
-            background: transparent;
-            color: var(--white);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+            background: var(--gray-50);
         }
 
         .menu-toggle {
             display: none;
-            background: var(--primary-blue);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: var(--white);
             border: none;
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 1.2em;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 1.1em;
             cursor: pointer;
             margin-bottom: 20px;
             width: 100%;
             text-align: center;
             font-weight: 600;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            transition: all 0.3s;
+        }
+
+        .menu-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 1.8em; }
+            h1 { font-size: 2em; }
             .subtitle { font-size: 1.1em; }
+            
+            header {
+                padding: 40px 25px;
+            }
+
+            .avatar {
+                width: 100px;
+                height: 100px;
+                font-size: 40px;
+            }
             
             .tabs {
                 flex-direction: column;
                 display: none;
+                padding: 15px;
             }
             
             .tabs.active {
@@ -331,9 +453,8 @@
                 text-align: center;
             }
             
-            .contact-info { 
-                flex-direction: column; 
-                gap: 10px; 
+            .tab-content {
+                padding: 30px 20px;
             }
             
             .language-switcher {
@@ -343,32 +464,35 @@
                 margin-bottom: 20px;
                 justify-content: center;
             }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .scroll-to-top {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: var(--primary-blue);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: var(--white);
-            border: 2px solid var(--white);
+            border: none;
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
+            width: 56px;
+            height: 56px;
             display: none;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             font-size: 1.5em;
-            transition: all 0.3s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
         }
 
         .scroll-to-top:hover {
-            background: var(--white);
-            color: var(--primary-blue);
-            transform: translateY(-3px);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(99, 102, 241, 0.5);
         }
 
         .progress-container {
@@ -383,17 +507,27 @@
 
         .progress-bar {
             height: 4px;
-            background: var(--accent-blue);
+            background: linear-gradient(90deg, var(--accent), var(--primary));
             width: 0%;
-            transition: width 0.3s;
+            transition: width 0.1s;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             color: var(--white);
+            margin-top: 50px;
+            font-size: 0.95em;
+            font-weight: 500;
+        }
+
+        .info-box {
             margin-top: 40px;
-            font-size: 0.9em;
+            padding: 35px;
+            background: linear-gradient(135deg, var(--gray-50), var(--white));
+            border-radius: 16px;
+            border: 2px solid var(--gray-200);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
     </style>
 </head>
@@ -410,6 +544,13 @@
                 <button onclick="switchLanguage('de')" id="lang-de" class="lang-btn active">🇩🇪 DE</button>
                 <button onclick="switchLanguage('en')" id="lang-en" class="lang-btn">🇬🇧 EN</button>
             </div>
+            <div class="header-content">
+                <div class="avatar">👨‍💻</div>
+                <div>
+                    <h1>Mohammadhossein Bikineh</h1>
+                    <p class="subtitle">IT-Spezialist | M.Sc. Technische Informatik</p>
+                </div>
+            </div>
         </header>
 
         <button class="menu-toggle" onclick="toggleMenu()">☰ Menü</button>
@@ -423,7 +564,7 @@
 
         <div id="about" class="tab-content active">
             <h2 id="about-title">Über mich</h2>
-            <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 30px;" id="about-intro">
+            <p style="font-size: 1.15em; line-height: 1.8; margin-bottom: 35px;" id="about-intro">
                 Als IT-Spezialist mit einem Master in Technischer Informatik bringe ich umfassende Expertise in 
                 <strong>Datenanalyse, Prozessoptimierung und Softwareentwicklung</strong> mit. Meine Leidenschaft 
                 liegt in der Digitalisierung und Automatisierung von Produktionsprozessen durch moderne Technologien.
@@ -492,11 +633,11 @@
             <div class="project-card">
                 <h3 id="proj1-title">Masterarbeit: Digitalisierung von Produktionsprozessen</h3>
                 <p id="proj1-partner"><strong>Kooperationspartner:</strong> Rostocker Wurst- und Schinkenspezialitäten GmbH</p>
-                <p style="margin-top: 10px;" id="proj1-desc">
+                <p style="margin-top: 15px;" id="proj1-desc">
                     Entwicklung eines vollständigen Systems zur Digitalisierung und Optimierung von 
                     Produktionsprozessen durch Maschinendatenerfassung über Softing OPC-Programme.
                 </p>
-                <ul style="margin-top: 10px;" id="proj1-list">
+                <ul style="margin-top: 15px;" id="proj1-list">
                     <li>Standardisierte Datenübertragung mittels OPC UA/DA-Protokoll</li>
                     <li>Speicherung in SQL-Datenbank</li>
                     <li>Implementierung effizienter Verfahren zur Datenanalyse und -visualisierung</li>
@@ -511,7 +652,7 @@
                     Integration und Konfiguration des Warenwirtschaftssystems Winweb zur Optimierung 
                     betrieblicher Abläufe.
                 </p>
-                <ul style="margin-top: 10px;" id="proj2-list">
+                <ul style="margin-top: 15px;" id="proj2-list">
                     <li>Anbindung von Produktionsmaschinen über OPC-Schnittstellen</li>
                     <li>Automatisierung von Datenaustauschprozessen</li>
                     <li>Schulung und Support für Endanwender</li>
@@ -524,7 +665,7 @@
                     Analyse, Optimierung und Verwaltung von SQL-Server-Datenbanken zur Verbesserung 
                     der Systemperformance und Datenqualität.
                 </p>
-                <ul style="margin-top: 10px;" id="proj3-list">
+                <ul style="margin-top: 15px;" id="proj3-list">
                     <li>Performance-Optimierung von Datenbankabfragen</li>
                     <li>Entwicklung von Reporting-Lösungen</li>
                     <li>Datenvisualisierung für Management-Entscheidungen</li>
@@ -536,7 +677,7 @@
                 <p id="proj4-desc">
                     Entwicklung einer modernen Web-Anwendung mit benutzerfreundlicher Oberfläche.
                 </p>
-                <ul style="margin-top: 10px;" id="proj4-list">
+                <ul style="margin-top: 15px;" id="proj4-list">
                     <li>Frontend-Entwicklung mit modernen Web-Technologien</li>
                     <li>Responsive Design für alle Geräte</li>
                     <li>Veröffentlicht auf GitHub Pages</li>
@@ -556,7 +697,7 @@
             
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h4 id="skills-prog">Programmierung</h4>
+                    <h4 id="skills-prog">💻 Programmierung</h4>
                     <ul>
                         <li>C#</li>
                         <li>SQL</li>
@@ -568,7 +709,7 @@
                 </div>
 
                 <div class="skill-category">
-                    <h4 id="skills-db">Datenbanken</h4>
+                    <h4 id="skills-db">🗄️ Datenbanken</h4>
                     <ul id="skills-db-list">
                         <li>SQL Server</li>
                         <li>PostgreSQL</li>
@@ -578,281 +719,4 @@
                 </div>
 
                 <div class="skill-category">
-                    <h4 id="skills-auto">Automatisierung</h4>
-                    <ul id="skills-auto-list">
-                        <li>SPS (TIA Portal)</li>
-                        <li>OPC UA/DA</li>
-                        <li>SCADA-Systeme</li>
-                        <li>Prozessoptimierung</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h4 id="skills-enterprise">Enterprise Software</h4>
-                    <ul>
-                        <li>Winweb ERP</li>
-                        <li>Data Feed OPC Suite</li>
-                        <li>TOM, CSB System</li>
-                        <li>JobRouter, STARFACE</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 40px;" id="lang-skills">Sprachkenntnisse</h3>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4 id="lang-de-title">Deutsch</h4>
-                    <p id="lang-de-level">Fließend (C1)</p>
-                </div>
-                <div class="skill-category">
-                    <h4 id="lang-en-title">Englisch</h4>
-                    <p id="lang-en-level">Kenntnisse (B1)</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="contact" class="tab-content">
-            <h2 id="contact-title">Kontakt aufnehmen</h2>
-            <p style="font-size: 1.2em; margin-bottom: 30px;" id="contact-intro">
-                Ich freue mich darauf, von Ihnen zu hören! Ob für neue Projekte, Jobangebote 
-                oder einfach zum Netzwerken – kontaktieren Sie mich gerne.
-            </p>
-
-            <div class="cta-section">
-                <h3 style="color: white; margin-bottom: 20px;" id="contact-cta">Lassen Sie uns zusammenarbeiten!</h3>
-                <p style="margin-bottom: 25px;" id="contact-cta-desc">
-                    Als motivierter IT-Spezialist mit fundierter Ausbildung und praktischer Erfahrung 
-                    bin ich bereit, meine Kenntnisse in einem innovativen Team einzubringen.
-                </p>
-                <a href="tel:+4915752457684" class="cta-button" id="contact-phone">📞 Anrufen</a>
-                <a href="mailto:bikineh.work@gmail.com" class="cta-button" id="contact-email">✉️ E-Mail schreiben</a>
-                <a href="https://www.linkedin.com/in/mohammadhossein-bikineh-b697b31b6" target="_blank" class="cta-button">💼 LinkedIn</a>
-            </div>
-
-            <div style="margin-top: 40px; padding: 30px; background: var(--gray-light); border-radius: 10px; border: 2px solid var(--primary-blue);">
-                <h3 id="avail-title">Standort & Verfügbarkeit</h3>
-                <p id="avail-location"><strong>📍 Aktueller Standort:</strong> Rostock, Deutschland</p>
-                <p id="avail-status"><strong>✓ Status:</strong> Umzugsbereit</p>
-                <p id="avail-ready"><strong>💼 Verfügbarkeit:</strong> Für neue Herausforderungen offen</p>
-                <p style="margin-top: 15px;" id="avail-interests">
-                    <strong>Interessen:</strong> Fußball, Schwimmen, kontinuierliche Weiterbildung in IT-Trends
-                </p>
-            </div>
-        </div>
-
-        <footer>
-            <p>© 2024 Mohammadhossein Bikineh - Portfolio | Letztes Update: Dezember 2024</p>
-        </footer>
-    </div>
-
-    <script>
-        let currentLang = 'de';
-        let menuOpen = false;
-
-        const translations = {
-            de: {
-                'tab-about': 'Über mich',
-                'tab-projects': 'Projekte',
-                'tab-skills': 'Kompetenzen',
-                'tab-contact': 'Kontakt',
-                'about-title': 'Über mich',
-                'about-intro': 'Als IT-Spezialist mit einem Master in Technischer Informatik bringe ich umfassende Expertise in <strong>Datenanalyse, Prozessoptimierung und Softwareentwicklung</strong> mit. Meine Leidenschaft liegt in der Digitalisierung und Automatisierung von Produktionsprozessen durch moderne Technologien.',
-                'exp-title': 'Berufserfahrung',
-                'job1-title': 'IT-Spezialist | Die ROSTOCKER Wurst- und Schinkenspezialitäten GmbH',
-                'job1-list': '<li>Entwicklung und Einführung von Softwarelösungen für Produktionsprozesse</li><li>Analyse und Verwaltung von SQL-Server-Datenbanken</li><li>Integration des Warenwirtschaftssystems Winweb</li><li>Anbindung von Produktionsmaschinen über OPC-Schnittstellen</li><li>Benutzer-Support und Betreuung von Mitarbeitenden</li>',
-                'job2-title': 'IT-Support | Deutsches Rotes Kreuz (DRK), Rostock',
-                'job2-list': '<li>Betreuung und Schulung der Mitarbeitenden bei neuer Software</li><li>Technische Beratung und Prozessoptimierung</li><li>Erstellung von Dokumentationen und Schulungsmaterialien</li>',
-                'job3-title': 'IT-Mitarbeiter / Netzwerktechniker | Avanegar Derak, Iran',
-                'job3-list': '<li>Fehlerdiagnose und Behebung von Netzwerkproblemen</li><li>Installation und Konfiguration von Hardwarekomponenten</li>',
-                'edu-title': 'Bildungsweg',
-                'edu1-title': 'M.Sc. Informationstechnik / Technische Informatik',
-                'edu1-location': 'Universität Rostock, Deutschland',
-                'edu1-focus': '<strong>Schwerpunkte:</strong> Datenanalyse, Prozessautomatisierung, Industrielle Maschinenkommunikation',
-                'edu2-title': 'B.Sc. Elektronik-Technologie-Ingenieurwesen',
-                'edu2-location': 'University of Technical and Engineering, Iran',
-                'edu2-focus': '<strong>Schwerpunkte:</strong> Elektronische Systeme, Automatisierungstechnik, Embedded Systems',
-                'cert-title': 'Zertifikate & Weiterbildungen',
-                'cert-list': '<li><strong>SPS-Programmierung (TIA Portal)</strong> - Bewertung: 90/100, 89/100</li><li><strong>Intelligentes Gebäudemanagement (Smart House)</strong> - Bewertung: 88/100</li><li><strong>Online-Kurse:</strong> Python Pro Bootcamp, SQL Bootcamp, Full-Stack Web Developer</li>',
-                'projects-title': 'Projekte',
-                'proj1-title': 'Masterarbeit: Digitalisierung von Produktionsprozessen',
-                'proj1-partner': '<strong>Kooperationspartner:</strong> Rostocker Wurst- und Schinkenspezialitäten GmbH',
-                'proj1-desc': 'Entwicklung eines vollständigen Systems zur Digitalisierung und Optimierung von Produktionsprozessen durch Maschinendatenerfassung über Softing OPC-Programme.',
-                'proj1-list': '<li>Standardisierte Datenübertragung mittels OPC UA/DA-Protokoll</li><li>Speicherung in SQL-Datenbank</li><li>Implementierung effizienter Verfahren zur Datenanalyse und -visualisierung</li><li>Technologien: .NET (C#, ASP.NET Core), Python, SQL Server</li>',
-                'proj1-link': '📄 Masterarbeit ansehen',
-                'proj2-title': 'ERP-Integration & Prozessautomatisierung',
-                'proj2-desc': 'Integration und Konfiguration des Warenwirtschaftssystems Winweb zur Optimierung betrieblicher Abläufe.',
-                'proj2-list': '<li>Anbindung von Produktionsmaschinen über OPC-Schnittstellen</li><li>Automatisierung von Datenaustauschprozessen</li><li>Schulung und Support für Endanwender</li>',
-                'proj3-title': 'Datenbank-Management & Business Intelligence',
-                'proj3-desc': 'Analyse, Optimierung und Verwaltung von SQL-Server-Datenbanken zur Verbesserung der Systemperformance und Datenqualität.',
-                'proj3-list': '<li>Performance-Optimierung von Datenbankabfragen</li><li>Entwicklung von Reporting-Lösungen</li><li>Datenvisualisierung für Management-Entscheidungen</li>',
-                'proj4-title': 'Feresthe - Web-Anwendung',
-                'proj4-desc': 'Entwicklung einer modernen Web-Anwendung mit benutzerfreundlicher Oberfläche.',
-                'proj4-list': '<li>Frontend-Entwicklung mit modernen Web-Technologien</li><li>Responsive Design für alle Geräte</li><li>Veröffentlicht auf GitHub Pages</li>',
-                'proj4-link1': '🌐 Live Demo ansehen',
-                'proj4-link2': '💻 GitHub Repository',
-                'more-projects': 'Weitere Projekte auf Anfrage',
-                'more-projects-desc': 'Gerne stelle ich Ihnen detaillierte Projektdokumentationen und Code-Beispiele zur Verfügung.',
-                'skills-title': 'Technische Kompetenzen',
-                'skills-prog': 'Programmierung',
-                'skills-db': 'Datenbanken',
-                'skills-db-list': '<li>SQL Server</li><li>PostgreSQL</li><li>Datenbankdesign</li><li>Performance-Optimierung</li>',
-                'skills-auto': 'Automatisierung',
-                'skills-auto-list': '<li>SPS (TIA Portal)</li><li>OPC UA/DA</li><li>SCADA-Systeme</li><li>Prozessoptimierung</li>',
-                'skills-enterprise': 'Enterprise Software',
-                'lang-skills': 'Sprachkenntnisse',
-                'lang-de-title': 'Deutsch',
-                'lang-de-level': 'Fließend (C1)',
-                'lang-en-title': 'Englisch',
-                'lang-en-level': 'Kenntnisse (B1)',
-                'contact-title': 'Kontakt aufnehmen',
-                'contact-intro': 'Ich freue mich darauf, von Ihnen zu hören! Ob für neue Projekte, Jobangebote oder einfach zum Netzwerken – kontaktieren Sie mich gerne.',
-                'contact-cta': 'Lassen Sie uns zusammenarbeiten!',
-                'contact-cta-desc': 'Als motivierter IT-Spezialist mit fundierter Ausbildung und praktischer Erfahrung bin ich bereit, meine Kenntnisse in einem innovativen Team einzubringen.',
-                'contact-phone': '📞 Anrufen',
-                'contact-email': '✉️ E-Mail schreiben',
-                'avail-title': 'Standort & Verfügbarkeit',
-                'avail-location': '<strong>📍 Aktueller Standort:</strong> Rostock, Deutschland',
-                'avail-status': '<strong>✓ Status:</strong> Umzugsbereit',
-                'avail-ready': '<strong>💼 Verfügbarkeit:</strong> Für neue Herausforderungen offen',
-                'avail-interests': '<strong>Interessen:</strong> Fußball, Schwimmen, kontinuierliche Weiterbildung in IT-Trends'
-            },
-            en: {
-                'tab-about': 'About Me',
-                'tab-projects': 'Projects',
-                'tab-skills': 'Skills',
-                'tab-contact': 'Contact',
-                'about-title': 'About Me',
-                'about-intro': 'As an IT specialist with a master\'s degree in Technical Computer Science, I bring comprehensive expertise in <strong>data analysis, process optimization, and software development</strong>. My passion lies in digitizing and automating production processes through modern technologies.',
-                'exp-title': 'Work Experience',
-                'job1-title': 'IT Specialist | Die ROSTOCKER Wurst- und Schinkenspezialitäten GmbH',
-                'job1-list': '<li>Development and implementation of software solutions for production processes</li><li>Analysis and management of SQL Server databases</li><li>Integration of Winweb ERP system</li><li>Connection of production machines via OPC interfaces</li><li>User support and employee training</li>',
-                'job2-title': 'IT Support | German Red Cross (DRK), Rostock',
-                'job2-list': '<li>Support and training of employees on new software</li><li>Technical consulting and process optimization</li><li>Creation of documentation and training materials</li>',
-                'job3-title': 'IT Employee / Network Technician | Avanegar Derak, Iran',
-                'job3-list': '<li>Troubleshooting and resolution of network problems</li><li>Installation and configuration of hardware components</li>',
-                'edu-title': 'Education',
-                'edu1-title': 'M.Sc. Information Technology / Technical Computer Science',
-                'edu1-location': 'University of Rostock, Germany',
-                'edu1-focus': '<strong>Focus:</strong> Data Analysis, Process Automation, Industrial Machine Communication',
-                'edu2-title': 'B.Sc. Electronics Technology Engineering',
-                'edu2-location': 'University of Technical and Engineering, Iran',
-                'edu2-focus': '<strong>Focus:</strong> Electronic Systems, Automation Technology, Embedded Systems',
-                'cert-title': 'Certificates & Further Education',
-                'cert-list': '<li><strong>PLC Programming (TIA Portal)</strong> - Rating: 90/100, 89/100</li><li><strong>Intelligent Building Management (Smart House)</strong> - Rating: 88/100</li><li><strong>Online Courses:</strong> Python Pro Bootcamp, SQL Bootcamp, Full-Stack Web Developer</li>',
-                'projects-title': 'Projects',
-                'proj1-title': 'Master Thesis: Digitization of Production Processes',
-                'proj1-partner': '<strong>Cooperation Partner:</strong> Rostocker Wurst- und Schinkenspezialitäten GmbH',
-                'proj1-desc': 'Development of a complete system for digitizing and optimizing production processes through machine data acquisition via Softing OPC programs.',
-                'proj1-list': '<li>Standardized data transmission using OPC UA/DA protocol</li><li>Storage in SQL database</li><li>Implementation of efficient methods for data analysis and visualization</li><li>Technologies: .NET (C#, ASP.NET Core), Python, SQL Server</li>',
-                'proj1-link': '📄 View Master Thesis',
-                'proj2-title': 'ERP Integration & Process Automation',
-                'proj2-desc': 'Integration and configuration of the Winweb ERP system to optimize business processes.',
-                'proj2-list': '<li>Connection of production machines via OPC interfaces</li><li>Automation of data exchange processes</li><li>Training and support for end users</li>',
-                'proj3-title': 'Database Management & Business Intelligence',
-                'proj3-desc': 'Analysis, optimization and management of SQL Server databases to improve system performance and data quality.',
-                'proj3-list': '<li>Performance optimization of database queries</li><li>Development of reporting solutions</li><li>Data visualization for management decisions</li>',
-                'proj4-title': 'Feresthe - Web Application',
-                'proj4-desc': 'Development of a modern web application with user-friendly interface.',
-                'proj4-list': '<li>Frontend development with modern web technologies</li><li>Responsive design for all devices</li><li>Published on GitHub Pages</li>',
-                'proj4-link1': '🌐 View Live Demo',
-                'proj4-link2': '💻 GitHub Repository',
-                'more-projects': 'More Projects on Request',
-                'more-projects-desc': 'I would be happy to provide you with detailed project documentation and code samples.',
-                'skills-title': 'Technical Skills',
-                'skills-prog': 'Programming',
-                'skills-db': 'Databases',
-                'skills-db-list': '<li>SQL Server</li><li>PostgreSQL</li><li>Database Design</li><li>Performance Optimization</li>',
-                'skills-auto': 'Automation',
-                'skills-auto-list': '<li>PLC (TIA Portal)</li><li>OPC UA/DA</li><li>SCADA Systems</li><li>Process Optimization</li>',
-                'skills-enterprise': 'Enterprise Software',
-                'lang-skills': 'Language Skills',
-                'lang-de-title': 'German',
-                'lang-de-level': 'Fluent (C1)',
-                'lang-en-title': 'English', 
-                'lang-en-level': 'Intermediate (B1)',
-                'contact-title': 'Get in Touch',
-                'contact-intro': 'I look forward to hearing from you! Whether for new projects, job offers or simply to network - feel free to contact me.',
-                'contact-cta': 'Let\'s work together!',
-                'contact-cta-desc': 'As a motivated IT specialist with solid education and practical experience, I am ready to contribute my knowledge in an innovative team.',
-                'contact-phone': '📞 Call',
-                'contact-email': '✉️ Send Email',
-                'avail-title': 'Location & Availability',
-                'avail-location': '<strong>📍 Current Location:</strong> Rostock, Germany',
-                'avail-status': '<strong>✓ Status:</strong> Relocatable',
-                'avail-ready': '<strong>💼 Availability:</strong> Open to new challenges',
-                'avail-interests': '<strong>Interests:</strong> Football, Swimming, continuous IT training'
-            }
-        };
-
-        function switchLanguage(lang) {
-            currentLang = lang;
-            
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            document.getElementById(`lang-${lang}`).classList.add('active');
-            
-            Object.keys(translations[lang]).forEach(key => {
-                const element = document.getElementById(key);
-                if (element) {
-                    element.innerHTML = translations[lang][key];
-                }
-            });
-        }
-
-        function showTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
-            document.querySelectorAll('.tab-button').forEach(button => {
-                button.classList.remove('active');
-            });
-            
-            document.getElementById(tabName).classList.add('active');
-            event.currentTarget.classList.add('active');
-
-            if (window.innerWidth <= 768) {
-                toggleMenu();
-            }
-        }
-
-        function toggleMenu() {
-            const tabsMenu = document.getElementById('tabsMenu');
-            const menuToggle = document.querySelector('.menu-toggle');
-            
-            if (menuOpen) {
-                tabsMenu.classList.remove('active');
-                menuToggle.textContent = '☰ Menü';
-            } else {
-                tabsMenu.classList.add('active');
-                menuToggle.textContent = '✕ Schließen';
-            }
-            menuOpen = !menuOpen;
-        }
-
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        window.onscroll = function() {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById("progressBar").style.width = scrolled + "%";
-
-            const scrollButton = document.querySelector('.scroll-to-top');
-            if (winScroll > 300) {
-                scrollButton.style.display = 'flex';
-            } else {
-                scrollButton.style.display = 'none';
-            }
-        };
-
-        switchLanguage('de');
-    </script>
-</body>
-</html>
+                    <h4 id="skills-auto">⚙️ Automatis
