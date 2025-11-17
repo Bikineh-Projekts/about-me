@@ -631,7 +631,7 @@
     <button class="tab-button active" onclick="showTab('about', event)" id="tab-about" role="tab" aria-selected="true" aria-controls="about">Über mich</button>
     <button class="tab-button" onclick="showTab('projects', event)" id="tab-projects" role="tab" aria-selected="false" aria-controls="projects">Projekte</button>
     <button class="tab-button" onclick="showTab('skills', event)" id="tab-skills" role="tab" aria-selected="false" aria-controls="skills">Kompetenzen</button>
-    <button class="tab-button" onclick="showTab('docku', event)" id="tab-docku" role="tab" aria-selected="false" aria-controls="docku">Zertifikate / Certificates</button>
+    <button class="tab-button" onclick="showTab('docku', event)" id="tab-docku" role="tab" aria-selected="false" aria-controls="docku">Zertifikate</button>
     <button class="tab-button" onclick="showTab('contact', event)" id="tab-contact" role="tab" aria-selected="false" aria-controls="contact">Kontakt</button>
 </nav>
         <main>
@@ -835,46 +835,93 @@
     </div>
 </section>
 
-            <section id="docku" class="tab-content" role="tabpanel" aria-labelledby="tab-docku">
-    <h2 id="docku-title">
-        Berufliche Nachweise & Abschlussdokumente / 
-        Certificates & Academic Records
-    </h2>
+<section id="docku" class="tab-content" role="tabpanel" aria-labelledby="tab-docku">
+    
+    <div id="docku-de">
+        <h2>Berufliche Nachweise & Abschlussdokumente</h2>
+        
+        <p class="certificate-desc">
+            Diese Sammlung umfasst meine offiziellen akademischen Abschlussunterlagen sowie 
+            qualifizierte berufliche Nachweise. Sie dokumentieren sowohl den erfolgreichen Abschluss 
+            meines Masterstudiums als auch meine praktische Erfahrung und Leistungsfähigkeit 
+            in früheren beruflichen Tätigkeiten.
+        </p>
 
-    <p class="certificate-desc">
-        Diese Sammlung umfasst meine offiziellen akademischen Abschlussunterlagen sowie 
-        qualifizierte berufliche Nachweise. Sie dokumentieren sowohl den erfolgreichen Abschluss 
-        meines Masterstudiums als auch meine praktische Erfahrung und Leistungsfähigkeit 
-        in früheren beruflichen Tätigkeiten.
-        <br><br>
-        This collection includes my official academic degree documents and certified employment records. 
-        They demonstrate the successful completion of my Master's program as well as my practical 
-        experience and performance in previous professional roles.
-    </p>
+        <div class="certificate-list">
+            <div class="certificate-item">
+                <h3 class="certificate-title">Masterabschluss – Universität Rostock</h3>
+                
+                <p class="certificate-text">
+                    Der Masterabschluss in Technischer Informatik bestätigt meine wissenschaftliche Qualifikation 
+                    sowie fundierte Kenntnisse in den Bereichen Informationstechnik, Datenanalyse, 
+                    Prozessoptimierung, Automatisierung und Softwareentwicklung.
+                </p>
 
-    <div class="certificate-list">
-        <div class="certificate-item">
-            <h3 class="certificate-title">
-                Masterabschluss – Universität Rostock /
-                Master's Degree – University of Rostock
-            </h3>
+                <a href="https://drive.google.com/file/d/1tIS8f5VtNW3WkLmVFczKun-hj9vHNHRm/view"
+                   target="_blank"
+                   class="project-link">
+                   🎓 Abschlussdokument ansehen
+                </a>
+            </div>
 
-            <p class="certificate-text">
-                Der Masterabschluss in Technischer Informatik bestätigt meine wissenschaftliche Qualifikation 
-                sowie fundierte Kenntnisse in den Bereichen Informationstechnik, Datenanalyse, 
-                Prozessoptimierung, Automatisierung und Softwareentwicklung.
-                <br><br>
-                The Master's degree in Technical Informatics certifies my academic qualification and 
-                advanced expertise in information technology, data analysis, process optimization, 
-                automation, and software development.
-            </p>
+            <div class="certificate-item">
+                <h3 class="certificate-title">Arbeitszeugnisse & Referenzen</h3>
+                
+                <p class="certificate-text">
+                    Diese Arbeitszeugnisse enthalten qualifizierte Einschätzungen meiner beruflichen 
+                    Leistungen, meiner fachlichen Kompetenz sowie meiner persönlichen Stärken im 
+                    Arbeitsumfeld.
+                </p>
 
-            <a href="https://drive.google.com/file/d/1tIS8f5VtNW3WkLmVFczKun-hj9vHNHRm/view"
-               target="_blank"
-               class="project-link"
-               id="cert-all">
-               📑 Alle Dokumente ansehen / View All Documents
-            </a>
+                <a href="https://drive.google.com/file/d/1tIS8f5VtNW3WkLmVFczKun-hj9vHNHRm/view"
+                   target="_blank"
+                   class="project-link">
+                   📄 Arbeitszeugnisse ansehen
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="docku-en" style="display: none;">
+        <h2>Certificates & Academic Records</h2>
+        
+        <p class="certificate-desc">
+            This collection includes my official academic degree documents and certified employment records. 
+            They demonstrate the successful completion of my Master's program as well as my practical 
+            experience and performance in previous professional roles.
+        </p>
+
+        <div class="certificate-list">
+            <div class="certificate-item">
+                <h3 class="certificate-title">Master's Degree – University of Rostock</h3>
+                
+                <p class="certificate-text">
+                    The Master's degree in Technical Informatics certifies my academic qualification and 
+                    advanced expertise in information technology, data analysis, process optimization, 
+                    automation, and software development.
+                </p>
+
+                <a href="https://drive.google.com/file/d/1tIS8f5VtNW3WkLmVFczKun-hj9vHNHRm/view"
+                   target="_blank"
+                   class="project-link">
+                   🎓 View Master Certificate
+                </a>
+            </div>
+
+            <div class="certificate-item">
+                <h3 class="certificate-title">Work References & Employment Certificates</h3>
+                
+                <p class="certificate-text">
+                    These employment references provide a qualified evaluation of my professional performance, 
+                    technical competence, and personal strengths in the workplace.
+                </p>
+
+                <a href="https://drive.google.com/file/d/1tIS8f5VtNW3WkLmVFczKun-hj9vHNHRm/view"
+                   target="_blank"
+                   class="project-link">
+                   📄 View Work Certificates
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -1091,28 +1138,32 @@
         }
 
         // Sprachumschaltung
-        function switchLanguage(lang) {
-            currentLang = lang;
-            
-            // Sprach-Buttons aktualisieren
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            document.getElementById(`lang-${lang}`).classList.add('active');
-            
-            // Texte übersetzen
-            Object.keys(translations[lang]).forEach(key => {
-                const element = document.getElementById(key);
-                if (element) {
-                    if (key.includes('list') || key.includes('intro') || key.includes('desc') || 
-                        key.includes('focus') || key.includes('partner') || key.includes('avail')) {
-                        element.innerHTML = translations[lang][key];
-                    } else {
-                        element.textContent = translations[lang][key];
-                    }
-                }
-            });
+       function switchLanguage(lang) {
+    currentLang = lang;
+    
+    // Sprach-Buttons aktualisieren
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.getElementById(`lang-${lang}`).classList.add('active');
+    
+    // Zertifikate-Sections umschalten
+    document.getElementById('docku-de').style.display = lang === 'de' ? 'block' : 'none';
+    document.getElementById('docku-en').style.display = lang === 'en' ? 'block' : 'none';
+    
+    // Texte übersetzen
+    Object.keys(translations[lang]).forEach(key => {
+        const element = document.getElementById(key);
+        if (element) {
+            if (key.includes('list') || key.includes('intro') || key.includes('desc') || 
+                key.includes('focus') || key.includes('partner') || key.includes('avail')) {
+                element.innerHTML = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
         }
+    });
+}
 
         // Menü-Toggle für Mobilgeräte
         function toggleMenu() {
