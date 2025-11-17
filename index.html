@@ -627,14 +627,13 @@
 
         <button class="menu-toggle" onclick="toggleMenu()" aria-expanded="false" aria-controls="tabsMenu">☰ Menü</button>
 
-        <nav class="tabs" id="tabsMenu" role="tablist">
-            <button class="tab-button active" onclick="showTab('about', event)" id="tab-about" role="tab" aria-selected="true" aria-controls="about">Über mich</button>
-            <button class="tab-button" onclick="showTab('projects', event)" id="tab-projects" role="tab" aria-selected="false" aria-controls="projects">Projekte</button>
-            <button class="tab-button" onclick="showTab('skills', event)" id="tab-skills" role="tab" aria-selected="false" aria-controls="skills">Kompetenzen</button>
-            <button class="tab-button" onclick="showTab('contact', event)" id="tab-Docku" role="tab" aria-selected="false" aria-controls="Docku">Zertifikat</button>
-            <button class="tab-button" onclick="showTab('contact', event)" id="tab-contact" role="tab" aria-selected="false" aria-controls="contact">Kontakt</button>
-        </nav>
-
+       <nav class="tabs" id="tabsMenu" role="tablist">
+    <button class="tab-button active" onclick="showTab('about', event)" id="tab-about" role="tab" aria-selected="true" aria-controls="about">Über mich</button>
+    <button class="tab-button" onclick="showTab('projects', event)" id="tab-projects" role="tab" aria-selected="false" aria-controls="projects">Projekte</button>
+    <button class="tab-button" onclick="showTab('skills', event)" id="tab-skills" role="tab" aria-selected="false" aria-controls="skills">Kompetenzen</button>
+    <button class="tab-button" onclick="showTab('docku', event)" id="tab-docku" role="tab" aria-selected="false" aria-controls="docku">Zertifikate</button>
+    <button class="tab-button" onclick="showTab('contact', event)" id="tab-contact" role="tab" aria-selected="false" aria-controls="contact">Kontakt</button>
+</nav>
         <main>
             <section id="about" class="tab-content active" role="tabpanel" aria-labelledby="tab-about">
                 <h2 id="about-title">Über mich</h2>
@@ -776,80 +775,72 @@
                     <p id="more-projects-desc">Gerne stelle ich Ihnen detaillierte Projektdokumentationen und Code-Beispiele zur Verfügung.</p>
                 </div>
             </section>
-
             <section id="skills" class="tab-content" role="tabpanel" aria-labelledby="tab-skills">
-                <h2 id="skills-title">Technische Kompetenzen</h2>
-                
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4 id="skills-prog">💻 Programmierung</h4>
-                        <ul>
-                            <li>C#</li>
-                            <li>SQL</li>
-                            <li>Python</li>
-                            <li>.NET Core MVC 6</li>
-                            <li>ASP.NET Core</li>
-                            <li>Entity Framework</li>
-                        </ul>
-                    </div>
+    <h2 id="skills-title">Technische Kompetenzen</h2>
+    
+    <div class="skills-grid">
+        <div class="skill-category">
+            <h4 id="skills-prog">💻 Programmierung</h4>
+            <ul>
+                <li>C#</li>
+                <li>SQL</li>
+                <li>Python</li>
+                <li>.NET Core MVC 6</li>
+                <li>ASP.NET Core</li>
+                <li>Entity Framework</li>
+            </ul>
+        </div>
 
-                    <div class="skill-category">
-                        <h4 id="skills-db">🗄️ Datenbanken</h4>
-                        <ul id="skills-db-list">
-                            <li>SQL Server</li>
-                            <li>PostgreSQL</li>
-                            <li>Datenbankdesign</li>
-                            <li>Performance-Optimierung</li>
-                        </ul>
-                    </div>
+        <div class="skill-category">
+            <h4 id="skills-db">🗄️ Datenbanken</h4>
+            <ul id="skills-db-list">
+                <li>SQL Server</li>
+                <li>PostgreSQL</li>
+                <li>Datenbankdesign</li>
+                <li>Performance-Optimierung</li>
+            </ul>
+        </div>
 
-                    <div class="skill-category">
-                        <h4 id="skills-auto">⚙️ Automatisierung</h4>
-                        <ul id="skills-auto-list">
-                            <li>SPS (TIA Portal)</li>
-                            <li>OPC UA/DA</li>
-                            <li>SCADA-Systeme</li>
-                            <li>Prozessoptimierung</li>
-                        </ul>
-                    </div>
+        <div class="skill-category">
+            <h4 id="skills-auto">⚙️ Automatisierung</h4>
+            <ul id="skills-auto-list">
+                <li>SPS (TIA Portal)</li>
+                <li>OPC UA/DA</li>
+                <li>SCADA-Systeme</li>
+                <li>Prozessoptimierung</li>
+            </ul>
+        </div>
 
-                    <div class="skill-category">
-                        <h4 id="skills-enterprise">🏢 Enterprise Software</h4>
-                        <ul>
-                            <li>Winweb ERP</li>
-                            <li>Data Feed OPC Suite</li>
-                            <li>TOM, CSB System</li>
-                            <li>JobRouter, STARFACE</li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="skill-category">
+            <h4 id="skills-enterprise">🏢 Enterprise Software</h4>
+            <ul>
+                <li>Winweb ERP</li>
+                <li>Data Feed OPC Suite</li>
+                <li>TOM, CSB System</li>
+                <li>JobRouter, STARFACE</li>
+            </ul>
+        </div>
+    </div>
 
-                <h3 style="margin-top: 40px;" id="lang-skills">Sprachkenntnisse</h3>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4 id="lang-de-title">🇩🇪 Deutsch</h4>
-                        <p id="lang-de-level">Fließend (C1)</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4 id="lang-en-title">🇬🇧 Englisch</h4>
-                        <p id="lang-en-level">Kenntnisse (B1)</p>
-                    </div>
-                </div>
-            </section>
-   
-<section id="Docku" class="tab-Docku" role="tabpanel" aria-labelledby="tab-skills">
+    <h3 style="margin-top: 40px;" id="lang-skills">Sprachkenntnisse</h3>
+    <div class="skills-grid">
+        <div class="skill-category">
+            <h4 id="lang-de-title">🇩🇪 Deutsch</h4>
+            <p id="lang-de-level">Fließend (C1)</p>
+        </div>
+        <div class="skill-category">
+            <h4 id="lang-en-title">🇬🇧 Englisch</h4>
+            <p id="lang-en-level">Kenntnisse (B1)</p>
+        </div>
+    </div>
+</section>
 
-    <!-- ===========================
-         SECTION TITLE
-    ============================ -->
-    <h2 id="Docku">
+<section id="docku" class="tab-content" role="tabpanel" aria-labelledby="tab-docku">
+    <h2 id="docku-title">
         Berufliche Nachweise & Abschlussdokumente / 
         Certificates & Academic Records
     </h2>
 
-    <!-- ===========================
-         SECTION DESCRIPTION
-    ============================ -->
     <p class="certificate-desc">
         Diese Sammlung umfasst meine offiziellen akademischen Abschlussunterlagen sowie 
         qualifizierte berufliche Nachweise. Sie dokumentieren sowohl den erfolgreichen Abschluss 
@@ -861,16 +852,8 @@
         experience and performance in previous professional roles.
     </p>
 
-    <!-- ===========================
-         CERTIFICATE LIST WRAPPER
-    ============================ -->
     <div class="certificate-list">
-
-        <!-- ============================================================
-             MASTER'S DEGREE – UNIVERSITY OF ROSTOCK
-        ============================================================= -->
         <div class="certificate-item">
-
             <h3 class="certificate-title">
                 Masterabschluss – Universität Rostock /
                 Master's Degree – University of Rostock
@@ -894,14 +877,9 @@
                id="cert-uni">
                🎓 Abschlussdokument ansehen / View Master Certificate
             </a>
-
         </div>
 
-        <!-- ============================================================
-             WORK REFERENCES / EMPLOYMENT CERTIFICATES
-        ============================================================= -->
         <div class="certificate-item">
-
             <h3 class="certificate-title">
                 Arbeitszeugnisse & Referenzen /
                 Work References & Employment Certificates
@@ -924,42 +902,40 @@
                id="cert-work">
                📄 Arbeitszeugnisse ansehen / View Work Certificates
             </a>
-
         </div>
+    </div>
+</section>
+            
+<section id="contact" class="tab-content" role="tabpanel" aria-labelledby="tab-contact">
+    <h2 id="contact-title">Kontakt aufnehmen</h2>
+    <p style="font-size: 1.1em; margin-bottom: 25px;" id="contact-intro">
+        Ich freue mich darauf, von Ihnen zu hören! Ob für neue Projekte, Jobangebote 
+        oder einfach zum Netzwerken – kontaktieren Sie mich gerne.
+    </p>
 
-    </div> <!-- END .certificate-list -->
+    <div class="cta-section">
+        <h3 style="color: white; margin-bottom: 20px;" id="contact-cta">Lassen Sie uns zusammenarbeiten!</h3>
+        <p style="margin-bottom: 20px;" id="contact-cta-desc">
+            Als motivierter IT-Spezialist mit fundierter Ausbildung und praktischer Erfahrung 
+            bin ich bereit, meine Kenntnisse in einem innovativen Team einzubringen.
+        </p>
+        <a href="tel:+4915752457684" class="cta-button" id="contact-phone">📞 Anrufen</a>
+        <a href="mailto:bikineh.work@gmail.com" class="cta-button" id="contact-email">✉️ E-Mail schreiben</a>
+        <a href="https://www.linkedin.com/in/mohammadhossein-bikineh-b697b31b6" target="_blank" class="cta-button">💼 LinkedIn</a>
+    </div>
 
+    <div class="info-box">
+        <h3 id="avail-title">Standort & Verfügbarkeit</h3>
+        <p id="avail-location"><strong>📍 Aktueller Standort:</strong> Rostock, Deutschland</p>
+        <p id="avail-status"><strong>✓ Status:</strong> Umzugsbereit</p>
+        <p id="avail-ready"><strong>💼 Verfügbarkeit:</strong> Für neue Herausforderungen offen</p>
+        <p style="margin-top: 15px;" id="avail-interests">
+            <strong>Interessen:</strong> Fußball, Schwimmen, kontinuierliche Weiterbildung in IT-Trends
+        </p>
+    </div>
 </section>
 
-            <section id="contact" class="tab-content" role="tabpanel" aria-labelledby="tab-contact">
-                <h2 id="contact-title">Kontakt aufnehmen</h2>
-                <p style="font-size: 1.1em; margin-bottom: 25px;" id="contact-intro">
-                    Ich freue mich darauf, von Ihnen zu hören! Ob für neue Projekte, Jobangebote 
-                    oder einfach zum Netzwerken – kontaktieren Sie mich gerne.
-                </p>
-
-                <div class="cta-section">
-                    <h3 style="color: white; margin-bottom: 20px;" id="contact-cta">Lassen Sie uns zusammenarbeiten!</h3>
-                    <p style="margin-bottom: 20px;" id="contact-cta-desc">
-                        Als motivierter IT-Spezialist mit fundierter Ausbildung und praktischer Erfahrung 
-                        bin ich bereit, meine Kenntnisse in einem innovativen Team einzubringen.
-                    </p>
-                    <a href="tel:+4915752457684" class="cta-button" id="contact-phone">📞 Anrufen</a>
-                    <a href="mailto:bikineh.work@gmail.com" class="cta-button" id="contact-email">✉️ E-Mail schreiben</a>
-                    <a href="https://www.linkedin.com/in/mohammadhossein-bikineh-b697b31b6" target="_blank" class="cta-button">💼 LinkedIn</a>
-                </div>
-
-                <div class="info-box">
-                    <h3 id="avail-title">Standort & Verfügbarkeit</h3>
-                    <p id="avail-location"><strong>📍 Aktueller Standort:</strong> Rostock, Deutschland</p>
-                    <p id="avail-status"><strong>✓ Status:</strong> Umzugsbereit</p>
-                    <p id="avail-ready"><strong>💼 Verfügbarkeit:</strong> Für neue Herausforderungen offen</p>
-                    <p style="margin-top: 15px;" id="avail-interests">
-                        <strong>Interessen:</strong> Fußball, Schwimmen, kontinuierliche Weiterbildung in IT-Trends
-                    </p>
-                </div>
-            </section>
-
+            
             
         </main>
 
