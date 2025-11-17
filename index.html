@@ -416,7 +416,6 @@
             border: 2px solid var(--gray-200);
         }
 
-        /* Mobile Optimierungen */
         @media (max-width: 768px) {
             .container {
                 padding: 10px;
@@ -573,7 +572,6 @@
             }
         }
 
-        /* Verbesserungen für Barrierefreiheit */
         .sr-only {
             position: absolute;
             width: 1px;
@@ -586,7 +584,6 @@
             border: 0;
         }
         
-        /* Verbesserte Fokus-Stile */
         .lang-btn:focus,
         .tab-button:focus,
         .project-link:focus,
@@ -597,7 +594,6 @@
             outline-offset: 2px;
         }
         
-        /* Smooth Scrolling */
         html {
             scroll-behavior: smooth;
         }
@@ -627,13 +623,14 @@
 
         <button class="menu-toggle" onclick="toggleMenu()" aria-expanded="false" aria-controls="tabsMenu">☰ Menü</button>
 
-       <nav class="tabs" id="tabsMenu" role="tablist">
-    <button class="tab-button active" onclick="showTab('about', event)" id="tab-about" role="tab" aria-selected="true" aria-controls="about">Über mich</button>
-    <button class="tab-button" onclick="showTab('projects', event)" id="tab-projects" role="tab" aria-selected="false" aria-controls="projects">Projekte</button>
-    <button class="tab-button" onclick="showTab('skills', event)" id="tab-skills" role="tab" aria-selected="false" aria-controls="skills">Kompetenzen</button>
-    <button class="tab-button" onclick="showTab('docku', event)" id="tab-docku" role="tab" aria-selected="false" aria-controls="docku">Zertifikate</button>
-    <button class="tab-button" onclick="showTab('contact', event)" id="tab-contact" role="tab" aria-selected="false" aria-controls="contact">Kontakt</button>
-</nav>
+        <nav class="tabs" id="tabsMenu" role="tablist">
+            <button class="tab-button active" onclick="showTab('about', event)" id="tab-about" role="tab" aria-selected="true" aria-controls="about">Über mich</button>
+            <button class="tab-button" onclick="showTab('projects', event)" id="tab-projects" role="tab" aria-selected="false" aria-controls="projects">Projekte</button>
+            <button class="tab-button" onclick="showTab('skills', event)" id="tab-skills" role="tab" aria-selected="false" aria-controls="skills">Kompetenzen</button>
+            <button class="tab-button" onclick="showTab('docku', event)" id="tab-docku" role="tab" aria-selected="false" aria-controls="docku">Zertifikate</button>
+            <button class="tab-button" onclick="showTab('contact', event)" id="tab-contact" role="tab" aria-selected="false" aria-controls="contact">Kontakt</button>
+        </nav>
+
         <main>
             <section id="about" class="tab-content active" role="tabpanel" aria-labelledby="tab-about">
                 <h2 id="about-title">Über mich</h2>
@@ -717,44 +714,32 @@
                         <li>Technologien: .NET (C#, ASP.NET Core), Python, SQL Server</li>
                     </ul>
                     <a href="https://drive.google.com/file/d/1zPazGEJl9pyEbR-EI68I0HswA4bzsf3S/view?usp=sharing" target="_blank" class="project-link" id="proj1-link">📄 Masterarbeit ansehen</a>
-                    <a href="https://github.com/Bikineh-Projekts/Mashinendaten.git" target="_blank" class="project-link" id="proj4-link2">💻 GitHub Repository</a>
+                    <a href="https://github.com/Bikineh-Projekts/Mashinendaten.git" target="_blank" class="project-link" id="proj1-link2">💻 GitHub Repository</a>
                 </div>
 
-            <div class="project-card">
-    <h3 id="proj-graph-title">Shortest-Path Analyse in Graphen</h3>
-
-    <p id="proj-graph-desc">
-        Implementierung und Vergleich verschiedener Algorithmen zur Berechnung kürzester Pfade 
-        in realen Netzwerk- und Straßengraphen. Fokus auf Performance-Optimierung, rekursiven SQL-Abfragen 
-        und der Analyse von Peer-to-Peer- sowie Road-Network-Datasets.
-    </p>
-
-    <ul style="margin-top: 15px;" id="proj-graph-list">
-        <li>BFS, DFS und Bidirectional BFS</li>
-        <li>Performance-Optimierung durch Indexing und Adjazenzlisten</li>
-        <li>Vergleich von UDF- und CTE-basierten Methoden</li>
-        <li>Rekursive SQL-Abfragen mittels <code>WITH RECURSIVE</code></li>
-        <li>Analyse auf Gnutella Peer-to-Peer und Texas Road Network Datensätzen</li>
-        <li>Technologien: PostgreSQL, pgRouting, Python (NetworkX)</li>
-        <li>System: Intel i7-9750H, 16 GB RAM, Work Mem 1250 MB, Cache 4 GB</li>
-        <li>Ergebnisse: UDF schneller als CTE, Bidirectional BFS am effizientesten, 
-            CTE-Limits bei sehr großen Graphen</li>
-        <li>Umsetzungsschritte: Repository klonen, PostgreSQL einrichten, Datensätze importieren, 
-            Algorithmen per SQL oder Python ausführen</li>
-    </ul>
-
-    <a href="https://drive.google.com/file/d/1un1coiAS_82-Wfou5ntCf7Vi5YGE7xXF/view?usp=sharing"
-       target="_blank"
-       class="project-link"
-       id="proj-graph-link1">📄 Pre.Thesis ansehen</a>
-
-    <a href="https://github.com/Bikineh-Projekts/graphsql.git"
-       target="_blank"
-       class="project-link"
-       id="proj-graph-link2">💻 GitHub Repository</a>
-</div>
-
-                
+                <div class="project-card">
+                    <h3 id="proj-graph-title">Shortest-Path Analyse in Graphen</h3>
+                    <p id="proj-graph-desc">
+                        Implementierung und Vergleich verschiedener Algorithmen zur Berechnung kürzester Pfade 
+                        in realen Netzwerk- und Straßengraphen. Fokus auf Performance-Optimierung, rekursiven SQL-Abfragen 
+                        und der Analyse von Peer-to-Peer- sowie Road-Network-Datasets.
+                    </p>
+                    <ul style="margin-top: 15px;" id="proj-graph-list">
+                        <li>BFS, DFS und Bidirectional BFS</li>
+                        <li>Performance-Optimierung durch Indexing und Adjazenzlisten</li>
+                        <li>Vergleich von UDF- und CTE-basierten Methoden</li>
+                        <li>Rekursive SQL-Abfragen mittels <code>WITH RECURSIVE</code></li>
+                        <li>Analyse auf Gnutella Peer-to-Peer und Texas Road Network Datensätzen</li>
+                        <li>Technologien: PostgreSQL, pgRouting, Python (NetworkX)</li>
+                        <li>System: Intel i7-9750H, 16 GB RAM, Work Mem 1250 MB, Cache 4 GB</li>
+                        <li>Ergebnisse: UDF schneller als CTE, Bidirectional BFS am effizientesten, 
+                            CTE-Limits bei sehr großen Graphen</li>
+                        <li>Umsetzungsschritte: Repository klonen, PostgreSQL einrichten, Datensätze importieren, 
+                            Algorithmen per SQL oder Python ausführen</li>
+                    </ul>
+                    <a href="https://drive.google.com/file/d/1un1coiAS_82-Wfou5ntCf7Vi5YGE7xXF/view?usp=sharing" target="_blank" class="project-link" id="proj-graph-link1">📄 Pre.Thesis ansehen</a>
+                    <a href="https://github.com/Bikineh-Projekts/graphsql.git" target="_blank" class="project-link" id="proj-graph-link2">💻 GitHub Repository</a>
+                </div>
 
                 <div class="project-card">
                     <h3 id="proj4-title">Web-Anwendung</h3>
@@ -775,142 +760,137 @@
                     <p id="more-projects-desc">Gerne stelle ich Ihnen detaillierte Projektdokumentationen und Code-Beispiele zur Verfügung.</p>
                 </div>
             </section>
+
             <section id="skills" class="tab-content" role="tabpanel" aria-labelledby="tab-skills">
-    <h2 id="skills-title">Technische Kompetenzen</h2>
-    
-    <div class="skills-grid">
-        <div class="skill-category">
-            <h4 id="skills-prog">💻 Programmierung</h4>
-            <ul>
-                <li>C#</li>
-                <li>SQL</li>
-                <li>Python</li>
-                <li>.NET Core MVC 6</li>
-                <li>ASP.NET Core</li>
-                <li>Entity Framework</li>
-            </ul>
-        </div>
+                <h2 id="skills-title">Technische Kompetenzen</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4 id="skills-prog">💻 Programmierung</h4>
+                        <ul>
+                            <li>C#</li>
+                            <li>SQL</li>
+                            <li>Python</li>
+                            <li>.NET Core MVC 6</li>
+                            <li>ASP.NET Core</li>
+                            <li>Entity Framework</li>
+                        </ul>
+                    </div>
 
-        <div class="skill-category">
-            <h4 id="skills-db">🗄️ Datenbanken</h4>
-            <ul id="skills-db-list">
-                <li>SQL Server</li>
-                <li>PostgreSQL</li>
-                <li>Datenbankdesign</li>
-                <li>Performance-Optimierung</li>
-            </ul>
-        </div>
+                    <div class="skill-category">
+                        <h4 id="skills-db">🗄️ Datenbanken</h4>
+                        <ul id="skills-db-list">
+                            <li>SQL Server</li>
+                            <li>PostgreSQL</li>
+                            <li>Datenbankdesign</li>
+                            <li>Performance-Optimierung</li>
+                        </ul>
+                    </div>
 
-        <div class="skill-category">
-            <h4 id="skills-auto">⚙️ Automatisierung</h4>
-            <ul id="skills-auto-list">
-                <li>SPS (TIA Portal)</li>
-                <li>OPC UA/DA</li>
-                <li>SCADA-Systeme</li>
-                <li>Prozessoptimierung</li>
-            </ul>
-        </div>
+                    <div class="skill-category">
+                        <h4 id="skills-auto">⚙️ Automatisierung</h4>
+                        <ul id="skills-auto-list">
+                            <li>SPS (TIA Portal)</li>
+                            <li>OPC UA/DA</li>
+                            <li>SCADA-Systeme</li>
+                            <li>Prozessoptimierung</li>
+                        </ul>
+                    </div>
 
-        <div class="skill-category">
-            <h4 id="skills-enterprise">🏢 Enterprise Software</h4>
-            <ul>
-                <li>Winweb ERP</li>
-                <li>Data Feed OPC Suite</li>
-                <li>TOM, CSB System</li>
-                <li>JobRouter, STARFACE</li>
-            </ul>
-        </div>
-    </div>
+                    <div class="skill-category">
+                        <h4 id="skills-enterprise">🏢 Enterprise Software</h4>
+                        <ul>
+                            <li>Winweb ERP</li>
+                            <li>Data Feed OPC Suite</li>
+                            <li>TOM, CSB System</li>
+                            <li>JobRouter, STARFACE</li>
+                        </ul>
+                    </div>
+                </div>
 
-    <h3 style="margin-top: 40px;" id="lang-skills">Sprachkenntnisse</h3>
-    <div class="skills-grid">
-        <div class="skill-category">
-            <h4 id="lang-de-title">🇩🇪 Deutsch</h4>
-            <p id="lang-de-level">Fließend (C1)</p>
-        </div>
-        <div class="skill-category">
-            <h4 id="lang-en-title">🇬🇧 Englisch</h4>
-            <p id="lang-en-level">Kenntnisse (B1)</p>
-        </div>
-    </div>
-</section>
+                <h3 style="margin-top: 40px;" id="lang-skills">Sprachkenntnisse</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4 id="lang-de-title">🇩🇪 Deutsch</h4>
+                        <p id="lang-de-level">Fließend (C1)</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4 id="lang-en-title">🇬🇧 Englisch</h4>
+                        <p id="lang-en-level">Kenntnisse (B1)</p>
+                    </div>
+                </div>
+            </section>
 
             <section id="docku" class="tab-content" role="tabpanel" aria-labelledby="tab-docku">
-    <h2 id="docku-title">
-        Berufliche Nachweise & Abschlussdokumente / 
-        Certificates & Academic Records
-    </h2>
+                <h2 id="docku-title">
+                    Berufliche Nachweise & Abschlussdokumente / 
+                    Certificates & Academic Records
+                </h2>
 
-    <p class="certificate-desc">
-        Diese Sammlung umfasst meine offiziellen akademischen Abschlussunterlagen sowie 
-        qualifizierte berufliche Nachweise. Sie dokumentieren sowohl den erfolgreichen Abschluss 
-        meines Masterstudiums als auch meine praktische Erfahrung und Leistungsfähigkeit 
-        in früheren beruflichen Tätigkeiten.
-        <br><br>
-        This collection includes my official academic degree documents and certified employment records. 
-        They demonstrate the successful completion of my Master's program as well as my practical 
-        experience and performance in previous professional roles.
-    </p>
+                <p class="certificate-desc" style="margin-bottom: 25px;">
+                    Diese Sammlung umfasst meine offiziellen akademischen Abschlussunterlagen sowie 
+                    qualifizierte berufliche Nachweise. Sie dokumentieren sowohl den erfolgreichen Abschluss 
+                    meines Masterstudiums als auch meine praktische Erfahrung und Leistungsfähigkeit 
+                    in früheren beruflichen Tätigkeiten.
+                    <br><br>
+                    This collection includes my official academic degree documents and certified employment records. 
+                    They demonstrate the successful completion of my Master's program as well as my practical 
+                    experience and performance in previous professional roles.
+                </p>
 
-    <div class="certificate-list">
-        <div class="certificate-item">
-            <h3 class="certificate-title">
-                Masterabschluss – Universität Rostock /
-                Master's Degree – University of Rostock
-            </h3>
+                <div class="project-card">
+                    <h3 class="certificate-title">
+                        Masterabschluss – Universität Rostock /
+                        Master's Degree – University of Rostock
+                    </h3>
 
-            <p class="certificate-text">
-                Der Masterabschluss in Technischer Informatik bestätigt meine wissenschaftliche Qualifikation 
-                sowie fundierte Kenntnisse in den Bereichen Informationstechnik, Datenanalyse, 
-                Prozessoptimierung, Automatisierung und Softwareentwicklung.
-                <br><br>
-                The Master's degree in Technical Informatics certifies my academic qualification and 
-                advanced expertise in information technology, data analysis, process optimization, 
-                automation, and software development.
-            </p>
+                    <p class="certificate-text" style="margin-top: 15px;">
+                        Der Masterabschluss in Technischer Informatik bestätigt meine wissenschaftliche Qualifikation 
+                        sowie fundierte Kenntnisse in den Bereichen Informationstechnik, Datenanalyse, 
+                        Prozessoptimierung, Automatisierung und Softwareentwicklung.
+                        <br><br>
+                        The Master's degree in Technical Informatics certifies my academic qualification and 
+                        advanced expertise in information technology, data analysis, process optimization, 
+                        automation, and software development.
+                    </p>
 
-            <a href="https://drive.google.com/file/d/1tIS8f5VtNW3WkLmVFczKun-hj9vHNHRm/view"
-               target="_blank"
-               class="project-link"
-               id="cert-all">
-               📑 Alle Dokumente ansehen / View All Documents
-            </a>
-        </div>
-    </div>
-</section>
+                    <a href="https://drive.google.com/file/d/1tIS8f5VtNW3WkLmVFczKun-hj9vHNHRm/view"
+                       target="_blank"
+                       class="project-link"
+                       id="cert-all">
+                       📑 Alle Dokumente ansehen / View All Documents
+                    </a>
+                </div>
+            </section>
 
-            
-<section id="contact" class="tab-content" role="tabpanel" aria-labelledby="tab-contact">
-    <h2 id="contact-title">Kontakt aufnehmen</h2>
-    <p style="font-size: 1.1em; margin-bottom: 25px;" id="contact-intro">
-        Ich freue mich darauf, von Ihnen zu hören! Ob für neue Projekte, Jobangebote 
-        oder einfach zum Netzwerken – kontaktieren Sie mich gerne.
-    </p>
+            <section id="contact" class="tab-content" role="tabpanel" aria-labelledby="tab-contact">
+                <h2 id="contact-title">Kontakt aufnehmen</h2>
+                <p style="font-size: 1.1em; margin-bottom: 25px;" id="contact-intro">
+                    Ich freue mich darauf, von Ihnen zu hören! Ob für neue Projekte, Jobangebote 
+                    oder einfach zum Netzwerken – kontaktieren Sie mich gerne.
+                </p>
 
-    <div class="cta-section">
-        <h3 style="color: white; margin-bottom: 20px;" id="contact-cta">Lassen Sie uns zusammenarbeiten!</h3>
-        <p style="margin-bottom: 20px;" id="contact-cta-desc">
-            Als motivierter IT-Spezialist mit fundierter Ausbildung und praktischer Erfahrung 
-            bin ich bereit, meine Kenntnisse in einem innovativen Team einzubringen.
-        </p>
-        <a href="tel:+4915752457684" class="cta-button" id="contact-phone">📞 Anrufen</a>
-        <a href="mailto:bikineh.work@gmail.com" class="cta-button" id="contact-email">✉️ E-Mail schreiben</a>
-        <a href="https://www.linkedin.com/in/mohammadhossein-bikineh-b697b31b6" target="_blank" class="cta-button">💼 LinkedIn</a>
-    </div>
+                <div class="cta-section">
+                    <h3 style="color: white; margin-bottom: 20px;" id="contact-cta">Lassen Sie uns zusammenarbeiten!</h3>
+                    <p style="margin-bottom: 20px;" id="contact-cta-desc">
+                        Als motivierter IT-Spezialist mit fundierter Ausbildung und praktischer Erfahrung 
+                        bin ich bereit, meine Kenntnisse in einem innovativen Team einzubringen.
+                    </p>
+                    <a href="tel:+4915752457684" class="cta-button" id="contact-phone">📞 Anrufen</a>
+                    <a href="mailto:bikineh.work@gmail.com" class="cta-button" id="contact-email">✉️ E-Mail schreiben</a>
+                    <a href="https://www.linkedin.com/in/mohammadhossein-bikineh-b697b31b6" target="_blank" class="cta-button">💼 LinkedIn</a>
+                </div>
 
-    <div class="info-box">
-        <h3 id="avail-title">Standort & Verfügbarkeit</h3>
-        <p id="avail-location"><strong>📍 Aktueller Standort:</strong> Rostock, Deutschland</p>
-        <p id="avail-status"><strong>✓ Status:</strong> Umzugsbereit</p>
-        <p id="avail-ready"><strong>💼 Verfügbarkeit:</strong> Für neue Herausforderungen offen</p>
-        <p style="margin-top: 15px;" id="avail-interests">
-            <strong>Interessen:</strong> Fußball, Schwimmen, kontinuierliche Weiterbildung in IT-Trends
-        </p>
-    </div>
-</section>
-
-            
-            
+                <div class="info-box">
+                    <h3 id="avail-title">Standort & Verfügbarkeit</h3>
+                    <p id="avail-location"><strong>📍 Aktueller Standort:</strong> Rostock, Deutschland</p>
+                    <p id="avail-status"><strong>✓ Status:</strong> Umzugsbereit</p>
+                    <p id="avail-ready"><strong>💼 Verfügbarkeit:</strong> Für neue Herausforderungen offen</p>
+                    <p style="margin-top: 15px;" id="avail-interests">
+                        <strong>Interessen:</strong> Fußball, Schwimmen, kontinuierliche Weiterbildung in IT-Trends
+                    </p>
+                </div>
+            </section>
         </main>
 
         <footer>
@@ -919,16 +899,15 @@
     </div>
 
     <script>
-        // Globale Variablen
         let currentLang = 'de';
         let menuOpen = false;
 
-        // Übersetzungen komplett
         const translations = {
             de: {
                 'tab-about': 'Über mich',
                 'tab-projects': 'Projekte',
                 'tab-skills': 'Kompetenzen',
+                'tab-docku': 'Zertifikate',
                 'tab-contact': 'Kontakt',
                 'about-title': 'Über mich',
                 'about-intro': 'Als IT-Spezialist mit einem Master in Technischer Informatik bringe ich umfassende Expertise in <strong>Datenanalyse, Prozessoptimierung und Softwareentwicklung</strong> mit. Meine Leidenschaft liegt in der Digitalisierung und Automatisierung von Produktionsprozessen durch moderne Technologien.',
@@ -954,25 +933,19 @@
                 'proj1-desc': 'Entwicklung eines vollständigen Systems zur Digitalisierung und Optimierung von Produktionsprozessen durch Maschinendatenerfassung über Softing OPC-Programme.',
                 'proj1-list': '<li>Standardisierte Datenübertragung mittels OPC UA/DA-Protokoll</li><li>Speicherung in SQL-Datenbank</li><li>Implementierung effizienter Verfahren zur Datenanalyse und -visualisierung</li><li>Technologien: .NET (C#, ASP.NET Core), Python, SQL Server</li>',
                 'proj1-link': '📄 Masterarbeit ansehen',
-                'proj2-title': 'ERP-Integration & Prozessautomatisierung',
-                'proj2-desc': 'Integration und Konfiguration des Warenwirtschaftssystems Winweb zur Optimierung betrieblicher Abläufe.',
-                'proj2-list': '<li>Anbindung von Produktionsmaschinen über OPC-Schnittstellen</li><li>Automatisierung von Datenaustauschprozessen</li><li>Schulung und Support für Endanwender</li>',
-                'proj3-title': 'Datenbank-Management & Business Intelligence',
-                'proj3-desc': 'Analyse, optimization und Verwaltung von SQL-Server-Datenbanken zur Verbesserung der Systemperformance und Datenqualität.',
-                'proj3-list': '<li>Performance-Optimierung von Datenbankabfragen</li><li>Entwicklung von Reporting-Lösungen</li><li>Datenvisualisierung für Management-Entscheidungen</li>',
-                'proj4-title': 'Feresthe - Web-Anwendung',
+                'proj-graph-title': 'Shortest-Path Analyse in Graphen',
+                'proj-graph-desc': 'Implementierung und Vergleich verschiedener Algorithmen zur Berechnung kürzester Pfade in realen Netzwerk- und Straßengraphen. Fokus auf Performance-Optimierung, rekursiven SQL-Abfragen und der Analyse von Peer-to-Peer- sowie Road-Network-Datasets.',
+                'proj-graph-list': '<li>BFS, DFS und Bidirectional BFS</li><li>Performance-Optimierung durch Indexing und Adjazenzlisten</li><li>Vergleich von UDF- und CTE-basierten Methoden</li><li>Rekursive SQL-Abfragen mittels <code>WITH RECURSIVE</code></li><li>Analyse auf Gnutella Peer-to-Peer und Texas Road Network Datensätzen</li><li>Technologien: PostgreSQL, pgRouting, Python (NetworkX)</li><li>System: Intel i7-9750H, 16 GB RAM, Work Mem 1250 MB, Cache 4 GB</li><li>Ergebnisse: UDF schneller als CTE, Bidirectional BFS am effizientesten, CTE-Limits bei sehr großen Graphen</li><li>Umsetzungsschritte: Repository klonen, PostgreSQL einrichten, Datensätze importieren, Algorithmen per SQL oder Python ausführen</li>',
+                'proj4-title': 'Web-Anwendung',
                 'proj4-desc': 'Entwicklung einer modernen Web-Anwendung mit benutzerfreundlicher Oberfläche.',
                 'proj4-list': '<li>Frontend-Entwicklung mit modernen Web-Technologien</li><li>Responsive Design für alle Geräte</li><li>Veröffentlicht auf GitHub Pages</li>',
                 'proj4-link1': '🌐 Live Demo ansehen',
-                'proj4-link2': '💻 GitHub Repository',
                 'more-projects': 'Weitere Projekte auf Anfrage',
                 'more-projects-desc': 'Gerne stelle ich Ihnen detaillierte Projektdokumentationen und Code-Beispiele zur Verfügung.',
                 'skills-title': 'Technische Kompetenzen',
                 'skills-prog': '💻 Programmierung',
                 'skills-db': '🗄️ Datenbanken',
-                'skills-db-list': '<li>SQL Server</li><li>PostgreSQL</li><li>Datenbankdesign</li><li>Performance-Optimierung</li>',
                 'skills-auto': '⚙️ Automatisierung',
-                'skills-auto-list': '<li>SPS (TIA Portal)</li><li>OPC UA/DA</li><li>SCADA-Systeme</li><li>Prozessoptimierung</li>',
                 'skills-enterprise': '🏢 Enterprise Software',
                 'lang-skills': 'Sprachkenntnisse',
                 'lang-de-title': '🇩🇪 Deutsch',
@@ -995,6 +968,7 @@
                 'tab-about': 'About Me',
                 'tab-projects': 'Projects',
                 'tab-skills': 'Skills',
+                'tab-docku': 'Certificates',
                 'tab-contact': 'Contact',
                 'about-title': 'About Me',
                 'about-intro': 'As an IT specialist with a Master\'s degree in Technical Computer Science, I bring comprehensive expertise in <strong>data analysis, process optimization, and software development</strong>. My passion lies in digitizing and automating production processes through modern technologies.',
@@ -1020,25 +994,19 @@
                 'proj1-desc': 'Development of a complete system for digitizing and optimizing production processes through machine data acquisition via Softing OPC programs.',
                 'proj1-list': '<li>Standardized data transmission using OPC UA/DA protocol</li><li>Storage in SQL database</li><li>Implementation of efficient methods for data analysis and visualization</li><li>Technologies: .NET (C#, ASP.NET Core), Python, SQL Server</li>',
                 'proj1-link': '📄 View Master Thesis',
-                'proj2-title': 'ERP Integration & Process Automation',
-                'proj2-desc': 'Integration and configuration of the Winweb ERP system to optimize business processes.',
-                'proj2-list': '<li>Connection of production machines via OPC interfaces</li><li>Automation of data exchange processes</li><li>Training and support for end users</li>',
-                'proj3-title': 'Database Management & Business Intelligence',
-                'proj3-desc': 'Analysis, optimization and management of SQL Server databases to improve system performance and data quality.',
-                'proj3-list': '<li>Performance optimization of database queries</li><li>Development of reporting solutions</li><li>Data visualization for management decisions</li>',
-                'proj4-title': 'Feresthe - Web Application',
+                'proj-graph-title': 'Shortest-Path Analysis in Graphs',
+                'proj-graph-desc': 'Implementation and comparison of various algorithms for calculating shortest paths in real network and road graphs. Focus on performance optimization, recursive SQL queries and analysis of peer-to-peer and road network datasets.',
+                'proj-graph-list': '<li>BFS, DFS and Bidirectional BFS</li><li>Performance optimization through indexing and adjacency lists</li><li>Comparison of UDF and CTE-based methods</li><li>Recursive SQL queries using <code>WITH RECURSIVE</code></li><li>Analysis on Gnutella Peer-to-Peer and Texas Road Network datasets</li><li>Technologies: PostgreSQL, pgRouting, Python (NetworkX)</li><li>System: Intel i7-9750H, 16 GB RAM, Work Mem 1250 MB, Cache 4 GB</li><li>Results: UDF faster than CTE, Bidirectional BFS most efficient, CTE limits with very large graphs</li><li>Implementation steps: Clone repository, set up PostgreSQL, import datasets, execute algorithms via SQL or Python</li>',
+                'proj4-title': 'Web Application',
                 'proj4-desc': 'Development of a modern web application with user-friendly interface.',
                 'proj4-list': '<li>Frontend development with modern web technologies</li><li>Responsive design for all devices</li><li>Published on GitHub Pages</li>',
                 'proj4-link1': '🌐 View Live Demo',
-                'proj4-link2': '💻 GitHub Repository',
                 'more-projects': 'More projects on request',
                 'more-projects-desc': 'I\'m happy to provide detailed project documentation and code samples.',
                 'skills-title': 'Technical Skills',
                 'skills-prog': '💻 Programming',
                 'skills-db': '🗄️ Databases',
-                'skills-db-list': '<li>SQL Server</li><li>PostgreSQL</li><li>Database design</li><li>Performance optimization</li>',
                 'skills-auto': '⚙️ Automation',
-                'skills-auto-list': '<li>PLC (TIA Portal)</li><li>OPC UA/DA</li><li>SCADA systems</li><li>Process optimization</li>',
                 'skills-enterprise': '🏢 Enterprise Software',
                 'lang-skills': 'Language Skills',
                 'lang-de-title': '🇩🇪 German',
@@ -1059,66 +1027,53 @@
             }
         };
 
-        // Tab-Funktionalität
         function showTab(tabId, event) {
-            // Alle Tab-Inhalte ausblenden
             document.querySelectorAll('.tab-content').forEach(tab => {
                 tab.classList.remove('active');
             });
             
-            // Alle Tab-Buttons deaktivieren
             document.querySelectorAll('.tab-button').forEach(button => {
                 button.classList.remove('active');
                 button.setAttribute('aria-selected', 'false');
             });
             
-            // Gewählten Tab anzeigen
             document.getElementById(tabId).classList.add('active');
             
-            // Gewählten Button aktivieren
             if (event && event.currentTarget) {
                 event.currentTarget.classList.add('active');
                 event.currentTarget.setAttribute('aria-selected', 'true');
             }
             
-            // Menü auf Mobilgeräten schließen
             if (window.innerWidth <= 768) {
                 toggleMenu();
             }
             
-            // Zurück zum Anfang scrollen
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Sprachumschaltung
-       function switchLanguage(lang) {
-    currentLang = lang;
-    
-    // Sprach-Buttons aktualisieren
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    document.getElementById(`lang-${lang}`).classList.add('active');
-    
-    // Zertifikate-Sections umschalten
-    document.getElementById('docku-de').style.display = lang === 'de' ? 'block' : 'none';
-    document.getElementById('docku-en').style.display = lang === 'en' ? 'block' : 'none';
-    
-    // Texte übersetzen
-    Object.keys(translations[lang]).forEach(key => {
-        const element = document.getElementById(key);
-        if (element) {
-            if (key.includes('list') || key.includes('intro') || key.includes('desc') || 
-                key.includes('focus') || key.includes('partner') || key.includes('avail')) {
-                element.innerHTML = translations[lang][key];
-            } else {
-                element.textContent = translations[lang][key];
-            }
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(`lang-${lang}`).classList.add('active');
+            
+            Object.keys(translations[lang]).forEach(key => {
+                const element = document.getElementById(key);
+                if (element) {
+                    if (key.includes('list') || key.includes('intro') || key.includes('desc') || 
+                        key.includes('focus') || key.includes('partner') || key.includes('avail') ||
+                        key.includes('location') || key.includes('status') || key.includes('ready') ||
+                        key.includes('interests') || key.includes('cta-desc')) {
+                        element.innerHTML = translations[lang][key];
+                    } else {
+                        element.textContent = translations[lang][key];
+                    }
+                }
+            });
         }
-    });
-}
 
-        // Menü-Toggle für Mobilgeräte
         function toggleMenu() {
             const tabsMenu = document.getElementById('tabsMenu');
             const menuToggle = document.querySelector('.menu-toggle');
@@ -1134,12 +1089,10 @@
             }
         }
 
-        // Nach-oben-Scrollen
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Progress-Bar
         function updateProgressBar() {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -1147,7 +1100,6 @@
             document.getElementById("progressBar").style.width = scrolled + "%";
         }
 
-        // Scroll-to-top-Button anzeigen/verbergen
         function toggleScrollButton() {
             const scrollButton = document.querySelector('.scroll-to-top');
             if (window.pageYOffset > 300) {
@@ -1157,18 +1109,14 @@
             }
         }
 
-        // Event-Listener
         window.addEventListener('scroll', () => {
             updateProgressBar();
             toggleScrollButton();
         });
 
-        // Initialisierung
         document.addEventListener('DOMContentLoaded', () => {
-            // Standard-Tab aktivieren
             showTab('about');
             
-            // Menü-Button Text setzen
             const menuToggle = document.querySelector('.menu-toggle');
             if (window.innerWidth <= 768) {
                 menuToggle.textContent = '☰ Menü';
