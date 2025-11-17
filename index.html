@@ -720,90 +720,40 @@
                     <a href="https://github.com/Bikineh-Projekts/Mashinendaten.git" target="_blank" class="project-link" id="proj4-link2">💻 GitHub Repository</a>
                 </div>
 
-            <div class="project-section">
+            <div class="project-card">
+    <h3 id="proj-graph-title">Shortest-Path Analyse in Graphen</h3>
 
-  <h1>Shortest-Path-Analyse in Graphen</h1>
+    <p id="proj-graph-desc">
+        Implementierung und Vergleich verschiedener Algorithmen zur Berechnung kürzester Pfade 
+        in realen Netzwerk- und Straßengraphen. Fokus auf Performance-Optimierung, rekursiven SQL-Abfragen 
+        und der Analyse von Peer-to-Peer- sowie Road-Network-Datasets.
+    </p>
 
-  <a href="https://drive.google.com/file/d/1un1coiAS_82-Wfou5ntCf7Vi5YGE7xXF/view?usp=sharing" 
-     target="_blank" 
-     class="project-link" 
-     id="proj1-link">📄 Pre.Thesis ansehen</a>
+    <ul style="margin-top: 15px;" id="proj-graph-list">
+        <li>BFS, DFS und Bidirectional BFS</li>
+        <li>Performance-Optimierung durch Indexing und Adjazenzlisten</li>
+        <li>Vergleich von UDF- und CTE-basierten Methoden</li>
+        <li>Rekursive SQL-Abfragen mittels <code>WITH RECURSIVE</code></li>
+        <li>Analyse auf Gnutella Peer-to-Peer und Texas Road Network Datensätzen</li>
+        <li>Technologien: PostgreSQL, pgRouting, Python (NetworkX)</li>
+        <li>System: Intel i7-9750H, 16 GB RAM, Work Mem 1250 MB, Cache 4 GB</li>
+        <li>Ergebnisse: UDF schneller als CTE, Bidirectional BFS am effizientesten, 
+            CTE-Limits bei sehr großen Graphen</li>
+        <li>Umsetzungsschritte: Repository klonen, PostgreSQL einrichten, Datensätze importieren, 
+            Algorithmen per SQL oder Python ausführen</li>
+    </ul>
 
-  <a href="https://github.com/Bikineh-Projekts/graphsql.git" 
-     target="_blank" 
-     class="project-link" 
-     id="proj4-link2">💻 GitHub Repository</a>
+    <a href="https://drive.google.com/file/d/1un1coiAS_82-Wfou5ntCf7Vi5YGE7xXF/view?usp=sharing"
+       target="_blank"
+       class="project-link"
+       id="proj-graph-link1">📄 Pre.Thesis ansehen</a>
 
-  <h2>Projekt: Kürzeste-Wege-Berechnung in großen Graphstrukturen</h2>
-  <p>
-    Implementierung und Vergleich verschiedener Algorithmen zur Berechnung kürzester Pfade 
-    in realen Netzwerk- und Straßengraphen.
-  </p>
-
-  <h3>Schwerpunkte</h3>
-  <ul>
-    <li>BFS, DFS und Bidirectional BFS</li>
-    <li>Performance-Optimierung durch Indexing und Adjazenzlisten</li>
-    <li>Vergleich von UDF- und CTE-basierten Methoden</li>
-    <li>Analyse auf Peer-to-Peer- und Road-Network-Datasets</li>
-  </ul>
-
-  <h3>Technologien</h3>
-  <p>PostgreSQL, pgRouting, Python (NetworkX)</p>
-
-  <hr>
-
-  <h3>Datensätze</h3>
-  <ul>
-    <li>
-      <strong>Gnutella Peer-to-Peer Netzwerk</strong><br>
-      6.301 Nodes, 20.777 Edges – dünne Struktur
-    </li>
-    <li>
-      <strong>Texas Road Network</strong><br>
-      1,38 Mio. Nodes, 1,92 Mio. Edges – realistische Straßendaten
-    </li>
-  </ul>
-
-  <hr>
-
-  <h3>Umsetzung</h3>
-  <ul>
-    <li>Indexbasierte Performance-Beschleunigung</li>
-    <li>Effiziente Adjazenzlisten-Repräsentation</li>
-    <li>Rekursive SQL-Abfragen mit <code>WITH RECURSIVE</code></li>
-    <li>UDF-Ansätze zur Reduzierung von Overhead</li>
-  </ul>
-
-  <hr>
-
-  <h3>Analyse & Ergebnisse</h3>
-  <ul>
-    <li>UDFs meist schneller als CTEs bei tiefen Graphen</li>
-    <li>Bidirectional BFS erzielt die besten Laufzeiten</li>
-    <li>CTEs stoßen bei sehr großen Graphen an Ressourcenlimits</li>
-  </ul>
-
-  <hr>
-
-  <h3>Systemumgebung</h3>
-  <p>
-    Intel i7-9750H • 16 GB RAM<br>
-    PostgreSQL: Work Mem 1250 MB • Effective Cache 4 GB
-  </p>
-
-  <hr>
-
-  <h3>Ausführung</h3>
-  <ol>
-    <li>Repository klonen</li>
-    <li>PostgreSQL einrichten und Datensätze importieren</li>
-    <li>Graph-Algorithmen per SQL oder Python ausführen</li>
-  </ol>
-
+    <a href="https://github.com/Bikineh-Projekts/graphsql.git"
+       target="_blank"
+       class="project-link"
+       id="proj-graph-link2">💻 GitHub Repository</a>
 </div>
 
-               
                 
 
                 <div class="project-card">
