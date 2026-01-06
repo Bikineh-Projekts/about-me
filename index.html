@@ -620,8 +620,15 @@
                 </div>
             </div>
         </header>
-
-        <button class="menu-toggle" onclick="toggleMenu()" aria-expanded="false" aria-controls="tabsMenu">☰ Menü</button>
+        
+         <button class="menu-toggle"
+          onclick="toggleMenu()"
+          aria-expanded="false"
+          aria-controls="tabsMenu"
+          data-de="☰ Menü"
+          data-en="☰ Menu">
+    ☰ Menü
+  </button>
 
         <nav class="tabs" id="tabsMenu" role="tablist">
             <button class="tab-button active" onclick="showTab('about', event)" id="tab-about" role="tab" aria-selected="true" aria-controls="about">Über mich</button>
