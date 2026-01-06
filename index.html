@@ -621,8 +621,13 @@
             </div>
         </header>
         
-         <button class="menu-toggle" onclick="toggleMenu()">
-    ☰ Menü <span>/ Menu</span>
+         <button class="menu-toggle"
+        onclick="toggleMenu()"
+        aria-expanded="false"
+        aria-controls="tabsMenu"
+        data-de="☰ Menü / ☰ Menu"
+        data-en="☰ Menü / ☰ Menu">
+    ☰ Menü / ☰ Menu
 </button>
 
         <nav class="tabs" id="tabsMenu" role="tablist">
