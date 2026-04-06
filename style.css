@@ -411,26 +411,26 @@ footer {
     .container {
         padding: 10px;
     }
-    
+
     header {
         padding: 25px 15px;
         margin-bottom: 15px;
     }
-    
+
     .avatar {
         width: 80px;
         height: 80px;
         font-size: 32px;
     }
-    
+
     h1 {
         font-size: 1.5em;
     }
-    
+
     .subtitle {
         font-size: 1em;
     }
-    
+
     .language-switcher {
         position: relative;
         top: 0;
@@ -441,85 +441,85 @@ footer {
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .tabs {
         flex-direction: column;
         display: none;
         padding: 12px;
         gap: 8px;
     }
-    
+
     .tabs.active {
         display: flex;
     }
-    
+
     .menu-toggle {
         display: block;
     }
-    
+
     .tab-button {
         width: 100%;
         padding: 12px 16px;
         font-size: 0.9em;
     }
-    
+
     .tab-content {
         padding: 20px 15px;
     }
-    
+
     h2 {
         font-size: 1.4em;
         margin-bottom: 15px;
     }
-    
+
     h3 {
         font-size: 1.2em;
         margin-top: 20px;
         margin-bottom: 12px;
     }
-    
+
     .experience-item, .education-item {
         padding: 16px;
         margin-bottom: 15px;
     }
-    
+
     .project-card {
         padding: 16px;
         margin-bottom: 15px;
     }
-    
+
     .skills-grid {
         grid-template-columns: 1fr;
         gap: 12px;
     }
-    
+
     .skill-category {
         padding: 16px;
     }
-    
+
     .cta-section {
         padding: 20px 15px;
         margin-top: 25px;
     }
-    
+
     .cta-button {
         display: block;
         margin: 8px 0;
         width: 100%;
     }
-    
+
     .project-link {
         display: block;
         width: 100%;
         margin: 8px 0;
         text-align: center;
     }
-    
+
     .info-box {
         padding: 20px 15px;
         margin-top: 25px;
     }
-    
+
     .scroll-to-top {
         bottom: 15px;
         right: 15px;
@@ -533,31 +533,31 @@ footer {
     .container {
         padding: 8px;
     }
-    
+
     header {
         padding: 20px 12px;
     }
-    
+
     h1 {
         font-size: 1.3em;
     }
-    
+
     .subtitle {
         font-size: 0.9em;
     }
-    
+
     .tab-content {
         padding: 15px 12px;
     }
-    
+
     h2 {
         font-size: 1.3em;
     }
-    
+
     h3 {
         font-size: 1.1em;
     }
-    
+
     .experience-item, .education-item, .project-card {
         padding: 14px;
     }
