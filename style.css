@@ -47,10 +47,9 @@ header {
     gap: 15px;
 }
 
-/* ✅ AVATAR MIT BILD */
 .avatar {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
