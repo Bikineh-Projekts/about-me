@@ -1,11 +1,3 @@
-/* ==========================================================================
-   PORTFOLIO / LEBENSLAUF – VERBESSERTES STYLESHEET
-   Drop-in-Ersatz: alle Klassennamen bleiben identisch zum Original.
-   Verbesserungen: harmonischere Farbpalette, fluide Typografie (clamp),
-   bessere Mobile-Darstellung, größere Touch-Flächen, reduced-motion,
-   weichere Schatten, konsistente Abstände.
-   ========================================================================== */
-
 * {
     margin: 0;
     padding: 0;
