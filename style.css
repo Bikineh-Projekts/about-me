@@ -1,3 +1,11 @@
+/* ==========================================================================
+   PORTFOLIO / LEBENSLAUF – VERBESSERTES STYLESHEET
+   Drop-in-Ersatz: alle Klassennamen bleiben identisch zum Original.
+   Verbesserungen: harmonischere Farbpalette, fluide Typografie (clamp),
+   bessere Mobile-Darstellung, größere Touch-Flächen, reduced-motion,
+   weichere Schatten, konsistente Abstände.
+   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,49 +13,81 @@
 }
 
 :root {
-    /* Neue, edlere Farbpalette */
-    --primary: #0f3b5f;      /* Tiefes Marineblau für Seriosität */
-    --primary-dark: #0a2a44;
-    --primary-light: #2c5a7a;
-    --accent: #e8a735;       /* Akzentfarbe für Highlights (Goldton) */
+    /* ---- Farbpalette: tiefes Petrol-Marine + warmes Bernstein-Gold ---- */
+    --primary: #14466b;          /* Hauptfarbe: etwas wärmer & satter als vorher */
+    --primary-dark: #0b2e49;
+    --primary-light: #3a6e95;
+    --primary-soft: #e9f0f6;     /* sehr helles Blau für Flächen & Hover */
+    --accent: #d99a2b;           /* Gold, leicht abgedunkelt = besserer Kontrast */
+    --accent-soft: #fdf4e3;      /* zartes Goldgelb für Highlights */
     --white: #ffffff;
-    --gray-50: #f8f9fa;
-    --gray-100: #f1f3f5;
-    --gray-200: #e9ecef;
-    --gray-600: #6c757d;
-    --gray-700: #495057;
-    --gray-900: #212529;
-    --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-    --shadow-md: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 25px 30px -12px rgba(0, 0, 0, 0.15);
+
+    --gray-50: #f7f8fa;
+    --gray-100: #eef1f4;
+    --gray-200: #e3e7ec;
+    --gray-600: #5d6b7a;         /* leicht bläulich, passt zur Palette */
+    --gray-700: #44505e;
+    --gray-900: #1c2630;
+
+    /* ---- Schatten: weicher, mit Blaustich statt reinem Schwarz ---- */
+    --shadow-sm: 0 2px 8px rgba(20, 70, 107, 0.06), 0 1px 2px rgba(20, 70, 107, 0.04);
+    --shadow-md: 0 12px 28px -8px rgba(20, 70, 107, 0.14);
+    --shadow-lg: 0 24px 48px -12px rgba(20, 70, 107, 0.22);
+
+    --radius-card: 1.25rem;
+    --radius-pill: 2rem;
     --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
 }
 
 body {
     font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     line-height: 1.65;
     color: var(--gray-900);
-    background: var(--gray-50);
+    /* dezenter Verlauf statt flacher Fläche – wirkt hochwertiger */
+    background:
+        radial-gradient(1200px 500px at 50% -10%, var(--primary-soft) 0%, transparent 60%),
+        var(--gray-50);
+    background-attachment: fixed;
     font-weight: 400;
     letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
 }
 
 .container {
-    max-width: 1280px;
+    max-width: 1100px; /* etwas schmaler = bessere Lesbarkeit auf Desktop */
     margin: 0 auto;
     padding: 2rem 1.5rem;
 }
 
-/* HEADER MIT FEINEREN DETAILS */
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
 header {
-    background: var(--white);
-    padding: 2rem 2rem;
-    border-radius: 1.5rem;
+    position: relative; /* wichtig: Anker für den Sprachumschalter */
+    background: linear-gradient(180deg, var(--white) 0%, var(--gray-50) 100%);
+    padding: 2.5rem 2rem 2rem;
+    border-radius: var(--radius-card);
     box-shadow: var(--shadow-sm);
     text-align: center;
     margin-bottom: 2rem;
-    border: 1px solid rgba(0, 0, 0, 0.03);
-    transition: var(--transition);
+    border: 1px solid var(--gray-200);
+    overflow: hidden;
+}
+
+/* feine Goldlinie oben als Wiedererkennungsmerkmal */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 50%, var(--primary) 100%);
 }
 
 .header-content {
@@ -57,21 +97,26 @@ header {
     gap: 1.25rem;
 }
 
-/* AVATAR – modern & clean */
+/* ---- Avatar ---- */
 .avatar {
-    width: 128px;
-    height: 128px;
+    width: 132px;
+    height: 132px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid var(--white);
-    box-shadow: 0 8px 20px rgba(15, 59, 95, 0.2);
+    border: 4px solid var(--white);
+    /* doppelter Ring: weiß innen + Gold außen */
+    box-shadow:
+        0 0 0 3px var(--accent),
+        0 10px 24px rgba(20, 70, 107, 0.22);
     background: var(--gray-100);
     transition: var(--transition);
 }
 
 .avatar:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 28px rgba(15, 59, 95, 0.25);
+    transform: scale(1.03);
+    box-shadow:
+        0 0 0 3px var(--accent),
+        0 14px 32px rgba(20, 70, 107, 0.3);
 }
 
 .avatar img {
@@ -83,42 +128,43 @@ header {
 }
 
 h1 {
-    font-size: 2rem;
+    /* fluide Größe: skaliert automatisch zwischen Handy & Desktop */
+    font-size: clamp(1.6rem, 4vw + 0.5rem, 2.25rem);
     font-weight: 700;
     letter-spacing: -0.02em;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    color: var(--primary-dark);
     margin: 0;
 }
 
 .subtitle {
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 1.5vw + 0.5rem, 1.15rem);
     color: var(--gray-600);
     font-weight: 500;
     letter-spacing: -0.2px;
 }
 
-/* SPACING & BUTTONS */
+/* ==========================================================================
+   SPRACHUMSCHALTER
+   ========================================================================== */
 .language-switcher {
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
+    top: 1.25rem;
+    right: 1.25rem;
     display: flex;
-    gap: 0.5rem;
+    gap: 0.25rem;
     background: var(--gray-100);
     padding: 0.25rem;
-    border-radius: 2rem;
-    backdrop-filter: blur(2px);
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--gray-200);
 }
 
 .lang-btn {
-    padding: 0.5rem 1.25rem;
+    padding: 0.45rem 1.1rem;
+    min-height: 40px; /* Touch-Fläche */
     border: none;
     background: transparent;
     color: var(--gray-700);
-    border-radius: 2rem;
+    border-radius: var(--radius-pill);
     cursor: pointer;
     font-weight: 600;
     font-size: 0.875rem;
@@ -133,25 +179,26 @@ h1 {
 .lang-btn.active {
     background: var(--primary);
     color: var(--white);
-    box-shadow: 0 2px 8px rgba(15, 59, 95, 0.3);
+    box-shadow: 0 2px 8px rgba(20, 70, 107, 0.3);
 }
 
-/* TABS – edler mit Abständen */
+/* ==========================================================================
+   TABS
+   ========================================================================== */
 .tabs {
     display: flex;
     justify-content: center;
-    gap: 0.75rem;
+    gap: 0.6rem;
     margin-bottom: 2rem;
     flex-wrap: wrap;
-    background: transparent;
-    padding: 0;
 }
 
 .tab-button {
-    padding: 0.875rem 1.75rem;
+    padding: 0.8rem 1.6rem;
+    min-height: 44px; /* empfohlene Mindest-Touchgröße */
     background: var(--white);
     border: 1px solid var(--gray-200);
-    border-radius: 2rem;
+    border-radius: var(--radius-pill);
     cursor: pointer;
     font-weight: 600;
     font-size: 0.9rem;
@@ -161,8 +208,9 @@ h1 {
 }
 
 .tab-button:hover {
-    background: var(--gray-50);
+    background: var(--primary-soft);
     border-color: var(--primary-light);
+    color: var(--primary);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -171,16 +219,16 @@ h1 {
     background: var(--primary);
     color: var(--white);
     border-color: var(--primary);
-    box-shadow: 0 6px 14px rgba(15, 59, 95, 0.25);
+    box-shadow: 0 6px 16px rgba(20, 70, 107, 0.28);
 }
 
 .tab-content {
     display: none;
     background: var(--white);
-    padding: 2rem;
-    border-radius: 1.5rem;
+    padding: 2.25rem;
+    border-radius: var(--radius-card);
     box-shadow: var(--shadow-sm);
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--gray-200);
     animation: fadeInUp 0.4s ease-out;
 }
 
@@ -189,21 +237,17 @@ h1 {
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(24px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
-/* TYPOGRAPHIE & LINIEN */
+/* ==========================================================================
+   TYPOGRAFIE
+   ========================================================================== */
 h2 {
-    color: var(--primary);
+    color: var(--primary-dark);
     margin-bottom: 1.75rem;
-    font-size: 1.75rem;
+    font-size: clamp(1.4rem, 2.5vw + 0.5rem, 1.75rem);
     font-weight: 700;
     letter-spacing: -0.02em;
     position: relative;
@@ -215,9 +259,9 @@ h2::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 70px;
+    width: 64px;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
+    background: linear-gradient(90deg, var(--accent), var(--primary));
     border-radius: 4px;
 }
 
@@ -225,18 +269,20 @@ h3 {
     color: var(--primary-dark);
     margin-top: 1.75rem;
     margin-bottom: 1rem;
-    font-size: 1.35rem;
+    font-size: clamp(1.15rem, 1.5vw + 0.6rem, 1.35rem);
     font-weight: 600;
     letter-spacing: -0.3px;
 }
 
-/* ERFAHRUNGSKARTEN – mehr Kontrast & Tiefe */
+/* ==========================================================================
+   ERFAHRUNG & AUSBILDUNG
+   ========================================================================== */
 .experience-item, .education-item {
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.5rem;
     padding: 1.5rem;
     background: var(--gray-50);
     border-radius: 1rem;
-    border-left: 5px solid var(--primary);
+    border-left: 4px solid var(--accent); /* Gold statt Blau = mehr Wärme */
     transition: var(--transition);
     box-shadow: 0 1px 2px rgba(0,0,0,0.02);
 }
@@ -245,27 +291,29 @@ h3 {
     transform: translateX(6px);
     box-shadow: var(--shadow-md);
     background: var(--white);
+    border-left-color: var(--primary);
 }
 
 .date {
-    color: var(--white);
+    color: var(--primary-dark);
     font-weight: 600;
     font-size: 0.8rem;
-    background: var(--primary);
-    padding: 0.3rem 1rem;
-    border-radius: 2rem;
+    background: var(--accent-soft);          /* dezenter als der volle Blauton */
+    border: 1px solid rgba(217, 154, 43, 0.35);
+    padding: 0.3rem 0.9rem;
+    border-radius: var(--radius-pill);
     display: inline-block;
     margin-bottom: 0.75rem;
-    letter-spacing: -0.2px;
+    letter-spacing: 0;
 }
 
 .company {
-    color: var(--primary-light);
-    font-weight: 600;
-    font-size: 1rem;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.95rem;
     margin: 0.5rem 0 0.25rem 0;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
 }
 
 ul {
@@ -277,14 +325,20 @@ li {
     margin-bottom: 0.5rem;
     color: var(--gray-700);
     font-size: 0.95rem;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
-/* SKILLS – mit sanftem Hover */
+li::marker {
+    color: var(--accent);
+}
+
+/* ==========================================================================
+   SKILLS
+   ========================================================================== */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
     margin-top: 1.5rem;
 }
 
@@ -300,16 +354,19 @@ li {
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
     background: var(--white);
+    border-top-color: var(--primary);
 }
 
 .skill-category h4 {
     color: var(--primary-dark);
     margin-bottom: 0.75rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
 }
 
-/* PROJECT CARDS – klare Hierarchie */
+/* ==========================================================================
+   PROJEKTE
+   ========================================================================== */
 .project-card {
     background: var(--gray-50);
     padding: 1.5rem;
@@ -320,74 +377,95 @@ li {
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
     border-color: var(--primary-light);
+    background: var(--white);
 }
 
 .project-link {
     display: inline-block;
     margin-top: 0.75rem;
     margin-right: 0.5rem;
-    padding: 0.6rem 1.25rem;
+    padding: 0.65rem 1.4rem;
+    min-height: 40px;
     background: var(--primary);
     color: var(--white);
     text-decoration: none;
-    border-radius: 2rem;
+    border-radius: var(--radius-pill);
     transition: var(--transition);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.875rem;
-    letter-spacing: 0.2px;
 }
 
 .project-link:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(15, 59, 95, 0.25);
+    box-shadow: 0 8px 18px rgba(20, 70, 107, 0.28);
 }
 
-/* CTA Bereich – moderner */
+/* ==========================================================================
+   CTA
+   ========================================================================== */
 .cta-section {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: var(--white);
-    padding: 2rem;
-    border-radius: 1.5rem;
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-card);
     text-align: center;
     margin-top: 2.5rem;
     box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+/* goldener Lichtschein im Hintergrund */
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -60%;
+    right: -20%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(217, 154, 43, 0.18) 0%, transparent 70%);
+    pointer-events: none;
 }
 
 .cta-button {
     display: inline-block;
     margin: 0.5rem;
-    padding: 0.75rem 1.75rem;
-    background: var(--white);
-    color: var(--primary);
+    padding: 0.8rem 1.75rem;
+    min-height: 44px;
+    background: var(--accent);
+    color: var(--primary-dark);
     text-decoration: none;
-    border-radius: 2rem;
-    font-weight: 600;
+    border-radius: var(--radius-pill);
+    font-weight: 700;
     transition: var(--transition);
-    font-size: 0.9rem;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    font-size: 0.95rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-    background: var(--gray-100);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    background: #e7ad44;
 }
 
-/* MOBILE MENU */
+/* ==========================================================================
+   MOBILE-MENÜ & HILFSELEMENTE
+   ========================================================================== */
 .menu-toggle {
     display: none;
     background: var(--primary);
     color: var(--white);
     border: none;
     padding: 0.9rem;
-    border-radius: 2rem;
+    min-height: 48px;
+    border-radius: var(--radius-pill);
     font-size: 1rem;
     cursor: pointer;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
     width: 100%;
     text-align: center;
     font-weight: 600;
@@ -397,32 +475,32 @@ li {
 
 .menu-toggle:hover {
     background: var(--primary-dark);
-    transform: scale(0.98);
 }
 
 .scroll-to-top {
     position: fixed;
-    bottom: 1.75rem;
-    right: 1.75rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
     background: var(--primary);
     color: var(--white);
-    border: none;
-    border-radius: 3rem;
-    width: 48px;
-    height: 48px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     display: none;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     transition: var(--transition);
     z-index: 1000;
     box-shadow: var(--shadow-md);
 }
 
 .scroll-to-top:hover {
-    background: var(--primary-dark);
-    transform: translateY(-4px) scale(1.02);
+    background: var(--accent);
+    color: var(--primary-dark);
+    transform: translateY(-4px);
 }
 
 .progress-container {
@@ -454,47 +532,43 @@ footer {
 .info-box {
     margin-top: 2rem;
     padding: 1.5rem;
-    background: var(--gray-50);
+    background: var(--primary-soft);
     border-radius: 1rem;
-    border: 1px solid var(--gray-200);
+    border: 1px solid rgba(20, 70, 107, 0.12);
     transition: var(--transition);
 }
 
-/* RESPONSIVE – PROFESSIONELL */
+/* ==========================================================================
+   RESPONSIVE – TABLET & HANDY
+   ========================================================================== */
 @media (max-width: 768px) {
     .container {
-        padding: 1rem;
+        padding: 1rem 0.9rem;
     }
 
     header {
-        padding: 1.5rem;
+        padding: 1.5rem 1.25rem;
         margin-bottom: 1.5rem;
+        border-radius: 1rem;
     }
 
     .avatar {
-        width: 100px;
-        height: 100px;
+        width: 104px;
+        height: 104px;
     }
 
-    h1 {
-        font-size: 1.65rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-    }
-
+    /* Umschalter ins Layout holen statt absolut zu positionieren */
     .language-switcher {
         position: static;
         justify-content: center;
-        margin: 0 auto 1rem auto;
+        margin: 0 auto 1.25rem auto;
         width: fit-content;
     }
 
     .tabs {
         display: none;
         flex-direction: column;
-        gap: 0.7rem;
+        gap: 0.6rem;
     }
 
     .tabs.active {
@@ -508,24 +582,24 @@ footer {
     .tab-button {
         width: 100%;
         text-align: center;
-        border-radius: 2rem;
     }
 
     .tab-content {
-        padding: 1.5rem;
+        padding: 1.4rem 1.1rem;
+        border-radius: 1rem;
     }
 
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    h3 {
-        font-size: 1.25rem;
+    .experience-item:hover, .education-item:hover {
+        transform: none; /* seitliches Verschieben wirkt auf Touch unruhig */
     }
 
     .skills-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .cta-section {
+        padding: 1.75rem 1.25rem;
     }
 
     .cta-button {
@@ -544,30 +618,28 @@ footer {
 
 @media (max-width: 480px) {
     .container {
-        padding: 0.75rem;
-    }
-
-    h1 {
-        font-size: 1.4rem;
+        padding: 0.75rem 0.65rem;
     }
 
     .tab-content {
-        padding: 1.25rem;
+        padding: 1.2rem 0.9rem;
     }
 
-    .experience-item, .education-item, .project-card {
+    .experience-item, .education-item, .project-card, .skill-category {
         padding: 1rem;
     }
 
     .scroll-to-top {
-        width: 42px;
-        height: 42px;
+        width: 44px;
+        height: 44px;
         bottom: 1rem;
         right: 1rem;
     }
 }
 
-/* ACCESSIBILITY */
+/* ==========================================================================
+   BARRIEREFREIHEIT
+   ========================================================================== */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -580,21 +652,26 @@ footer {
     border: 0;
 }
 
-.lang-btn:focus,
-.tab-button:focus,
-.project-link:focus,
-.cta-button:focus,
-.menu-toggle:focus,
-.scroll-to-top:focus {
+.lang-btn:focus-visible,
+.tab-button:focus-visible,
+.project-link:focus-visible,
+.cta-button:focus-visible,
+.menu-toggle:focus-visible,
+.scroll-to-top:focus-visible {
     outline: 3px solid var(--accent);
     outline-offset: 3px;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-/* Smooth scroll padding für fixierte Header */
-html {
-    scroll-padding-top: 1rem;
+/* Animationen deaktivieren, wenn das System es wünscht */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    html {
+        scroll-behavior: auto;
+    }
 }
