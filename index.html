@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio von Mohammadhossein Bikineh-M.Sc. in Technischer Informatik">
+    <title>Mohammadhossein Bikineh - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <button class="scroll-to-top" onclick="scrollToTop()" aria-label="Nach oben scrollen">↑</button>
+
+    <div class="container">
+        <div id="header-placeholder"></div>
+
+        <button class="menu-toggle"
+            onclick="toggleMenu()"
+            aria-expanded="false"
+            aria-controls="tabsMenu">
+            ☰ Menü
+        </button>
+
+        <nav class="tabs" id="tabsMenu" role="tablist">
+            <button class="tab-button active" onclick="showTab('about', event)" id="tab-about" role="tab" aria-selected="true" aria-controls="about">Über mich</button>
+            <button class="tab-button" onclick="showTab('projects', event)" id="tab-projects" role="tab" aria-selected="false" aria-controls="projects">Projekte</button>
+            <button class="tab-button" onclick="showTab('skills', event)" id="tab-skills" role="tab" aria-selected="false" aria-controls="skills">Kompetenzen</button>
+            <button class="tab-button" onclick="showTab('docku', event)" id="tab-docku" role="tab" aria-selected="false" aria-controls="docku">Zertifikate</button>
+            <button class="tab-button" onclick="showTab('contact', event)" id="tab-contact" role="tab" aria-selected="false" aria-controls="contact">Kontakt</button>
+        </nav>
+
+        <main>
+            <section id="about" class="tab-content active" role="tabpanel" aria-labelledby="tab-about">
+                <h2 id="about-title">Über mich</h2>
+                <p style="font-size: 1.05em; line-height: 1.7; margin-bottom: 25px;" id="about-intro">
+                    Als IT-Spezialist mit einem Master in Technischer Informatik bringe ich umfassende Expertise in 
+                    <strong>Datenanalyse, Prozessoptimierung und Softwareentwicklung</strong> mit. Meine Leidenschaft 
+                    liegt in der Digitalisierung und Automatisierung von Produktionsprozessen durch moderne Technologien.
+                </p>
+
+                <h3 id="exp-title">Berufserfahrung</h3>
+                
+                <div class="experience-item">
+                    <div class="date">Oktober 2024 – Oktober 2025</div>
+                    <div class="company" id="job1-title">IT-Spezialist | Die ROSTOCKER Wurst- und Schinkenspezialitäten GmbH</div>
+                    <ul id="job1-list">
+                        <li>Entwicklung und Einführung von Softwarelösungen für Produktionsprozesse</li>
+                        <li>Analyse und Verwaltung von SQL-Server-Datenbanken</li>
+                        <li>Integration des Warenwirtschaftssystems Winweb</li>
+                        <li>Anbindung von Produktionsmaschinen über OPC-Schnittstellen</li>
+                        <li>Benutzer-Support und Betreuung von Mitarbeitenden</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="date">Oktober 2023 – September 2024</div>
+                    <div class="company" id="job2-title">IT-Support | Deutsches Rotes Kreuz (DRK), Rostock</div>
+                    <ul id="job2-list">
+                        <li>Betreuung und Schulung der Mitarbeitenden bei neuer Software</li>
+                        <li>Technische Beratung und Prozessoptimierung</li>
+                        <li>Erstellung von Dokumentationen und Schulungsmaterialien</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="date">Oktober 2018 – Dezember 2020</div>
+                    <div class="company" id="job3-title">IT-Mitarbeiter / Netzwerktechniker | Avanegar Derak, Iran</div>
+                    <ul id="job3-list">
+                        <li>Fehlerdiagnose und Behebung von Netzwerkproblemen</li>
+                        <li>Installation und Konfiguration von Hardwarekomponenten</li>
+                    </ul>
+                </div>
+
+                <h3 id="edu-title">Bildungsweg</h3>
+                
+                <div class="education-item">
+                    <div class="date">Oktober 2021 – August 2025</div>
+                    <div class="company" id="edu1-title">M.Sc. Informationstechnik / Technische Informatik</div>
+                    <p id="edu1-location">Universität Rostock, Deutschland</p>
+                    <p id="edu1-focus"><strong>Schwerpunkte:</strong> Datenanalyse, Prozessautomatisierung, Industrielle Maschinenkommunikation</p>
+                </div>
+
+                <div class="education-item">
+                    <div class="date">Oktober 2012 – Juli 2016</div>
+                    <div class="company" id="edu2-title">B.Sc. Elektronik-Technologie-Ingenieurwesen</div>
+                    <p id="edu2-location">University of Technical and Engineering, Iran</p>
+                    <p id="edu2-focus"><strong>Schwerpunkte:</strong> Elektronische Systeme, Automatisierungstechnik, Embedded Systems</p>
+                </div>
+
+                <h3 id="cert-title">Zertifikate & Weiterbildungen</h3>
+                <ul id="cert-list">
+                    <li><strong>SPS-Programmierung (TIA Portal)</strong> - Bewertung: 90/100, 89/100</li>
+                    <li><strong>Intelligentes Gebäudemanagement (Smart House)</strong> - Bewertung: 88/100</li>
+                    <li><strong>Online-Kurse:</strong> Python Pro Bootcamp, SQL Bootcamp, Full-Stack Web Developer</li>
+                </ul>
+            </section>
+
+            <section id="projects" class="tab-content" role="tabpanel" aria-labelledby="tab-projects">
+                <h2 id="projects-title">Projekte</h2>
+                
+                <div class="project-card">
+                    <h3 id="proj1-title">Masterarbeit: Digitalisierung von Produktionsprozessen</h3>
+                    <p id="proj1-partner"><strong>Kooperationspartner:</strong> Rostocker Wurst- und Schinkenspezialitäten GmbH</p>
+                    <p style="margin-top: 15px;" id="proj1-desc">
+                        Entwicklung eines vollständigen Systems zur Digitalisierung und Optimierung von 
+                        Produktionsprozessen durch Maschinendatenerfassung über Softing OPC-Programme.
+                    </p>
+                    <ul style="margin-top: 15px;" id="proj1-list">
+                        <li>Standardisierte Datenübertragung mittels OPC UA/DA-Protokoll</li>
+                        <li>Speicherung in SQL-Datenbank</li>
+                        <li>Implementierung effizienter Verfahren zur Datenanalyse und -visualisierung</li>
+                        <li>Technologien: .NET (C#, ASP.NET Core), Python, SQL Server</li>
+                    </ul>
+                    <a href="https://drive.google.com/file/d/1zPazGEJl9pyEbR-EI68I0HswA4bzsf3S/view?usp=sharing" target="_blank" class="project-link" id="proj1-link">📄 Masterarbeit ansehen</a>
+                    <a href="https://github.com/Bikineh-Projekts/Maschinen" target="_blank" class="project-link" id="proj1-link2">💻 GitHub Repository</a>
+                    <a href="https://maschinen.onrender.com" target="_blank" class="project-link" id="proj1-link3">🌐 Live Demo Masterarbeit</a>
+                </div>
+
+                <div class="project-card">
+                    <h3 id="proj-market-title">Power BI Dashboard – Finanzmarkt-Datenvisualisierung</h3>
+                    <p style="margin-top: 10px;" id="proj-market-desc">
+                        Entwicklung einer End-to-End Datenpipeline zur Verarbeitung und Visualisierung von Finanzmarktdaten in nahezu Echtzeit.
+                    </p>
+                    <ul style="margin-top: 15px;" id="proj-market-list">
+                        <li>Konzeption und Betrieb einer Echtzeit-Datenpipeline (3 Finanz-APIs, inkrementelle Aktualisierung)</li>
+                        <li>Entwicklung eines Python-basierten ETL-Prozesses mit PostgreSQL</li>
+                        <li>Integration von PostgreSQL in Power BI (Native Query, SQL-Views)</li>
+                        <li>Entwicklung interaktiver Dashboards (RSI, EMA, SMA, Fundamentaldaten)</li>
+                        <li>Drill-Down-Analysen für Finanzinstrumente (AAPL, MSFT, GOOGL)</li>
+                    </ul>
+                    <a href="https://market-pipeline.onrender.com" target="_blank" class="project-link" id="proj-market-demo">🌐 Live Demo ansehen</a>
+                    <a href="https://github.com/Miladnd01/market-pipeline" target="_blank" class="project-link" id="proj-market-github">💻 GitHub Repository</a>
+                </div>
+
+                <div class="project-card">
+                    <h3 id="proj-graph-title">Shortest-Path Analyse in Graphen</h3>
+                    <p id="proj-graph-desc">
+                        Implementierung und Vergleich verschiedener Algorithmen zur Berechnung kürzester Pfade 
+                        in realen Netzwerk- und Straßengraphen. Fokus auf Performance-Optimierung, rekursiven SQL-Abfragen 
+                        und der Analyse von Peer-to-Peer- sowie Road-Network-Datasets.
+                    </p>
+                    <ul style="margin-top: 15px;" id="proj-graph-list">
+                        <li>BFS, DFS und Bidirectional BFS</li>
+                        <li>Performance-Optimierung durch Indexing und Adjazenzlisten</li>
+                        <li>Vergleich von UDF- und CTE-basierten Methoden</li>
+                        <li>Rekursive SQL-Abfragen mittels <code>WITH RECURSIVE</code></li>
+                        <li>Analyse auf Gnutella Peer-to-Peer und Texas Road Network Datensätzen</li>
+                        <li>Technologien: PostgreSQL, pgRouting, Python (NetworkX)</li>
+                        <li>System: Intel i7-9750H, 16 GB RAM, Work Mem 1250 MB, Cache 4 GB</li>
+                        <li>Ergebnisse: UDF schneller als CTE, Bidirectional BFS am effizientesten, CTE-Limits bei sehr großen Graphen</li>
+                        <li>Umsetzungsschritte: Repository klonen, PostgreSQL einrichten, Datensätze importieren, Algorithmen per SQL oder Python ausführen</li>
+                    </ul>
+                    <a href="https://drive.google.com/file/d/1un1coiAS_82-Wfou5ntCf7Vi5YGE7xXF/view?usp=sharing" target="_blank" class="project-link" id="proj-graph-link1">📄 Pre.Thesis ansehen</a>
+                    <a href="https://github.com/Bikineh-Projekts/graphsql.git" target="_blank" class="project-link" id="proj-graph-link2">💻 GitHub Repository</a>
+                </div>
+
+      <div class="project-card">
+    <h3 id="proj4-title">Microsoft 365, Azure & DevOps</h3>
+    <p id="proj4-desc">
+        Administration einer Microsoft-365-Testumgebung (Business Standard + Entra ID P1) sowie 
+        Aufbau einer CI/CD-Pipeline für eine .NET-Anwendung auf Microsoft Azure.
+    </p>
+    <ul style="margin-top: 15px;" id="proj4-list">
+        <li>Benutzeranlage, Lizenzverwaltung und Rollenkonzept (Least Privilege) in Microsoft 365</li>
+        <li>Multi-Faktor-Authentifizierung (MFA), Kontosperrung und Offboarding-Prozesse</li>
+        <li>Exchange Online: freigegebene Postfächer, Gruppen, Abwesenheitsnotizen & Weiterleitungen</li>
+        <li>CI/CD-Pipeline mit Azure DevOps, Docker und Azure Container Apps (.NET-Projekt „Maschinen“)</li>
+    </ul>
+
+
+    <a href="https://drive.google.com/file/d/1ILyAC1vKqlSgPbrPonMSdryeAYAclz9P/view?usp=drive_open" target="_blank" class="project-link">📄 Modul 1: Sicherheit & MFA (PDF)</a>
+    <a href="https://drive.google.com/file/d/1n_89GwKypf6qHycb_MNFIdBsYJHRN5VA/view" target="_blank" class="project-link">📄 Modul 2: Benutzeranlage & Kennwortreset (PDF)</a>
+    <a href="https://drive.google.com/file/d/194wrOJuB2_FyaYvn5F35luBUvE0mfZZ6/view" target="_blank" class="project-link">📄 Modul 3: Benutzer- & Lizenzverwaltung (PDF)</a>
+    <a href="https://drive.google.com/file/d/1Fk78nUW6ehT1Qo3F62R-lHHo4fKTVamd/view" target="_blank" class="project-link">📄 Modul 4: Exchange Online (PDF)</a>
+    <a href="https://drive.google.com/file/d/1ZKMVS3x_FH0HAXA49upNzpz1xIlKl5Gu/view" target="_blank" class="project-link">📄 Modul 5: DEVOPS PROJEKTDOKUMENTATION (PDF)</a>
+</div>
+                <div class="cta-section">
+                    <h3 style="color: white; margin-bottom: 15px;" id="more-projects">Weitere Projekte auf Anfrage</h3>
+                    <p id="more-projects-desc">Gerne stelle ich Ihnen detaillierte Projektdokumentationen und Code-Beispiele zur Verfügung.</p>
+                </div>
+            </section>
+
+            <section id="skills" class="tab-content" role="tabpanel" aria-labelledby="tab-skills">
+                <h2 id="skills-title">Technische Kompetenzen</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4 id="skills-prog">💻 Programmierung</h4>
+                        <ul>
+                            <li>C#</li>
+                            <li>SQL</li>
+                            <li>Python</li>
+                            <li>.NET Core MVC 6</li>
+                            <li>ASP.NET Core</li>
+                            <li>Entity Framework</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4 id="skills-db">🗄️ Datenbanken</h4>
+                        <ul id="skills-db-list">
+                            <li>SQL Server</li>
+                            <li>PostgreSQL</li>
+                            <li>Datenbankdesign</li>
+                            <li>Performance-Optimierung</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4 id="skills-auto">⚙️ Automatisierung</h4>
+                        <ul id="skills-auto-list">
+                            <li>SPS (TIA Portal)</li>
+                            <li>OPC UA/DA</li>
+                            <li>SCADA-Systeme</li>
+                            <li>Prozessoptimierung</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4 id="skills-enterprise">🏢 Enterprise Software</h4>
+                        <ul>
+                            <li>Winweb ERP</li>
+                            <li>Data Feed OPC Suite</li>
+                            <li>TOM, CSB System</li>
+                            <li>JobRouter, STARFACE</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 40px;" id="lang-skills">Sprachkenntnisse</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4 id="lang-de-title">🇩🇪 Deutsch</h4>
+                        <p id="lang-de-level">Fließend (C1)</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4 id="lang-en-title">🇬🇧 Englisch</h4>
+                        <p id="lang-en-level">Kenntnisse (B2)</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="docku" class="tab-content" role="tabpanel" aria-labelledby="tab-docku">
+                <h2 id="docku-title">
+                    Berufliche Nachweise & Abschlussdokumente / 
+                    Certificates & Academic Records
+                </h2>
+
+                <p class="certificate-desc" style="margin-bottom: 25px;">
+                    Diese Sammlung umfasst meine offiziellen akademischen Abschlussunterlagen sowie 
+                    qualifizierte berufliche Nachweise. Sie dokumentieren sowohl den erfolgreichen Abschluss 
+                    meines Masterstudiums als auch meine praktische Erfahrung und Leistungsfähigkeit 
+                    in früheren beruflichen Tätigkeiten.
+                    <br><br>
+                    This collection includes my official academic degree documents and certified employment records. 
+                    They demonstrate the successful completion of my Master's program as well as my practical 
+                    experience and performance in previous professional roles.
+                </p>
+
+                <div class="project-card">
+                    <h3 class="certificate-title">
+                        Masterabschluss – Universität Rostock /
+                        Master's Degree – University of Rostock
+                    </h3>
+
+                    <p class="certificate-text" style="margin-top: 15px;">
+                        Der Masterabschluss in Technischer Informatik bestätigt meine wissenschaftliche Qualifikation 
+                        sowie fundierte Kenntnisse in den Bereichen Informationstechnik, Datenanalyse, 
+                        Prozessoptimierung, Automatisierung und Softwareentwicklung.
+                        <br><br>
+                        The Master's degree in Technical Informatics certifies my academic qualification and 
+                        advanced expertise in information technology, data analysis, process optimization, 
+                        automation, and software development.
+                    </p>
+
+                    <a href="#entfernt"
+                       target="_blank"
+                       class="project-link"
+                       id="cert-all">
+                       📑 Alle Dokumente ansehen / View All Documents
+                    </a>
+                </div>
+            </section>
+
+            <section id="contact" class="tab-content" role="tabpanel" aria-labelledby="tab-contact">
+                <h2 id="contact-title">Kontakt aufnehmen</h2>
+                <p style="font-size: 1.1em; margin-bottom: 25px;" id="contact-intro">
+                    Ich freue mich darauf, von Ihnen zu hören! Ob für neue Projekte, Jobangebote 
+                    oder einfach zum Netzwerken – kontaktieren Sie mich gerne.
+                </p>
+
+                <div class="cta-section">
+                    <h3 style="color: white; margin-bottom: 20px;" id="contact-cta">Lassen Sie uns zusammenarbeiten!</h3>
+                    <p style="margin-bottom: 20px;" id="contact-cta-desc">
+                        Als motivierter IT-Spezialist mit fundierter Ausbildung und praktischer Erfahrung 
+                        bin ich bereit, meine Kenntnisse in einem innovativen Team einzubringen.
+                    </p>
+                    <a href="tel:+4915752457684" class="cta-button" id="contact-phone">📞 Anrufen</a>
+                    <a href="mailto:bikineh.work@gmail.com" class="cta-button" id="contact-email">✉️ E-Mail schreiben</a>
+                    <a href="https://www.linkedin.com/in/mohammadhossein-bikineh-b697b31b6" target="_blank" class="cta-button">💼 LinkedIn</a>
+                </div>
+
+                <div class="info-box">
+                    <h3 id="avail-title">Standort & Verfügbarkeit</h3>
+                    <p id="avail-location"><strong>📍 Aktueller Standort:</strong> Rostock, Deutschland</p>
+                    <p id="avail-status"><strong>✓ Status:</strong> Umzugsbereit</p>
+                    <p id="avail-ready"><strong>💼 Verfügbarkeit:</strong> Für neue Herausforderungen offen</p>
+                    <p style="margin-top: 15px;" id="avail-interests">
+                        <strong>Interessen:</strong> Fußball, Schwimmen, kontinuierliche Weiterbildung in IT-Trends
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 Mohammadhossein Bikineh - Portfolio | Letztes Update: Oktober 2025</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
