@@ -89,7 +89,7 @@ C = {
     'path-thesis': ('Masterarbeit (PDF)', 'Master’s thesis (PDF)'),
 
     'exp-h2': ('Erfahrung', 'Experience'),
-    'job1-h': ('Werkstudent Data Engineering & Datenanalyse', 'Working student, data engineering & data analysis'),
+    'job1-h': ('Wissenschaftliche Hilfskraft, Data Engineering & Datenanalyse', 'Research assistant, data engineering & data analysis'),
     'job1-org': ('Universität Rostock', 'University of Rostock'),
     'job1-list': ('<li>Performance-Vergleich von SQL-Abfragetechniken (rekursive CTEs und PL/pgSQL-Funktionen) in PostgreSQL auf 2 realen Netzwerken mit bis zu 1,38 Mio. Knoten und 1,92 Mio. Kanten, 30 Messwiederholungen je Tiefenstufe.</li><li>Ergebnis: PL/pgSQL-Funktionen erreichten Pfadlängen bis 1.054 Kanten, rekursive CTEs nur bis 19. Validierung mit pgRouting und NetworkX.</li>',
                   '<li>Performance comparison of SQL query techniques (recursive CTEs and PL/pgSQL functions) in PostgreSQL on 2 real networks with up to 1.38 million nodes and 1.92 million edges, 30 repetitions per depth level.</li><li>Result: PL/pgSQL functions reached path lengths of up to 1,054 edges, recursive CTEs only 19. Validated with pgRouting and NetworkX.</li>'),
@@ -295,7 +295,7 @@ EDU = '\n'.join(f'''          <div class="entry">
             {tx(f'{k}-h', 'h3')}
             {tx(f'{k}-p', 'p')}
             {tx(f'{k}-f', 'p') if f'{k}-f' in DE else ''}
-          </div>''' for d, k in [('10/2023 – 08/2025', 'e1'), ('10/2012 – 07/2016', 'e2')])
+          </div>''' for d, k in [('03/2023 – 08/2025', 'e1'), ('10/2012 – 07/2016', 'e2')])
 CERT = '\n'.join(f'''          <div class="entry">
             <time>{d}</time>
             {tx(f'{k}-h', 'h3')}
