@@ -116,7 +116,7 @@ a:hover { text-decoration-thickness: 2px; }
 .seg button { font: inherit; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.02em; color: var(--ink-2); background: transparent; border: 0; border-radius: 999px; padding: 0.3rem 0.7rem; cursor: pointer; }
 .seg button[aria-pressed="true"] { background: var(--panel); color: var(--ink); box-shadow: 0 1px 2px color-mix(in srgb, var(--ink) 18%, transparent); }
 .btn-sm { padding: 0.5rem 0.95rem; font-size: var(--step--1); }
-.menu-btn { display: none; align-items: center; gap: 0.55rem; font: inherit; font-size: var(--step--1); font-weight: 650; color: var(--ink); background: var(--panel); border: 1px solid color-mix(in srgb, var(--pipe) 55%, transparent); border-radius: var(--radius-s); padding: 0.45rem 0.75rem; cursor: pointer; }
+.menu-btn { display: none; align-items: center; justify-content: center; width: 2.6rem; height: 2.6rem; color: var(--ink); background: var(--panel); border: 1px solid color-mix(in srgb, var(--pipe) 55%, transparent); border-radius: 10px; padding: 0; cursor: pointer; }
 .burger, .burger::before, .burger::after { display: block; width: 16px; height: 2px; background: currentColor; border-radius: 2px; position: relative; transition: transform 180ms ease, background 180ms; }
 .burger::before, .burger::after { content: ""; position: absolute; left: 0; }
 .burger::before { top: -5px; } .burger::after { top: 5px; }
@@ -163,7 +163,7 @@ a:hover { text-decoration-thickness: 2px; }
 .pulse { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--run); box-shadow: 0 0 0 3px color-mix(in srgb, var(--run) 25%, transparent); }
 
 .hero-text { padding-top: clamp(0rem, 0.5vw, 0.5rem); }
-.name {
+h1.name {
   margin: 0;
   font-size: clamp(2.1rem, 1.3rem + 3.2vw, 3.9rem);
   font-weight: 800; font-stretch: 116%;
@@ -196,15 +196,10 @@ a:hover { text-decoration-thickness: 2px; }
 .status li { display: flex; align-items: center; gap: 0.5rem; }
 .status li::before { content: ""; width: 0.45rem; height: 0.45rem; border-radius: 50%; background: var(--pipe); flex: none; }
 
-@media (max-width: 640px) {
-  .hero-card { grid-template-columns: 1fr; }
-  .portrait { width: 150px; }
-  .portrait .avail { position: static; margin-top: 0.6rem; }
-  .name { font-stretch: 104%; }
-  .roles { gap: 0.25rem 1rem; }
-  .roles li { padding: 0; border: 0; }
-}
+.only-mobile { display: none !important; }
+.status li.on::before { background: var(--run); box-shadow: 0 0 0 3px color-mix(in srgb, var(--run) 22%, transparent); }
 
+/* Mobile: compact profile header (photo beside the name), then a clean single column */
 /* ---------- Signal path (the one memorable element) ---------- */
 .path { margin-top: clamp(2rem, 1.5rem + 2vw, 3.5rem); }
 .path-frame {
@@ -341,3 +336,34 @@ footer p { margin: 0 0 0.35rem; max-width: var(--measure); }
   body { background: #fff; color: #000; }
   section.block { border: 0; padding-block: 1rem; }
 }
+
+/* ---------- Mobile (kept last so it wins the cascade) ---------- */
+@media (max-width: 640px) {
+  .hero { padding-block: 1.5rem 1rem; }
+  .hero-card { grid-template-columns: 84px minmax(0, 1fr); column-gap: 1rem; row-gap: 0; align-items: center; }
+  .hero-text { display: contents; }
+  .portrait { grid-column: 1; grid-row: 1; width: 84px; }
+  .portrait img { aspect-ratio: 1; border-radius: 16px; box-shadow: none; }
+  .portrait .avail { display: none; }
+  .hero h1.name { grid-column: 2; grid-row: 1; margin: 0; font-size: min(7.4vw, 1.85rem); font-stretch: 86%; line-height: 1.04; letter-spacing: -0.015em; overflow-wrap: normal; word-break: keep-all; hyphens: none; }
+  .roles, .tagline, .lead, .actions, .status { grid-column: 1 / -1; }
+  .roles { margin-top: 1rem; gap: 0.4rem; }
+  .roles li, .roles li:first-child { padding: 0.25rem 0.65rem; border: 1px solid color-mix(in srgb, var(--signal) 35%, transparent); border-radius: 999px; font-size: 0.82rem; background: color-mix(in srgb, var(--signal) 7%, transparent); }
+  .tagline { margin-top: 1.1rem; font-size: 1.4rem; max-width: none; }
+  .lead { font-size: 1rem; margin-bottom: 1.25rem; }
+  .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .actions .btn { justify-content: center; padding: 0.8rem 0.6rem; font-size: 0.95rem; }
+  .status { flex-direction: column; gap: 0.45rem; }
+  .only-mobile { display: flex !important; }
+  .path { margin-top: 1.75rem; }
+  .path-head h2 { font-size: 1.15rem; }
+  .block-head h2 { font-size: 1.6rem; }
+  .figure .num { font-size: 2.5rem; }
+  .figure .cap { max-width: none; }
+  .block-head p { font-size: 1rem; }
+  .node .dot { width: 2.8rem; height: 2.8rem; font-size: 0.85rem; }
+  .line::before { left: 1.4rem; }
+  .readout .value { font-size: 1.45rem; }
+  .contact .mail { font-size: 1.35rem; }
+}
+

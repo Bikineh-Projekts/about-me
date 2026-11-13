@@ -350,7 +350,7 @@ PAGE = f'''<!DOCTYPE html>
           <button type="button" data-lang="de" aria-pressed="true">DE</button><button type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
         <a class="btn btn-primary btn-sm cta-top" href="#contact" data-i18n="nav-contact">{DE['nav-contact']}</a>
-        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="burger" aria-hidden="true"></span><span data-i18n="menu">{DE['menu']}</span></button>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="{DE['menu']}" data-i18n-attr="aria-label:menu"><span class="burger" aria-hidden="true"></span></button>
       </div>
     </div>
   </header>
@@ -378,6 +378,7 @@ PAGE = f'''<!DOCTYPE html>
               <a class="btn btn-quiet" href="#projects" data-i18n="btn-proj">{DE['btn-proj']}</a>
             </div>
             <ul class="status">
+              <li class="on only-mobile" data-i18n="status-1">{DE['status-1']}</li>
               <li data-i18n="status-2">{DE['status-2']}</li>
               <li data-i18n="status-3">{DE['status-3']}</li>
             </ul>
