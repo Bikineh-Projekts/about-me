@@ -302,11 +302,6 @@ section.block { padding-block: clamp(2.5rem, 2rem + 3vw, 4.5rem); border-top: 1p
 .legend span.basic::before { background: transparent; border-style: dashed; }
 @media (max-width: 760px) { .layer { grid-template-columns: 1fr; } }
 
-.ai { margin-top: clamp(1.75rem, 1.25rem + 1.5vw, 2.75rem); display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: 0.5rem var(--gap); padding: 1.25rem; background: var(--panel); border-radius: var(--radius-m); border: 1px solid color-mix(in srgb, var(--pipe) 45%, transparent); }
-.ai h3 { margin: 0; font-size: var(--step-0); font-weight: 700; }
-.ai p { margin: 0 0 0.6rem; max-width: var(--measure); }
-.ai p:last-child { margin-bottom: 0; }
-@media (max-width: 760px) { .ai { grid-template-columns: 1fr; } }
 
 /* Education + certificates */
 .split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }

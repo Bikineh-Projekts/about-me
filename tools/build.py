@@ -157,12 +157,6 @@ C = {
     'c-oee': ('OEE- und Stillstandsanalyse', 'OEE and downtime analysis'),
     'c-support': ('1st-/2nd-Level-Support', '1st/2nd-level support'),
     'c-erp': ('ERP-Betreuung (Winweb)', 'ERP support (Winweb)'),
-    'ai-h': ('Arbeiten mit KI', 'Working with AI'),
-    'ai-p1': ('Ich setze Claude und Claude Code im Alltag als Werkzeug ein: für Recherche, Code-Reviews und Automatisierung. Ein Beispiel ist meine eigene Jobsuche, die ich mit Python, GitHub und Claude Code automatisiert habe, mit Deduplizierung, Excel-Berichten und Passungsprüfung gegen meinen Lebenslauf.',
-              'I use Claude and Claude Code as everyday tools for research, code reviews and automation. One example is my own job search, which I automated with Python, GitHub and Claude Code, including deduplication, Excel reports and a fit check against my CV.'),
-    'ai-p2': ('Was die KI liefert, prüfe ich selbst gegen Code, Daten und Quellen.',
-              'I check what the AI produces against the code, the data and the sources myself.'),
-
     'edu-h2': ('Ausbildung & Nachweise', 'Education & certificates'),
     'edu-col1': ('Studium', 'Degrees'), 'edu-col2': ('Zertifikate', 'Certificates'),
     'e1-h': ('M.Sc. Informationstechnik / Technische Informatik', 'M.Sc. Information Technology / Technical Computer Science'),
@@ -429,13 +423,6 @@ PAGE = f'''<!DOCTYPE html>
 {layers_html}
         </div>
         <p class="legend"><span data-i18n="lg-solid">{DE['lg-solid']}</span><span class="basic" data-i18n="lg-basic">{DE['lg-basic']}</span></p>
-        <div class="ai">
-          {tx('ai-h', 'h3')}
-          <div>
-            {tx('ai-p1', 'p')}
-            {tx('ai-p2', 'p')}
-          </div>
-        </div>
       </div>
     </section>
 
