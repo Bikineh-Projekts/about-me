@@ -23,7 +23,6 @@ L = {
     'market_gh': f'{GH}/market_pipeline-Aktiv',
     'graph_gh': f'{GH}/graphsql',
     'graph_pdf': 'https://drive.google.com/file/d/1un1coiAS_82-Wfou5ntCf7Vi5YGE7xXF/view?usp=sharing',
-    'docs_all': '#entfernt',
     'm365': [
         'https://drive.google.com/file/d/1ILyAC1vKqlSgPbrPonMSdryeAYAclz9P/view?usp=drive_open',
         'https://drive.google.com/file/d/1n_89GwKypf6qHycb_MNFIdBsYJHRN5VA/view',
@@ -184,7 +183,6 @@ C = {
     'z3-p': ('Je 272 Stunden, Bewertung 90/100 und 89/100 („sehr gut“).', '272 hours each, rated 90/100 and 89/100 ("very good").'),
     'z4-h': ('Intelligentes Gebäudemanagement', 'Intelligent building management'),
     'z4-p': ('64 Stunden, Bewertung 88/100.', '64 hours, rated 88/100.'),
-    'docs': ('Alle Zeugnisse und Abschlussdokumente (PDF)', 'All references and degree documents (PDF)'),
 
     'contact-h2': ('Kontakt', 'Contact'),
     'contact-p': ('Am schnellsten erreichen Sie mich per E-Mail.', 'Email is the fastest way to reach me.'),
@@ -454,7 +452,6 @@ PAGE = f'''<!DOCTYPE html>
 {CERT}
           </div>
         </div>
-        <p class="docs links">{ext(L['docs_all'], tx('docs'))}</p>
       </div>
     </section>
 
