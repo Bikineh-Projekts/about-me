@@ -1,237 +1,310 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio von Mohammadhossein Bikineh: M.Sc. Technische Informatik, IT/OT-Integration, Produktions-IT und Data Engineering">
-    <title>Mohammadhossein Bikineh - Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohammadhossein Bikineh | IT/OT-Integration &amp; Data Engineering</title>
+  <meta name="description" content="Portfolio von Mohammadhossein Bikineh, M.Sc. Technische Informatik: Maschinendatenerfassung mit Siemens S7 und OPC, SQL Server, PostgreSQL und Python. Rostock, deutschlandweit umzugsbereit." data-i18n-attr="content:meta-desc">
+  <link rel="canonical" href="https://bikineh-projekts.github.io/about-me/">
+  <meta name="theme-color" content="#e8ecef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#131b23" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Mohammadhossein Bikineh | IT/OT-Integration &amp; Data Engineering">
+  <meta property="og:description" content="Portfolio von Mohammadhossein Bikineh, M.Sc. Technische Informatik: Maschinendatenerfassung mit Siemens S7 und OPC, SQL Server, PostgreSQL und Python. Rostock, deutschlandweit umzugsbereit.">
+  <meta property="og:url" content="https://bikineh-projekts.github.io/about-me/">
+  <meta property="og:image" content="https://bikineh-projekts.github.io/about-me/assets/portrait.jpg">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Mohammadhossein Bikineh", "jobTitle": "IT/OT-Integration & Data Engineering", "email": "mailto:bikineh.work@gmail.com", "url": "https://bikineh-projekts.github.io/about-me/", "image": "https://bikineh-projekts.github.io/about-me/assets/portrait.jpg", "sameAs": ["https://www.linkedin.com/in/bikineh", "https://github.com/Bikineh-Projekts"], "address": {"@type": "PostalAddress", "addressLocality": "Rostock", "addressCountry": "DE"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "Universität Rostock"}, "knowsLanguage": ["de", "en", "fa"], "knowsAbout": ["Siemens S7", "OPC", "SQL Server", "PostgreSQL", "Python", "ETL", "MES", "OEE", "C#", "ASP.NET Core"]}</script>
 </head>
 <body>
-    <div class="progress-container">
-        <div class="progress-bar" id="progressBar"></div>
+  <a class="skip" href="#main" data-i18n="skip">Zum Inhalt springen</a>
+
+  <header class="bar">
+    <div class="wrap">
+      <a class="brand" href="#top">M. Bikineh</a>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="#experience" data-i18n="nav-exp">Erfahrung</a>
+        <a href="#projects" data-i18n="nav-proj">Projekte</a>
+        <a href="#skills" data-i18n="nav-skills">Kompetenzen</a>
+        <a href="#education" data-i18n="nav-edu">Ausbildung</a>
+        <a href="#contact" data-i18n="nav-contact">Kontakt</a>
+      </nav>
+      <button class="lang" id="lang" type="button" aria-label="Sprache auf Englisch umstellen">EN</button>
     </div>
+  </header>
 
-    <button class="scroll-to-top" onclick="scrollToTop()" aria-label="Nach oben scrollen">↑</button>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <h1 data-i18n="hero-h1">Maschinendaten von der Steuerung bis zur Entscheidung.</h1>
+            <p class="lead" data-i18n-html="hero-lead">Ich bin <strong>Mohammadhossein Bikineh</strong>, M.Sc. Technische Informatik. Ich verbinde Produktionsanlagen mit Datenbanken und mache aus Signalen Kennzahlen, mit denen eine Produktionsleitung arbeiten kann.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="mailto:bikineh.work@gmail.com" data-i18n="btn-mail">E-Mail schreiben</a>
+              <a class="btn btn-quiet" href="#projects" data-i18n="btn-proj">Projekte ansehen</a>
+            </div>
+            <ul class="status">
+              <li class="on" data-i18n="status-1">Ab sofort verfügbar</li>
+              <li data-i18n="status-2">Rostock, deutschlandweit umzugsbereit</li>
+              <li data-i18n="status-3">Deutsch C1, Englisch B2</li>
+            </ul>
+          </div>
+          <figure class="portrait">
+            <picture>
+              <source srcset="assets/portrait.webp" type="image/webp">
+              <img src="assets/portrait.jpg" width="480" height="480" alt="Porträt von Mohammadhossein Bikineh" data-i18n-attr="alt:portrait-alt" fetchpriority="high">
+            </picture>
+          </figure>
+        </div>
 
-    <div class="container">
-        <div id="header-placeholder"></div>
+        <div class="path" aria-labelledby="path-h2">
+          <div class="path-frame">
+            <div class="path-head">
+              <h2 id="path-h2" data-i18n="path-h2">So läuft ein Signal durch mein Masterprojekt</h2>
+              <p data-i18n="path-hint">Wählen Sie eine Station.</p>
+            </div>
+            <div class="line">
+              <span class="packet" aria-hidden="true"></span>
+          <button class="node" type="button" aria-pressed="false" aria-controls="readout">
+            <span class="dot" aria-hidden="true">S7</span>
+            <span class="name" data-i18n="node-1">Steuerung</span>
+            <span class="sub" data-i18n="node-1s">Siemens S7</span>
+          </button>
+          <button class="node" type="button" aria-pressed="false" aria-controls="readout">
+            <span class="dot" aria-hidden="true">OPC</span>
+            <span class="name" data-i18n="node-2">Erfassung</span>
+            <span class="sub" data-i18n="node-2s">OPC DA, Softing</span>
+          </button>
+          <button class="node" type="button" aria-pressed="false" aria-controls="readout">
+            <span class="dot" aria-hidden="true">SQL</span>
+            <span class="name" data-i18n="node-3">Datenbank</span>
+            <span class="sub" data-i18n="node-3s">SQL Server</span>
+          </button>
+          <button class="node" type="button" aria-pressed="false" aria-controls="readout">
+            <span class="dot" aria-hidden="true">.NET</span>
+            <span class="name" data-i18n="node-4">Anwendung</span>
+            <span class="sub" data-i18n="node-4s">ASP.NET Core</span>
+          </button>
+          <button class="node" type="button" aria-pressed="false" aria-controls="readout">
+            <span class="dot" aria-hidden="true">OEE</span>
+            <span class="name" data-i18n="node-5">Analyse</span>
+            <span class="sub" data-i18n="node-5s">OEE, Fehlerdiagnose</span>
+          </button>
+            </div>
+            <div class="readout" id="readout" aria-live="polite">
+              <div class="value" id="readout-value">2 Maschinen, 94 Alarmsignale</div>
+              <p class="text" id="readout-text">Zwei VARIOVAC-Verpackungsmaschinen mit Siemens-S7-Steuerung liefern Prozess-, Zustands- und Leistungsdaten sowie 94 Alarmsignale.</p>
+            </div>
+            <p class="links"><a href="https://github.com/Bikineh-Projekts/Maschinen" target="_blank" rel="noopener"><span data-i18n="path-code">Code auf GitHub</span></a><a href="https://maschinen.onrender.com" target="_blank" rel="noopener"><span data-i18n="path-demo">Live-Demo</span></a><a href="https://drive.google.com/file/d/1zPazGEJl9pyEbR-EI68I0HswA4bzsf3S/view?usp=sharing" target="_blank" rel="noopener"><span data-i18n="path-thesis">Masterarbeit (PDF)</span></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <button class="menu-toggle"
-            onclick="toggleMenu()"
-            aria-expanded="false"
-            aria-controls="tabsMenu">
-            ☰ Menü
-        </button>
+    <section class="block" id="experience" aria-labelledby="exp-h2">
+      <div class="wrap">
+        <div class="block-head"><h2 id="exp-h2" data-i18n="exp-h2">Erfahrung</h2></div>
+        <ol class="timeline">
+        <li class="job">
+          <time>11/2025 – 10/2026</time>
+          <div>
+            <h3 data-i18n="job1-h">Werkstudent Data Engineering &amp; Datenanalyse</h3>
+            <p class="org" data-i18n="job1-org">Universität Rostock</p>
+            <ul data-i18n-html="job1-list"><li>Performance-Vergleich von SQL-Abfragetechniken (rekursive CTEs und PL/pgSQL-Funktionen) in PostgreSQL auf 2 realen Netzwerken mit bis zu 1,38 Mio. Knoten und 1,92 Mio. Kanten, 30 Messwiederholungen je Tiefenstufe.</li><li>Ergebnis: PL/pgSQL-Funktionen erreichten Pfadlängen bis 1.054 Kanten, rekursive CTEs nur bis 19. Validierung mit pgRouting und NetworkX.</li></ul>
+          </div>
+        </li>
+        <li class="job key">
+          <time>10/2024 – 10/2025</time>
+          <div>
+            <h3 data-i18n="job2-h">Werkstudent Produktions-IT, Datenanalyse &amp; IT-Support</h3>
+            <p class="org" data-i18n="job2-org">Rostocker Wurst- und Schinkenspezialitäten GmbH, EDV-Abteilung</p>
+            <ul data-i18n-html="job2-list"><li>Automatisierte Maschinendatenerfassung für 2 Verpackungsmaschinen (VARIOVAC, Siemens S7): Prozess-, Zustands- und Leistungsdaten sowie 94 Alarmsignale gelangen über OPC DA und ODBC in SQL Server und ersetzen die papierbasierte Erfassung.</li><li>Normalisiertes Datenmodell mit 11 Tabellen als Grundlage für OEE-, Stillstands- und Temperaturanalysen.</li><li>SQL-Abfragen, Stored Procedures und Dashboards, die der Produktionsleitung Leistung und Störungen der Maschinen sichtbar machen.</li><li>1st-/2nd-Level-IT-Support (Windows, Microsoft 365), Active Directory und Betreuung des Warenwirtschaftssystems Winweb.</li></ul>
+          </div>
+        </li>
+        <li class="job">
+          <time>03/2023 – 09/2024</time>
+          <div>
+            <h3 data-i18n="job3-h">Werkstudent IT-Support (1st-/2nd-Level)</h3>
+            <p class="org" data-i18n="job3-org">Deutsches Rotes Kreuz (DRK), Rostock</p>
+            <ul data-i18n-html="job3-list"><li>1st-/2nd-Level-Support in Windows und Microsoft 365 (Outlook, Teams, SharePoint) sowie Bearbeitung von Störungen und Service Requests.</li><li>Anwenderschulungen und Softwareeinführungen zur Reduzierung wiederkehrender Anfragen.</li></ul>
+          </div>
+        </li>
+        <li class="job">
+          <time>10/2018 – 12/2020</time>
+          <div>
+            <h3 data-i18n="job4-h">IT- und Datenbank-Support</h3>
+            <p class="org" data-i18n="job4-org">Avangar Darak Co., IT-Partner der Medizinischen Universität Shiraz, Iran</p>
+            <ul data-i18n-html="job4-list"><li>Installation und Konfiguration von SQL-Server-Umgebungen einschließlich automatisierter Backups, Zugriffsrechte und Firewall-Regeln.</li><li>Unterstützung bei Datenbankmigrationen sowie Behebung von Server- und Verbindungsproblemen.</li></ul>
+          </div>
+        </li>
+        </ol>
+      </div>
+    </section>
 
-        <nav class="tabs" id="tabsMenu" role="tablist">
-            <button class="tab-button active" onclick="showTab('about', event)" id="tab-about" role="tab" aria-selected="true" aria-controls="about">Über mich</button>
-            <button class="tab-button" onclick="showTab('projects', event)" id="tab-projects" role="tab" aria-selected="false" aria-controls="projects">Projekte</button>
-            <button class="tab-button" onclick="showTab('skills', event)" id="tab-skills" role="tab" aria-selected="false" aria-controls="skills">Kompetenzen</button>
-            <button class="tab-button" onclick="showTab('docku', event)" id="tab-docku" role="tab" aria-selected="false" aria-controls="docku">Zertifikate</button>
-            <button class="tab-button" onclick="showTab('contact', event)" id="tab-contact" role="tab" aria-selected="false" aria-controls="contact">Kontakt</button>
-        </nav>
+    <section class="block" id="projects" aria-labelledby="proj-h2">
+      <div class="wrap">
+        <div class="block-head"><h2 id="proj-h2" data-i18n="proj-h2">Projekte</h2></div>
+      <article class="proj">
+        <p class="figure"><span class="num">94</span><span class="cap" data-i18n="p1-cap">Alarmsignale aus 2 Maschinen, live erfasst</span></p>
+        <div>
+          <h3 data-i18n="p1-h">Masterarbeit: Analyse-Software für Verpackungsmaschinen</h3>
+          <p class="intro" data-i18n="p1-intro">In Kooperation mit der Rostocker Wurst- und Schinkenspezialitäten GmbH. Den Datenweg zeigt die Grafik oben.</p>
+          <ul data-i18n-html="p1-list"><li>Erfassung über OPC DA (Softing dataFEED OPC Suite) und ODBC in SQL Server, Datenmodell mit 11 Tabellen.</li><li>Webanwendung mit 9 Auswertungsansichten, im Werk produktiv genutzt.</li><li>Leistungsermittlung aus SPS-Zählerständen und Häufigkeitsanalyse der Alarm- und Störungsmeldungen.</li><li>Regression der Temperaturverläufe und Fehlermodell mit 5 Einflussfaktoren, daraus 4 Empfehlungen.</li></ul>
+            <p class="tech"><span data-i18n="p1-tech">Siemens S7, OPC DA, ODBC, SQL Server, C#, ASP.NET Core, Entity Framework Core, Docker</span></p>
+          <p class="links"><a href="https://github.com/Bikineh-Projekts/Maschinen" target="_blank" rel="noopener"><span data-i18n="gh">GitHub</span></a><a href="https://maschinen.onrender.com" target="_blank" rel="noopener"><span data-i18n="path-demo">Live-Demo</span></a><a href="https://drive.google.com/file/d/1zPazGEJl9pyEbR-EI68I0HswA4bzsf3S/view?usp=sharing" target="_blank" rel="noopener"><span data-i18n="path-thesis">Masterarbeit (PDF)</span></a></p>
+        </div>
+      </article>
+      <article class="proj">
+        <p class="figure"><span class="num">30 min</span><span class="cap" data-i18n="p2-cap">ETL-Takt während der US-Handelszeit, vollautomatisch</span></p>
+        <div>
+          <h3 data-i18n="p2-h">Market Data Pipeline &amp; Dashboard</h3>
+          <p class="intro" data-i18n="p2-intro">Eine Datenpipeline, die ohne manuelles Zutun läuft: von drei REST-APIs über PostgreSQL bis zu Dashboard und Power BI.</p>
+          <ul data-i18n-html="p2-list"><li>Python-ETL für Finnhub, Alpha Vantage und Twelve Data: Kurse, Fundamentaldaten und 4 technische Indikatoren.</li><li>PostgreSQL mit DIM-/FACT-/LOG-Datenmodell, idempotenten Upserts, 17 BI-Views und Power-BI-Measures (DAX).</li><li>GitHub Actions: ETL alle 30 Minuten plus nächtlicher Volllauf, wöchentliches Backup, monatliche Wartung.</li><li>CI mit automatisierten Tests (pytest), Web-Dashboard mit Pipeline-Monitoring, Bereitstellung mit Docker.</li></ul>
+            <p class="tech"><span data-i18n="p2-tech">Python, PostgreSQL, SQL, REST-APIs, GitHub Actions, Docker, Power BI</span></p>
+          <p class="links"><a href="https://github.com/Bikineh-Projekts/market_pipeline-Aktiv" target="_blank" rel="noopener"><span data-i18n="gh">GitHub</span></a></p>
+        </div>
+      </article>
+      <article class="proj">
+        <p class="figure"><span class="num" data-i18n="p3-num">1.054</span><span class="cap" data-i18n="p3-cap">Kanten Pfadlänge mit PL/pgSQL, mit rekursiven CTEs nur 19</span></p>
+        <div>
+          <h3 data-i18n="p3-h">Kürzeste Pfade in großen Graphen mit PostgreSQL</h3>
+          <p class="intro" data-i18n="p3-intro">Welcher SQL-Ansatz skaliert, wenn das Netz groß wird? Gemessen statt vermutet.</p>
+          <ul data-i18n-html="p3-list"><li>Gnutella-P2P-Netz (6.301 Knoten, 20.777 Kanten) und Straßennetz Texas (1,38 Mio. Knoten, 1,92 Mio. Kanten).</li><li>BFS, DFS und Bidirectional BFS als rekursive CTEs und als PL/pgSQL-Funktionen, 30 Messwiederholungen je Tiefenstufe.</li><li>CTEs sind bei Pfaden unter 5 Kanten schneller, PL/pgSQL-Funktionen skalieren deutlich weiter.</li><li>Optimierung durch Indexierung, Adjazenzlisten und PostgreSQL-Konfiguration, Validierung mit pgRouting und NetworkX.</li></ul>
+          <p class="links"><a href="https://github.com/Bikineh-Projekts/graphsql" target="_blank" rel="noopener"><span data-i18n="gh">GitHub</span></a><a href="https://drive.google.com/file/d/1un1coiAS_82-Wfou5ntCf7Vi5YGE7xXF/view?usp=sharing" target="_blank" rel="noopener"><span data-i18n="p3-report">Projektbericht (PDF)</span></a></p>
+        </div>
+      </article>
+      <article class="proj">
+        <p class="figure"><span class="num">5</span><span class="cap" data-i18n="p4-cap">dokumentierte Module, von MFA bis CI/CD</span></p>
+        <div>
+          <h3 data-i18n="p4-h">Microsoft 365, Azure &amp; DevOps</h3>
+          <p class="intro" data-i18n="p4-intro">Eine Microsoft-365-Testumgebung (Business Standard, Entra ID P1) und eine CI/CD-Pipeline für das .NET-Projekt aus der Masterarbeit.</p>
+          <ul data-i18n-html="p4-list"><li>Benutzeranlage, Lizenzverwaltung und Rollenkonzept nach Least Privilege.</li><li>Multi-Faktor-Authentifizierung, Kontosperrung und Offboarding.</li><li>Exchange Online: freigegebene Postfächer, Gruppen, Abwesenheitsnotizen und Weiterleitungen.</li><li>CI/CD mit Azure DevOps, Docker und Azure Container Apps.</li></ul>
+          <p class="links"><a href="https://drive.google.com/file/d/1ILyAC1vKqlSgPbrPonMSdryeAYAclz9P/view?usp=drive_open" target="_blank" rel="noopener"><span data-i18n="p4-m1">Modul 1: Sicherheit &amp; MFA</span></a><a href="https://drive.google.com/file/d/1n_89GwKypf6qHycb_MNFIdBsYJHRN5VA/view" target="_blank" rel="noopener"><span data-i18n="p4-m2">Modul 2: Benutzer &amp; Kennwörter</span></a><a href="https://drive.google.com/file/d/194wrOJuB2_FyaYvn5F35luBUvE0mfZZ6/view" target="_blank" rel="noopener"><span data-i18n="p4-m3">Modul 3: Lizenzen</span></a><a href="https://drive.google.com/file/d/1Fk78nUW6ehT1Qo3F62R-lHHo4fKTVamd/view" target="_blank" rel="noopener"><span data-i18n="p4-m4">Modul 4: Exchange Online</span></a><a href="https://drive.google.com/file/d/1ZKMVS3x_FH0HAXA49upNzpz1xIlKl5Gu/view" target="_blank" rel="noopener"><span data-i18n="p4-m5">Modul 5: DevOps</span></a></p>
+        </div>
+      </article>
+      </div>
+    </section>
 
-        <main>
-            <section id="about" class="tab-content active" role="tabpanel" aria-labelledby="tab-about">
-                <h2 id="about-title">Über mich</h2>
-                <p style="font-size: 1.05em; line-height: 1.7; margin-bottom: 25px;" id="about-intro">Absolvent M.Sc. Technische Informatik (Universität Rostock) mit Werkstudentenerfahrung in Produktions-IT und Data Engineering. Mein Schwerpunkt: <strong>Maschinen- und Produktionsdaten von der Steuerung bis zur Auswertung</strong>, also Anbindung über OPC, Speicherung in SQL Server oder PostgreSQL und Analysen zu Leistung, Störungen und OEE. Ich suche einen Berufseinstieg in Produktions-IT, MES, IT/OT-Integration oder Data Engineering.</p>
+    <section class="block" id="skills" aria-labelledby="skills-h2">
+      <div class="wrap">
+        <div class="block-head">
+          <h2 id="skills-h2" data-i18n="skills-h2">Kompetenzen</h2>
+          <p data-i18n="skills-p">Geordnet nach dem Weg, den Daten in einer Fabrik nehmen.</p>
+        </div>
+        <div class="layers">
+        <div class="layer">
+          <h3><span data-i18n="l1-h">Maschinenanbindung</span><small data-i18n="l1-s">OT-Ebene</small></h3>
+          <ul class="chips"><li>Siemens S7</li><li>OPC DA</li><li>Softing dataFEED OPC Suite</li><li>ODBC</li><li data-i18n="c-mde">Maschinen- und Betriebsdatenerfassung</li><li class="basic">OPC UA</li><li class="basic" data-i18n="c-sps">SPS-Programmierung (TIA Portal)</li><li class="basic" data-i18n="c-mes">MES-/SCADA-Konzepte</li></ul>
+        </div>
+        <div class="layer">
+          <h3><span data-i18n="l2-h">Datenbanken &amp; Auswertung</span><small data-i18n="l2-s">Daten-Ebene</small></h3>
+          <ul class="chips"><li>SQL Server (T-SQL, Stored Procedures, SSDT)</li><li>PostgreSQL (PL/pgSQL)</li><li data-i18n="c-model">Datenmodellierung (DIM/FACT/LOG)</li><li>Python (pandas)</li><li>ETL</li><li>Dashboards</li><li data-i18n="c-oee">OEE- und Stillstandsanalyse</li><li class="basic">Power BI</li></ul>
+        </div>
+        <div class="layer">
+          <h3><span data-i18n="l3-h">Anwendungen &amp; Automatisierung</span><small data-i18n="l3-s">Software-Ebene</small></h3>
+          <ul class="chips"><li>C#</li><li>ASP.NET Core MVC (.NET 8)</li><li>Entity Framework Core</li><li>Docker</li><li>Git</li><li>GitHub Actions</li><li class="basic">Azure DevOps</li></ul>
+        </div>
+        <div class="layer">
+          <h3><span data-i18n="l4-h">IT-Betrieb</span><small data-i18n="l4-s">Arbeitsplatz-Ebene</small></h3>
+          <ul class="chips"><li>Windows 10/11</li><li>Active Directory</li><li>Microsoft 365</li><li>Entra ID</li><li>Exchange Online</li><li data-i18n="c-erp">ERP-Betreuung (Winweb)</li><li data-i18n="c-support">1st-/2nd-Level-Support</li></ul>
+        </div>
+        </div>
+        <p class="legend"><span data-i18n="lg-solid">praxiserprobt</span><span class="basic" data-i18n="lg-basic">Grundlagen</span></p>
+        <div class="ai">
+          <h3 data-i18n="ai-h">Arbeiten mit KI</h3>
+          <div>
+            <p data-i18n="ai-p1">Ich setze Claude und Claude Code im Alltag als Werkzeug ein: für Recherche, Code-Reviews und Automatisierung. Ein Beispiel ist meine eigene Jobsuche, die ich mit Python, GitHub und Claude Code automatisiert habe, mit Deduplizierung, Excel-Berichten und Passungsprüfung gegen meinen Lebenslauf.</p>
+            <p data-i18n="ai-p2">Was die KI liefert, prüfe ich selbst gegen Code, Daten und Quellen. Auch diese Website ist so entstanden: ohne Framework, mit selbst gehosteter Schrift und ohne Tracking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <h3 id="exp-title">Berufserfahrung</h3>
-                <div class="experience-item">
-                    <div class="date" id="job1-date">November 2025 – Oktober 2026</div>
-                    <div class="company" id="job1-title">Werkstudent | Data Engineering & Datenanalyse | Universität Rostock</div>
-                    <ul id="job1-list"><li>Performance-Vergleich von SQL-Abfragetechniken (rekursive CTEs und PL/pgSQL-Funktionen) in PostgreSQL auf 2 realen Netzwerken mit bis zu 1,38 Mio. Knoten und 1,92 Mio. Kanten, 30 Messwiederholungen je Tiefenstufe</li><li>Ergebnis: PL/pgSQL-Funktionen erreichten Pfadlängen bis 1.054 Kanten, rekursive CTEs nur bis 19; Validierung mit pgRouting und NetworkX</li></ul>
-                </div>
-                <div class="experience-item">
-                    <div class="date" id="job2-date">Oktober 2024 – Oktober 2025</div>
-                    <div class="company" id="job2-title">Werkstudent | Produktions-IT, Datenanalyse & IT-Support (EDV-Abteilung) | Rostocker Wurst- und Schinkenspezialitäten GmbH</div>
-                    <ul id="job2-list"><li>Aufbau einer automatisierten Maschinendatenerfassung für 2 Verpackungsmaschinen (VARIOVAC, Siemens S7): Prozess-, Zustands- und Leistungsdaten sowie 94 Alarmsignale gelangen über OPC DA (Softing dataFEED) und ODBC in SQL Server und ersetzen die papierbasierte Erfassung</li><li>Entwurf eines normalisierten Datenmodells mit 11 Tabellen als Grundlage für OEE-, Stillstands- und Temperaturanalysen</li><li>SQL-Abfragen, Stored Procedures und Dashboards, die der Produktionsleitung Leistung und Störungen der Maschinen sichtbar machen</li><li>1st-/2nd-Level-IT-Support (Windows, Microsoft 365), Active Directory und Betreuung des Warenwirtschaftssystems Winweb</li></ul>
-                </div>
-                <div class="experience-item">
-                    <div class="date" id="job3-date">März 2023 – September 2024</div>
-                    <div class="company" id="job3-title">Werkstudent | IT-Support (1st-/2nd-Level) | Deutsches Rotes Kreuz (DRK), Rostock</div>
-                    <ul id="job3-list"><li>1st-/2nd-Level-Support in Windows und Microsoft 365 (Outlook, Teams, SharePoint) sowie Bearbeitung von Störungen und Service Requests</li><li>Anwenderschulungen und Softwareeinführungen zur Reduzierung wiederkehrender Anfragen</li></ul>
-                </div>
-                <div class="experience-item">
-                    <div class="date" id="job4-date">Oktober 2018 – Dezember 2020</div>
-                    <div class="company" id="job4-title">Mitarbeiter | IT- & Datenbank-Support | Avangar Darak Co., IT-Partner der Medizinischen Universität Shiraz, Iran</div>
-                    <ul id="job4-list"><li>Installation und Konfiguration von SQL-Server-Umgebungen einschließlich automatisierter Backups, Zugriffsrechte und Firewall-Regeln</li><li>Unterstützung bei Datenbankmigrationen sowie Behebung von Server- und Verbindungsproblemen</li></ul>
-                </div>
+    <section class="block" id="education" aria-labelledby="edu-h2">
+      <div class="wrap">
+        <div class="block-head"><h2 id="edu-h2" data-i18n="edu-h2">Ausbildung & Nachweise</h2></div>
+        <div class="split">
+          <div>
+            <h3 class="col" data-i18n="edu-col1">Studium</h3>
+          <div class="entry">
+            <time>10/2023 – 08/2025</time>
+            <h3 data-i18n="e1-h">M.Sc. Informationstechnik / Technische Informatik</h3>
+            <p data-i18n="e1-p">Universität Rostock. Masterarbeit: „Analysetechniken zur Steigerung der Betriebseffizienz von Verpackungsmaschinen“.</p>
+            <p data-i18n="e1-f">Schwerpunkte: Datenanalyse, Prozessautomatisierung, Maschinenkommunikation, Datenbankdesign.</p>
+          </div>
+          <div class="entry">
+            <time>10/2012 – 07/2016</time>
+            <h3 data-i18n="e2-h">B.Sc. Ingenieurwesen für Elektroniktechnologie</h3>
+            <p data-i18n="e2-p">Technische und Berufliche Universität Shiraz, Iran. Laut ZAB-Zeugnisbewertung gleichwertig mit einem deutschen Bachelor.</p>
+            <p data-i18n="e2-f">Schwerpunkte: Energiedatenanalyse, IoT-Kommunikation, Smart-Home-Systeme.</p>
+          </div>
+          </div>
+          <div>
+            <h3 class="col" data-i18n="edu-col2">Zertifikate</h3>
+          <div class="entry">
+            <time>03/2026</time>
+            <h3 data-i18n="z1-h">SAP Analytics Cloud</h3>
+            <p data-i18n="z1-p">SAP Learning, vier abgeschlossene Learning Journeys.</p>
+          </div>
+          <div class="entry">
+            <time>08/2024</time>
+            <h3 data-i18n="z2-h">Python Pro Bootcamp &amp; Complete SQL Bootcamp</h3>
+            <p data-i18n="z2-p">Udemy.</p>
+          </div>
+          <div class="entry">
+            <time>2019</time>
+            <h3 data-i18n="z3-h">SPS-Anwender 1. und 2. Grades</h3>
+            <p data-i18n="z3-p">Je 272 Stunden, Bewertung 90/100 und 89/100 („sehr gut“).</p>
+          </div>
+          <div class="entry">
+            <time>2019</time>
+            <h3 data-i18n="z4-h">Intelligentes Gebäudemanagement</h3>
+            <p data-i18n="z4-p">64 Stunden, Bewertung 88/100.</p>
+          </div>
+          </div>
+        </div>
+        <p class="docs links"><a href="#entfernt" target="_blank" rel="noopener"><span data-i18n="docs">Alle Zeugnisse und Abschlussdokumente (PDF)</span></a></p>
+      </div>
+    </section>
 
-                <h3 id="edu-title">Bildungsweg</h3>
-                <div class="education-item">
-                    <div class="date" id="edu1-date">Oktober 2023 – August 2025</div>
-                    <div class="company" id="edu1-title">M.Sc. Informationstechnik / Technische Informatik</div>
-                    <p id="edu1-location">Universität Rostock, Deutschland</p>
-                    <p id="edu1-focus"><strong>Masterarbeit:</strong> „Analysetechniken zur Steigerung der Betriebseffizienz von Verpackungsmaschinen“ in Kooperation mit der Rostocker Wurst- und Schinkenspezialitäten GmbH<br><strong>Schwerpunkte:</strong> Datenanalyse, Prozessautomatisierung, Maschinenkommunikation, Datenbankdesign</p>
-                </div>
-                <div class="education-item">
-                    <div class="date" id="edu2-date">Oktober 2012 – Juli 2016</div>
-                    <div class="company" id="edu2-title">B.Sc. Ingenieurwesen für Elektroniktechnologie</div>
-                    <p id="edu2-location">Technische und Berufliche Universität Shiraz, Iran</p>
-                    <p id="edu2-focus"><strong>Schwerpunkte:</strong> Energiedatenanalyse, IoT-Kommunikation, Smart-Home-Systeme, Energieeffizienz<br><strong>ZAB-Zeugnisbewertung:</strong> entspricht einem deutschen Hochschulabschluss auf Bachelor-Ebene</p>
-                </div>
+    <section class="block contact" id="contact" aria-labelledby="contact-h2">
+      <div class="wrap">
+        <div class="block-head">
+          <h2 id="contact-h2" data-i18n="contact-h2">Kontakt</h2>
+          <p data-i18n="contact-p">Am schnellsten erreichen Sie mich per E-Mail.</p>
+        </div>
+        <div class="contact-grid">
+          <div>
+            <a class="mail" href="mailto:bikineh.work@gmail.com">bikineh.work@gmail.com</a>
+            <ul class="channels">
+              <li><span data-i18n="ch-phone">Telefon</span>: <a href="tel:+4915752457684">+49 157 52457684</a></li>
+              <li><a href="https://www.linkedin.com/in/bikineh" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://github.com/Bikineh-Projekts" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+            <button class="btn btn-quiet vcard" id="vcard" type="button" data-i18n="vcard">Kontakt speichern (vCard)</button>
+          </div>
+          <div>
+            <h3 class="col" data-i18n="avail-h">Verfügbarkeit</h3>
+            <p data-i18n="avail-1">Ab sofort, in Vollzeit.</p>
+            <p data-i18n="avail-2">Wohnort Rostock, deutschlandweit umzugsbereit, Remote oder Hybrid möglich.</p>
+            <p data-i18n="avail-3">Deutsch C1, Englisch B2, Persisch Muttersprache.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-                <h3 id="cert-title">Zertifikate & Weiterbildungen</h3>
-                <ul id="cert-list"><li><strong>SAP Analytics Cloud</strong> (SAP Learning, 03/2026): vier abgeschlossene Learning Journeys</li><li><strong>Python Pro Bootcamp & Complete SQL Bootcamp</strong> (Udemy, 08/2024)</li><li><strong>SPS-Programmierung: PLC-Anwender 1. und 2. Grades</strong> (2019): je 272 Stunden, Bewertung 90/100 und 89/100 („sehr gut“)</li><li><strong>Intelligentes Gebäudemanagement</strong> (2019): 64 Stunden, Bewertung 88/100</li></ul>
-            </section>
-
-            <section id="projects" class="tab-content" role="tabpanel" aria-labelledby="tab-projects">
-                <h2 id="projects-title">Projekte</h2>
-
-                <div class="project-card">
-                    <h3 id="proj1-title">Masterarbeit: Analyse-Software für Verpackungsmaschinen</h3>
-                    <p id="proj1-partner"><strong>Kooperationspartner:</strong> Rostocker Wurst- und Schinkenspezialitäten GmbH</p>
-                    <p style="margin-top: 15px;" id="proj1-desc">Durchgängige Lösung von der Maschine bis zur Auswertung: Maschinendaten aus Siemens-S7-Steuerungen werden automatisch erfasst, gespeichert und in einer Webanwendung ausgewertet.</p>
-                    <ul style="margin-top: 15px;" id="proj1-list"><li>Erfassung von 2 Verpackungsmaschinen über OPC DA (Softing dataFEED OPC Suite) und ODBC in SQL Server; Datenmodell mit 11 Tabellen</li><li>Webanwendung (ASP.NET Core, Entity Framework Core) mit 9 Auswertungsansichten für Leistung, Temperatur, Alarme, Zustände, Störungen und Planung; im Werk produktiv genutzt</li><li>Leistungsermittlung aus SPS-Zählerständen und Häufigkeitsanalyse der Alarm- und Störungsmeldungen</li><li>Stückweise Regression der Temperaturverläufe und Fehlerwahrscheinlichkeitsmodell mit 5 Einflussfaktoren; daraus 4 Empfehlungen, u. a. Migration von OPC DA auf OPC UA</li><li>Technologien: Siemens S7, OPC DA, ODBC, SQL Server, C#, ASP.NET Core, Docker</li></ul>
-                    <a href="https://drive.google.com/file/d/1zPazGEJl9pyEbR-EI68I0HswA4bzsf3S/view?usp=sharing" target="_blank" rel="noopener" class="project-link" id="proj1-link">📄 Masterarbeit ansehen</a>
-                    <a href="https://github.com/Bikineh-Projekts/Maschinen" target="_blank" rel="noopener" class="project-link" id="proj1-link2">💻 GitHub Repository</a>
-                    <a href="https://maschinen.onrender.com" target="_blank" rel="noopener" class="project-link" id="proj1-link3">🌐 Live Demo</a>
-                </div>
-
-                <div class="project-card">
-                    <h3 id="proj-market-title">Market Data Pipeline & Dashboard</h3>
-                    <p style="margin-top: 10px;" id="proj-market-desc">Automatisierte Datenpipeline für Finanzmarktdaten: von drei REST-APIs über PostgreSQL bis zu Dashboard und Power BI, mit Tests und geplanten Läufen.</p>
-                    <ul style="margin-top: 15px;" id="proj-market-list"><li>Python-ETL für 3 REST-APIs (Finnhub, Alpha Vantage, Twelve Data): Kurse, Fundamentaldaten und 4 technische Indikatoren</li><li>PostgreSQL mit DIM-/FACT-/LOG-Datenmodell, idempotenten Upserts und 17 BI-Views; Power-BI-Measures (DAX)</li><li>Automatisierung mit GitHub Actions: ETL alle 30 Minuten während der US-Handelszeit plus nächtlicher Volllauf, wöchentliches Backup, monatliche Wartung</li><li>CI mit automatisierten Tests (pytest); Web-Dashboard mit Pipeline-Monitoring, Bereitstellung mit Docker</li><li>Technologien: Python, PostgreSQL, SQL, REST-APIs, GitHub Actions, Docker, Power BI</li></ul>
-                    <a href="https://github.com/Bikineh-Projekts/market_pipeline-Aktiv" target="_blank" rel="noopener" class="project-link" id="proj-market-github">💻 GitHub Repository</a>
-                </div>
-
-                <div class="project-card">
-                    <h3 id="proj-graph-title">Shortest-Path-Analyse in Graphen (PostgreSQL)</h3>
-                    <p id="proj-graph-desc">Vergleich von SQL-Ansätzen für kürzeste Pfade in großen realen Netzwerken, mit Fokus auf Performance und Skalierbarkeit.</p>
-                    <ul style="margin-top: 15px;" id="proj-graph-list"><li>Datensätze: Gnutella-P2P-Netz (6.301 Knoten, 20.777 Kanten) und Straßennetz Texas (1,38 Mio. Knoten, 1,92 Mio. Kanten)</li><li>BFS, DFS und Bidirectional BFS als rekursive CTEs und als PL/pgSQL-Funktionen, 30 Messwiederholungen je Tiefenstufe</li><li>Ergebnis: CTEs sind bei Pfaden unter 5 Kanten schneller, PL/pgSQL-Funktionen skalieren bis 1.054 Kanten, CTEs nur bis 19</li><li>Optimierung durch Indexierung, Adjazenzlisten und PostgreSQL-Konfiguration; Validierung mit pgRouting und NetworkX</li></ul>
-                    <a href="https://drive.google.com/file/d/1un1coiAS_82-Wfou5ntCf7Vi5YGE7xXF/view?usp=sharing" target="_blank" rel="noopener" class="project-link" id="proj-graph-link1">📄 Projektbericht ansehen</a>
-                    <a href="https://github.com/Bikineh-Projekts/graphsql" target="_blank" rel="noopener" class="project-link" id="proj-graph-link2">💻 GitHub Repository</a>
-                </div>
-
-                <div class="project-card">
-                    <h3 id="proj4-title">Microsoft 365, Azure & DevOps</h3>
-                    <p id="proj4-desc">Administration einer Microsoft-365-Testumgebung (Business Standard, Entra ID P1) sowie CI/CD-Pipeline für eine .NET-Anwendung auf Microsoft Azure.</p>
-                    <ul style="margin-top: 15px;" id="proj4-list"><li>Benutzeranlage, Lizenzverwaltung und Rollenkonzept (Least Privilege) in Microsoft 365</li><li>Multi-Faktor-Authentifizierung, Kontosperrung und Offboarding-Prozesse</li><li>Exchange Online: freigegebene Postfächer, Gruppen, Abwesenheitsnotizen und Weiterleitungen</li><li>CI/CD mit Azure DevOps, Docker und Azure Container Apps für das .NET-Projekt „Maschinen“</li></ul>
-                    <a href="https://drive.google.com/file/d/1ILyAC1vKqlSgPbrPonMSdryeAYAclz9P/view?usp=drive_open" target="_blank" rel="noopener" class="project-link">📄 Modul 1: Sicherheit & MFA (PDF)</a>
-                    <a href="https://drive.google.com/file/d/1n_89GwKypf6qHycb_MNFIdBsYJHRN5VA/view" target="_blank" rel="noopener" class="project-link">📄 Modul 2: Benutzeranlage & Kennwortreset (PDF)</a>
-                    <a href="https://drive.google.com/file/d/194wrOJuB2_FyaYvn5F35luBUvE0mfZZ6/view" target="_blank" rel="noopener" class="project-link">📄 Modul 3: Benutzer- & Lizenzverwaltung (PDF)</a>
-                    <a href="https://drive.google.com/file/d/1Fk78nUW6ehT1Qo3F62R-lHHo4fKTVamd/view" target="_blank" rel="noopener" class="project-link">📄 Modul 4: Exchange Online (PDF)</a>
-                    <a href="https://drive.google.com/file/d/1ZKMVS3x_FH0HAXA49upNzpz1xIlKl5Gu/view" target="_blank" rel="noopener" class="project-link">📄 Modul 5: DevOps-Projektdokumentation (PDF)</a>
-                </div>
-
-                <div class="cta-section">
-                    <h3 style="color: white; margin-bottom: 15px;" id="more-projects">Weitere Unterlagen auf Anfrage</h3>
-                    <p id="more-projects-desc">Gerne stelle ich Ihnen detaillierte Projektdokumentationen und Code-Beispiele zur Verfügung.</p>
-                </div>
-            </section>
-
-            <section id="skills" class="tab-content" role="tabpanel" aria-labelledby="tab-skills">
-                <h2 id="skills-title">Technische Kompetenzen</h2>
-
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4 id="skills-ot">🏭 Maschinenanbindung (OT)</h4>
-                        <ul id="skills-ot-list"><li>Siemens S7</li><li>OPC DA (OPC UA: Grundlagen)</li><li>Softing dataFEED OPC Suite</li><li>ODBC</li><li>Maschinen- und Betriebsdatenerfassung (MDE/BDE)</li><li>SPS-Programmierung, TIA Portal (Grundlagen)</li></ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4 id="skills-db">🗄️ Datenbanken & Daten</h4>
-                        <ul id="skills-db-list"><li>SQL Server (T-SQL, Stored Procedures, SSDT)</li><li>PostgreSQL (PL/pgSQL, Indexierung)</li><li>Relationale Datenmodellierung (DIM/FACT/LOG)</li><li>Python (pandas), ETL</li><li>Dashboards, Power BI, OEE-Analyse</li></ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4 id="skills-dev">💻 Entwicklung & DevOps</h4>
-                        <ul id="skills-dev-list"><li>C#, ASP.NET Core MVC (.NET 8)</li><li>Entity Framework Core</li><li>Docker</li><li>Git, GitHub Actions</li><li>Azure DevOps (Grundlagen)</li></ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4 id="skills-it">🖥️ IT-Betrieb</h4>
-                        <ul id="skills-it-list"><li>Windows 10/11</li><li>Active Directory</li><li>Microsoft 365, Entra ID, Exchange Online</li><li>ERP-Betreuung (Winweb)</li><li>1st-/2nd-Level-Support</li></ul>
-                    </div>
-                </div>
-
-                <h3 style="margin-top: 40px;" id="lang-skills">Sprachkenntnisse</h3>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4 id="lang-de-title">🇩🇪 Deutsch</h4>
-                        <p id="lang-de-level">Verhandlungssicher (C1)</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4 id="lang-en-title">🇬🇧 Englisch</h4>
-                        <p id="lang-en-level">Gute Kenntnisse (B2)</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4 id="lang-fa-title">🌐 Persisch</h4>
-                        <p id="lang-fa-level">Muttersprache</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="docku" class="tab-content" role="tabpanel" aria-labelledby="tab-docku">
-                <h2 id="docku-title">
-                    Berufliche Nachweise & Abschlussdokumente / 
-                    Certificates & Academic Records
-                </h2>
-
-                <p class="certificate-desc" style="margin-bottom: 25px;">
-                    Diese Sammlung umfasst meine offiziellen akademischen Abschlussunterlagen sowie 
-                    qualifizierte berufliche Nachweise. Sie dokumentieren sowohl den erfolgreichen Abschluss 
-                    meines Masterstudiums als auch meine praktische Erfahrung und Leistungsfähigkeit 
-                    in früheren beruflichen Tätigkeiten.
-                    <br><br>
-                    This collection includes my official academic degree documents and certified employment records. 
-                    They demonstrate the successful completion of my Master's program as well as my practical 
-                    experience and performance in previous professional roles.
-                </p>
-
-                <div class="project-card">
-                    <h3 class="certificate-title">
-                        Masterabschluss – Universität Rostock /
-                        Master's Degree – University of Rostock
-                    </h3>
-
-                    <p class="certificate-text" style="margin-top: 15px;">
-                        Der Masterabschluss in Technischer Informatik bestätigt meine wissenschaftliche Qualifikation 
-                        sowie fundierte Kenntnisse in den Bereichen Informationstechnik, Datenanalyse, 
-                        Prozessoptimierung, Automatisierung und Softwareentwicklung.
-                        <br><br>
-                        The Master's degree in Technical Informatics certifies my academic qualification and 
-                        advanced expertise in information technology, data analysis, process optimization, 
-                        automation, and software development.
-                    </p>
-
-                    <a href="#entfernt"
-                       target="_blank"
-                       class="project-link"
-                       id="cert-all">
-                       📑 Alle Dokumente ansehen / View All Documents
-                    </a>
-                </div>
-            </section>
-
-            <section id="contact" class="tab-content" role="tabpanel" aria-labelledby="tab-contact">
-                <h2 id="contact-title">Kontakt aufnehmen</h2>
-                <p style="font-size: 1.1em; margin-bottom: 25px;" id="contact-intro">Ich freue mich über Ihre Nachricht, ob zu einer offenen Stelle, einem Projekt oder einfach zum Austausch.</p>
-
-                <div class="cta-section">
-                    <h3 style="color: white; margin-bottom: 20px;" id="contact-cta">Lassen Sie uns sprechen</h3>
-                    <p style="margin-bottom: 20px;" id="contact-cta-desc">Ich bringe praktische Erfahrung mit Maschinendaten, Datenbanken und IT-Support mit und kann sofort starten.</p>
-                    <a href="tel:+4915752457684" class="cta-button" id="contact-phone">📞 Anrufen</a>
-                    <a href="mailto:bikineh.work@gmail.com" class="cta-button" id="contact-email">✉️ E-Mail schreiben</a>
-                    <a href="https://www.linkedin.com/in/bikineh" target="_blank" rel="noopener" class="cta-button">💼 LinkedIn</a>
-                    <a href="https://github.com/Bikineh-Projekts" target="_blank" rel="noopener" class="cta-button">💻 GitHub</a>
-                </div>
-
-                <div class="info-box">
-                    <h3 id="avail-title">Standort & Verfügbarkeit</h3>
-                    <p id="avail-location"><strong>📍 Standort:</strong> Rostock, Deutschland</p>
-                    <p id="avail-status"><strong>✓ Mobilität:</strong> Deutschlandweit umzugsbereit, Remote/Hybrid möglich</p>
-                    <p id="avail-ready"><strong>💼 Verfügbarkeit:</strong> Ab sofort</p>
-                    <p style="margin-top: 15px;" id="avail-interests"><strong>Interessen:</strong> Fußball, Schwimmen, kontinuierliche Weiterbildung in IT-Themen</p>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <p>© 2026 Mohammadhossein Bikineh - Portfolio | Letztes Update: November 2026</p>
-        </footer>
+  <footer>
+    <div class="wrap">
+      <p data-i18n="foot-1">© 2026 Mohammadhossein Bikineh. Von Hand gebaut mit HTML, CSS und JavaScript, mit Unterstützung von Claude Code. Kein Framework, keine Cookies, kein Tracking.</p>
+      <p data-i18n="foot-2">Schrift: Archivo, SIL Open Font License, selbst gehostet. Stand: November 2026.</p>
     </div>
+  </footer>
 
-    <script src="app.js"></script>
+  <script type="application/json" id="i18n">{"de": {"meta-title": "Mohammadhossein Bikineh | IT/OT-Integration & Data Engineering", "meta-desc": "Portfolio von Mohammadhossein Bikineh, M.Sc. Technische Informatik: Maschinendatenerfassung mit Siemens S7 und OPC, SQL Server, PostgreSQL und Python. Rostock, deutschlandweit umzugsbereit.", "skip": "Zum Inhalt springen", "lang-switch": "Sprache auf Englisch umstellen", "nav-exp": "Erfahrung", "nav-proj": "Projekte", "nav-skills": "Kompetenzen", "nav-edu": "Ausbildung", "nav-contact": "Kontakt", "hero-h1": "Maschinendaten von der Steuerung bis zur Entscheidung.", "hero-lead": "Ich bin <strong>Mohammadhossein Bikineh</strong>, M.Sc. Technische Informatik. Ich verbinde Produktionsanlagen mit Datenbanken und mache aus Signalen Kennzahlen, mit denen eine Produktionsleitung arbeiten kann.", "btn-mail": "E-Mail schreiben", "btn-proj": "Projekte ansehen", "status-1": "Ab sofort verfügbar", "status-2": "Rostock, deutschlandweit umzugsbereit", "status-3": "Deutsch C1, Englisch B2", "portrait-alt": "Porträt von Mohammadhossein Bikineh", "path-h2": "So läuft ein Signal durch mein Masterprojekt", "path-hint": "Wählen Sie eine Station.", "node-1": "Steuerung", "node-1s": "Siemens S7", "node-2": "Erfassung", "node-2s": "OPC DA, Softing", "node-3": "Datenbank", "node-3s": "SQL Server", "node-4": "Anwendung", "node-4s": "ASP.NET Core", "node-5": "Analyse", "node-5s": "OEE, Fehlerdiagnose", "stage1-value": "2 Maschinen, 94 Alarmsignale", "stage1-text": "Zwei VARIOVAC-Verpackungsmaschinen mit Siemens-S7-Steuerung liefern Prozess-, Zustands- und Leistungsdaten sowie 94 Alarmsignale.", "stage2-value": "OPC DA, dann ODBC", "stage2-text": "Softing dataFEED liest die Werte als OPC-Tags aus den Datenbausteinen der Steuerung und schreibt sie zeitgesteuert per ODBC in die Datenbank. Rohwerte im Zehntel-Format, etwa 432, werden zu 43,2 °C.", "stage3-value": "11 Tabellen", "stage3-text": "Ein normalisiertes Datenmodell für Maschinen-, Leistungs-, Temperatur-, Alarm-, Zustands- und Störungsdaten ist die Grundlage für OEE- und Stillstandsanalysen.", "stage4-value": "9 Ansichten, produktiv im Werk", "stage4-text": "Eine Webanwendung zeigt Leistung, Temperatur, Alarme, Zustände, Störungen und Planung live an. Sie ist im Werk produktiv im Einsatz.", "stage5-value": "5 Einflussfaktoren, 4 Empfehlungen", "stage5-text": "Stückweise Regression der Temperaturverläufe und ein Fehlerwahrscheinlichkeitsmodell. Daraus entstanden Empfehlungen, unter anderem die Migration von OPC DA auf OPC UA.", "path-code": "Code auf GitHub", "path-demo": "Live-Demo", "path-thesis": "Masterarbeit (PDF)", "exp-h2": "Erfahrung", "job1-h": "Werkstudent Data Engineering & Datenanalyse", "job1-org": "Universität Rostock", "job1-list": "<li>Performance-Vergleich von SQL-Abfragetechniken (rekursive CTEs und PL/pgSQL-Funktionen) in PostgreSQL auf 2 realen Netzwerken mit bis zu 1,38 Mio. Knoten und 1,92 Mio. Kanten, 30 Messwiederholungen je Tiefenstufe.</li><li>Ergebnis: PL/pgSQL-Funktionen erreichten Pfadlängen bis 1.054 Kanten, rekursive CTEs nur bis 19. Validierung mit pgRouting und NetworkX.</li>", "job2-h": "Werkstudent Produktions-IT, Datenanalyse & IT-Support", "job2-org": "Rostocker Wurst- und Schinkenspezialitäten GmbH, EDV-Abteilung", "job2-list": "<li>Automatisierte Maschinendatenerfassung für 2 Verpackungsmaschinen (VARIOVAC, Siemens S7): Prozess-, Zustands- und Leistungsdaten sowie 94 Alarmsignale gelangen über OPC DA und ODBC in SQL Server und ersetzen die papierbasierte Erfassung.</li><li>Normalisiertes Datenmodell mit 11 Tabellen als Grundlage für OEE-, Stillstands- und Temperaturanalysen.</li><li>SQL-Abfragen, Stored Procedures und Dashboards, die der Produktionsleitung Leistung und Störungen der Maschinen sichtbar machen.</li><li>1st-/2nd-Level-IT-Support (Windows, Microsoft 365), Active Directory und Betreuung des Warenwirtschaftssystems Winweb.</li>", "job3-h": "Werkstudent IT-Support (1st-/2nd-Level)", "job3-org": "Deutsches Rotes Kreuz (DRK), Rostock", "job3-list": "<li>1st-/2nd-Level-Support in Windows und Microsoft 365 (Outlook, Teams, SharePoint) sowie Bearbeitung von Störungen und Service Requests.</li><li>Anwenderschulungen und Softwareeinführungen zur Reduzierung wiederkehrender Anfragen.</li>", "job4-h": "IT- und Datenbank-Support", "job4-org": "Avangar Darak Co., IT-Partner der Medizinischen Universität Shiraz, Iran", "job4-list": "<li>Installation und Konfiguration von SQL-Server-Umgebungen einschließlich automatisierter Backups, Zugriffsrechte und Firewall-Regeln.</li><li>Unterstützung bei Datenbankmigrationen sowie Behebung von Server- und Verbindungsproblemen.</li>", "proj-h2": "Projekte", "p1-cap": "Alarmsignale aus 2 Maschinen, live erfasst", "p1-h": "Masterarbeit: Analyse-Software für Verpackungsmaschinen", "p1-intro": "In Kooperation mit der Rostocker Wurst- und Schinkenspezialitäten GmbH. Den Datenweg zeigt die Grafik oben.", "p1-list": "<li>Erfassung über OPC DA (Softing dataFEED OPC Suite) und ODBC in SQL Server, Datenmodell mit 11 Tabellen.</li><li>Webanwendung mit 9 Auswertungsansichten, im Werk produktiv genutzt.</li><li>Leistungsermittlung aus SPS-Zählerständen und Häufigkeitsanalyse der Alarm- und Störungsmeldungen.</li><li>Regression der Temperaturverläufe und Fehlermodell mit 5 Einflussfaktoren, daraus 4 Empfehlungen.</li>", "p1-tech": "Siemens S7, OPC DA, ODBC, SQL Server, C#, ASP.NET Core, Entity Framework Core, Docker", "p2-cap": "ETL-Takt während der US-Handelszeit, vollautomatisch", "p2-h": "Market Data Pipeline & Dashboard", "p2-intro": "Eine Datenpipeline, die ohne manuelles Zutun läuft: von drei REST-APIs über PostgreSQL bis zu Dashboard und Power BI.", "p2-list": "<li>Python-ETL für Finnhub, Alpha Vantage und Twelve Data: Kurse, Fundamentaldaten und 4 technische Indikatoren.</li><li>PostgreSQL mit DIM-/FACT-/LOG-Datenmodell, idempotenten Upserts, 17 BI-Views und Power-BI-Measures (DAX).</li><li>GitHub Actions: ETL alle 30 Minuten plus nächtlicher Volllauf, wöchentliches Backup, monatliche Wartung.</li><li>CI mit automatisierten Tests (pytest), Web-Dashboard mit Pipeline-Monitoring, Bereitstellung mit Docker.</li>", "p2-tech": "Python, PostgreSQL, SQL, REST-APIs, GitHub Actions, Docker, Power BI", "p3-num": "1.054", "p3-cap": "Kanten Pfadlänge mit PL/pgSQL, mit rekursiven CTEs nur 19", "p3-h": "Kürzeste Pfade in großen Graphen mit PostgreSQL", "p3-intro": "Welcher SQL-Ansatz skaliert, wenn das Netz groß wird? Gemessen statt vermutet.", "p3-list": "<li>Gnutella-P2P-Netz (6.301 Knoten, 20.777 Kanten) und Straßennetz Texas (1,38 Mio. Knoten, 1,92 Mio. Kanten).</li><li>BFS, DFS und Bidirectional BFS als rekursive CTEs und als PL/pgSQL-Funktionen, 30 Messwiederholungen je Tiefenstufe.</li><li>CTEs sind bei Pfaden unter 5 Kanten schneller, PL/pgSQL-Funktionen skalieren deutlich weiter.</li><li>Optimierung durch Indexierung, Adjazenzlisten und PostgreSQL-Konfiguration, Validierung mit pgRouting und NetworkX.</li>", "p3-report": "Projektbericht (PDF)", "p4-cap": "dokumentierte Module, von MFA bis CI/CD", "p4-h": "Microsoft 365, Azure & DevOps", "p4-intro": "Eine Microsoft-365-Testumgebung (Business Standard, Entra ID P1) und eine CI/CD-Pipeline für das .NET-Projekt aus der Masterarbeit.", "p4-list": "<li>Benutzeranlage, Lizenzverwaltung und Rollenkonzept nach Least Privilege.</li><li>Multi-Faktor-Authentifizierung, Kontosperrung und Offboarding.</li><li>Exchange Online: freigegebene Postfächer, Gruppen, Abwesenheitsnotizen und Weiterleitungen.</li><li>CI/CD mit Azure DevOps, Docker und Azure Container Apps.</li>", "p4-m1": "Modul 1: Sicherheit & MFA", "p4-m2": "Modul 2: Benutzer & Kennwörter", "p4-m3": "Modul 3: Lizenzen", "p4-m4": "Modul 4: Exchange Online", "p4-m5": "Modul 5: DevOps", "gh": "GitHub", "skills-h2": "Kompetenzen", "skills-p": "Geordnet nach dem Weg, den Daten in einer Fabrik nehmen.", "lg-solid": "praxiserprobt", "lg-basic": "Grundlagen", "l1-h": "Maschinenanbindung", "l1-s": "OT-Ebene", "l2-h": "Datenbanken & Auswertung", "l2-s": "Daten-Ebene", "l3-h": "Anwendungen & Automatisierung", "l3-s": "Software-Ebene", "l4-h": "IT-Betrieb", "l4-s": "Arbeitsplatz-Ebene", "c-mde": "Maschinen- und Betriebsdatenerfassung", "c-sps": "SPS-Programmierung (TIA Portal)", "c-mes": "MES-/SCADA-Konzepte", "c-model": "Datenmodellierung (DIM/FACT/LOG)", "c-oee": "OEE- und Stillstandsanalyse", "c-support": "1st-/2nd-Level-Support", "c-erp": "ERP-Betreuung (Winweb)", "ai-h": "Arbeiten mit KI", "ai-p1": "Ich setze Claude und Claude Code im Alltag als Werkzeug ein: für Recherche, Code-Reviews und Automatisierung. Ein Beispiel ist meine eigene Jobsuche, die ich mit Python, GitHub und Claude Code automatisiert habe, mit Deduplizierung, Excel-Berichten und Passungsprüfung gegen meinen Lebenslauf.", "ai-p2": "Was die KI liefert, prüfe ich selbst gegen Code, Daten und Quellen. Auch diese Website ist so entstanden: ohne Framework, mit selbst gehosteter Schrift und ohne Tracking.", "edu-h2": "Ausbildung & Nachweise", "edu-col1": "Studium", "edu-col2": "Zertifikate", "e1-h": "M.Sc. Informationstechnik / Technische Informatik", "e1-p": "Universität Rostock. Masterarbeit: „Analysetechniken zur Steigerung der Betriebseffizienz von Verpackungsmaschinen“.", "e1-f": "Schwerpunkte: Datenanalyse, Prozessautomatisierung, Maschinenkommunikation, Datenbankdesign.", "e2-h": "B.Sc. Ingenieurwesen für Elektroniktechnologie", "e2-p": "Technische und Berufliche Universität Shiraz, Iran. Laut ZAB-Zeugnisbewertung gleichwertig mit einem deutschen Bachelor.", "e2-f": "Schwerpunkte: Energiedatenanalyse, IoT-Kommunikation, Smart-Home-Systeme.", "z1-h": "SAP Analytics Cloud", "z1-p": "SAP Learning, vier abgeschlossene Learning Journeys.", "z2-h": "Python Pro Bootcamp & Complete SQL Bootcamp", "z2-p": "Udemy.", "z3-h": "SPS-Anwender 1. und 2. Grades", "z3-p": "Je 272 Stunden, Bewertung 90/100 und 89/100 („sehr gut“).", "z4-h": "Intelligentes Gebäudemanagement", "z4-p": "64 Stunden, Bewertung 88/100.", "docs": "Alle Zeugnisse und Abschlussdokumente (PDF)", "contact-h2": "Kontakt", "contact-p": "Am schnellsten erreichen Sie mich per E-Mail.", "ch-phone": "Telefon", "vcard": "Kontakt speichern (vCard)", "avail-h": "Verfügbarkeit", "avail-1": "Ab sofort, in Vollzeit.", "avail-2": "Wohnort Rostock, deutschlandweit umzugsbereit, Remote oder Hybrid möglich.", "avail-3": "Deutsch C1, Englisch B2, Persisch Muttersprache.", "foot-1": "© 2026 Mohammadhossein Bikineh. Von Hand gebaut mit HTML, CSS und JavaScript, mit Unterstützung von Claude Code. Kein Framework, keine Cookies, kein Tracking.", "foot-2": "Schrift: Archivo, SIL Open Font License, selbst gehostet. Stand: November 2026."}, "en": {"meta-title": "Mohammadhossein Bikineh | IT/OT Integration & Data Engineering", "meta-desc": "Portfolio of Mohammadhossein Bikineh, M.Sc. Technical Computer Science: machine data acquisition with Siemens S7 and OPC, SQL Server, PostgreSQL and Python. Based in Rostock, open to relocating across Germany.", "skip": "Skip to content", "lang-switch": "Switch language to German", "nav-exp": "Experience", "nav-proj": "Projects", "nav-skills": "Skills", "nav-edu": "Education", "nav-contact": "Contact", "hero-h1": "Machine data, from the controller to the decision.", "hero-lead": "I am <strong>Mohammadhossein Bikineh</strong>, M.Sc. in Technical Computer Science. I connect production machines to databases and turn their signals into figures that production managers can work with.", "btn-mail": "Send an email", "btn-proj": "See projects", "status-1": "Available now", "status-2": "Rostock, open to relocating across Germany", "status-3": "German C1, English B2", "portrait-alt": "Portrait of Mohammadhossein Bikineh", "path-h2": "How a signal travels through my master’s project", "path-hint": "Select a stage.", "node-1": "Controller", "node-1s": "Siemens S7", "node-2": "Acquisition", "node-2s": "OPC DA, Softing", "node-3": "Database", "node-3s": "SQL Server", "node-4": "Application", "node-4s": "ASP.NET Core", "node-5": "Analysis", "node-5s": "OEE, fault diagnosis", "stage1-value": "2 machines, 94 alarm signals", "stage1-text": "Two VARIOVAC packaging machines with Siemens S7 controllers deliver process, state and performance data plus 94 alarm signals.", "stage2-value": "OPC DA, then ODBC", "stage2-text": "Softing dataFEED reads the values as OPC tags from the controller’s data blocks and writes them to the database via ODBC on a schedule. Raw values in tenths, such as 432, become 43.2 °C.", "stage3-value": "11 tables", "stage3-text": "A normalised data model for machine, performance, temperature, alarm, state and fault data is the basis for OEE and downtime analyses.", "stage4-value": "9 views, in use at the plant", "stage4-text": "A web application shows performance, temperature, alarms, states, faults and planning live. It is in productive use at the plant.", "stage5-value": "5 factors, 4 recommendations", "stage5-text": "Piecewise regression of temperature curves and a fault probability model. They led to recommendations, including the migration from OPC DA to OPC UA.", "path-code": "Code on GitHub", "path-demo": "Live demo", "path-thesis": "Master’s thesis (PDF)", "exp-h2": "Experience", "job1-h": "Working student, data engineering & data analysis", "job1-org": "University of Rostock", "job1-list": "<li>Performance comparison of SQL query techniques (recursive CTEs and PL/pgSQL functions) in PostgreSQL on 2 real networks with up to 1.38 million nodes and 1.92 million edges, 30 repetitions per depth level.</li><li>Result: PL/pgSQL functions reached path lengths of up to 1,054 edges, recursive CTEs only 19. Validated with pgRouting and NetworkX.</li>", "job2-h": "Working student, production IT, data analysis & IT support", "job2-org": "Rostocker Wurst- und Schinkenspezialitäten GmbH, IT department", "job2-list": "<li>Automated machine data acquisition for 2 packaging machines (VARIOVAC, Siemens S7): process, state and performance data plus 94 alarm signals flow via OPC DA and ODBC into SQL Server, replacing paper-based recording.</li><li>Normalised data model with 11 tables as the basis for OEE, downtime and temperature analyses.</li><li>SQL queries, stored procedures and dashboards that make machine performance and faults visible to production management.</li><li>1st/2nd-level IT support (Windows, Microsoft 365), Active Directory and support of the Winweb ERP system.</li>", "job3-h": "Working student, IT support (1st/2nd level)", "job3-org": "German Red Cross (DRK), Rostock", "job3-list": "<li>1st/2nd-level support for Windows and Microsoft 365 (Outlook, Teams, SharePoint), handling incidents and service requests.</li><li>User training and software roll-outs to reduce recurring requests.</li>", "job4-h": "IT and database support", "job4-org": "Avangar Darak Co., IT partner of Shiraz University of Medical Sciences, Iran", "job4-list": "<li>Installation and configuration of SQL Server environments including automated backups, access rights and firewall rules.</li><li>Support for database migrations and resolution of server and connectivity issues.</li>", "proj-h2": "Projects", "p1-cap": "alarm signals from 2 machines, captured live", "p1-h": "Master’s thesis: analysis software for packaging machines", "p1-intro": "In cooperation with Rostocker Wurst- und Schinkenspezialitäten GmbH. The data path is shown in the diagram above.", "p1-list": "<li>Acquisition via OPC DA (Softing dataFEED OPC Suite) and ODBC into SQL Server, data model with 11 tables.</li><li>Web application with 9 analysis views, in productive use at the plant.</li><li>Output calculation from PLC counters and frequency analysis of alarm and fault messages.</li><li>Regression of temperature curves and a fault model with 5 factors, resulting in 4 recommendations.</li>", "p1-tech": "Siemens S7, OPC DA, ODBC, SQL Server, C#, ASP.NET Core, Entity Framework Core, Docker", "p2-cap": "ETL interval during US trading hours, fully automated", "p2-h": "Market data pipeline & dashboard", "p2-intro": "A data pipeline that runs without manual work: from three REST APIs via PostgreSQL to a dashboard and Power BI.", "p2-list": "<li>Python ETL for Finnhub, Alpha Vantage and Twelve Data: prices, fundamentals and 4 technical indicators.</li><li>PostgreSQL with a DIM/FACT/LOG data model, idempotent upserts, 17 BI views and Power BI measures (DAX).</li><li>GitHub Actions: ETL every 30 minutes plus a nightly full run, weekly backup, monthly maintenance.</li><li>CI with automated tests (pytest), web dashboard with pipeline monitoring, deployed with Docker.</li>", "p2-tech": "Python, PostgreSQL, SQL, REST APIs, GitHub Actions, Docker, Power BI", "p3-num": "1,054", "p3-cap": "edges of path length with PL/pgSQL, only 19 with recursive CTEs", "p3-h": "Shortest paths in large graphs with PostgreSQL", "p3-intro": "Which SQL approach scales once the network gets large? Measured, not assumed.", "p3-list": "<li>Gnutella P2P network (6,301 nodes, 20,777 edges) and Texas road network (1.38 million nodes, 1.92 million edges).</li><li>BFS, DFS and bidirectional BFS as recursive CTEs and as PL/pgSQL functions, 30 repetitions per depth level.</li><li>CTEs are faster for paths below 5 edges, PL/pgSQL functions scale much further.</li><li>Optimisation through indexing, adjacency lists and PostgreSQL configuration, validated with pgRouting and NetworkX.</li>", "p3-report": "Project report (PDF)", "p4-cap": "documented modules, from MFA to CI/CD", "p4-h": "Microsoft 365, Azure & DevOps", "p4-intro": "A Microsoft 365 test environment (Business Standard, Entra ID P1) and a CI/CD pipeline for the .NET project from the master’s thesis.", "p4-list": "<li>User creation, licence management and a least-privilege role concept.</li><li>Multi-factor authentication, account blocking and offboarding.</li><li>Exchange Online: shared mailboxes, groups, out-of-office replies and forwarding.</li><li>CI/CD with Azure DevOps, Docker and Azure Container Apps.</li>", "p4-m1": "Module 1: security & MFA", "p4-m2": "Module 2: users & passwords", "p4-m3": "Module 3: licences", "p4-m4": "Module 4: Exchange Online", "p4-m5": "Module 5: DevOps", "gh": "GitHub", "skills-h2": "Skills", "skills-p": "Ordered along the path data takes in a factory.", "lg-solid": "used in practice", "lg-basic": "foundations", "l1-h": "Machine connectivity", "l1-s": "OT level", "l2-h": "Databases & analysis", "l2-s": "data level", "l3-h": "Applications & automation", "l3-s": "software level", "l4-h": "IT operations", "l4-s": "workplace level", "c-mde": "Machine and production data acquisition", "c-sps": "PLC programming (TIA Portal)", "c-mes": "MES/SCADA concepts", "c-model": "Data modelling (DIM/FACT/LOG)", "c-oee": "OEE and downtime analysis", "c-support": "1st/2nd-level support", "c-erp": "ERP support (Winweb)", "ai-h": "Working with AI", "ai-p1": "I use Claude and Claude Code as everyday tools for research, code reviews and automation. One example is my own job search, which I automated with Python, GitHub and Claude Code, including deduplication, Excel reports and a fit check against my CV.", "ai-p2": "I check what the AI produces against the code, the data and the sources myself. This website was built the same way: no framework, a self-hosted font and no tracking.", "edu-h2": "Education & certificates", "edu-col1": "Degrees", "edu-col2": "Certificates", "e1-h": "M.Sc. Information Technology / Technical Computer Science", "e1-p": "University of Rostock. Thesis: \"Analysis techniques for increasing the operational efficiency of packaging machines\".", "e1-f": "Focus: data analysis, process automation, machine communication, database design.", "e2-h": "B.Sc. Electronics Technology Engineering", "e2-p": "Technical and Vocational University Shiraz, Iran. Rated equivalent to a German bachelor’s degree by the ZAB.", "e2-f": "Focus: energy data analysis, IoT communication, smart-home systems.", "z1-h": "SAP Analytics Cloud", "z1-p": "SAP Learning, four completed learning journeys.", "z2-h": "Python Pro Bootcamp & Complete SQL Bootcamp", "z2-p": "Udemy.", "z3-h": "PLC user, level 1 and 2", "z3-p": "272 hours each, rated 90/100 and 89/100 (\"very good\").", "z4-h": "Intelligent building management", "z4-p": "64 hours, rated 88/100.", "docs": "All references and degree documents (PDF)", "contact-h2": "Contact", "contact-p": "Email is the fastest way to reach me.", "ch-phone": "Phone", "vcard": "Save contact (vCard)", "avail-h": "Availability", "avail-1": "Immediately, full-time.", "avail-2": "Based in Rostock, open to relocating anywhere in Germany, remote or hybrid possible.", "avail-3": "German C1, English B2, Persian native.", "foot-1": "© 2026 Mohammadhossein Bikineh. Hand-built with HTML, CSS and JavaScript, with help from Claude Code. No framework, no cookies, no tracking.", "foot-2": "Typeface: Archivo, SIL Open Font License, self-hosted. Updated November 2026."}}</script>
+  <script src="assets/site.js" defer></script>
 </body>
 </html>
