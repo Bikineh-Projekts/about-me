@@ -25,11 +25,7 @@
         if (attr && key) el.setAttribute(attr.trim(), t(key.trim()));
       });
     });
-    const btn = document.getElementById('lang');
-    if (btn) {
-      btn.textContent = next === 'de' ? 'EN' : 'DE';
-      btn.setAttribute('aria-label', t('lang-switch'));
-    }
+    document.querySelectorAll('.seg [data-lang]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === next)));
     document.title = t('meta-title');
     renderReadout(current);
     store.set('lang', next);
@@ -135,8 +131,28 @@
   }
 
   /* ---------- Start ---------- */
-  const btn = document.getElementById('lang');
-  if (btn) btn.addEventListener('click', () => applyLang(lang === 'de' ? 'en' : 'de'));
+  document.querySelectorAll('.seg [data-lang]').forEach(b => b.addEventListener('click', () => {
+    if (b.dataset.lang !== lang) applyLang(b.dataset.lang);
+  }));
+
+  /* ---------- Mobile menu ---------- */
+  const menuBtn = document.querySelector('.menu-btn');
+  const menu = document.getElementById('menu');
+  if (menuBtn && menu) {
+    const setOpen = (open) => {
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menu.classList.toggle('open', open);
+    };
+    menuBtn.addEventListener('click', () => setOpen(menuBtn.getAttribute('aria-expanded') !== 'true'));
+    menu.addEventListener('click', (e) => { if (e.target.closest('a')) setOpen(false); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menu.classList.contains('open')) { setOpen(false); menuBtn.focus(); }
+    });
+    document.addEventListener('click', (e) => {
+      if (menu.classList.contains('open') && !e.target.closest('.bar')) setOpen(false);
+    });
+    window.matchMedia('(min-width: 861px)').addEventListener('change', (m) => { if (m.matches) setOpen(false); });
+  }
 
   const saved = store.get('lang');
   if (saved && saved !== lang && I18N[saved]) applyLang(saved);

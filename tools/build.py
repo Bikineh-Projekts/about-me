@@ -45,10 +45,16 @@ C = {
     'nav-skills': ('Kompetenzen', 'Skills'), 'nav-edu': ('Ausbildung', 'Education'),
     'nav-contact': ('Kontakt', 'Contact'),
 
+    'role-1': ('IT/OT-Integration', 'IT/OT integration'),
+    'role-2': ('Produktions-IT', 'Production IT'),
+    'role-3': ('Data Engineering', 'Data engineering'),
+    'menu': ('Menü', 'Menu'),
+    'lang-group': ('Sprache', 'Language'),
+    'nav-label': ('Hauptnavigation', 'Main navigation'),
     'hero-h1': ('Maschinendaten von der Steuerung bis zur Entscheidung.',
                 'Machine data, from the controller to the decision.'),
-    'hero-lead': ('Ich bin <strong>Mohammadhossein Bikineh</strong>, M.Sc. Technische Informatik. Ich verbinde Produktionsanlagen mit Datenbanken und mache aus Signalen Kennzahlen, mit denen eine Produktionsleitung arbeiten kann.',
-                  'I am <strong>Mohammadhossein Bikineh</strong>, M.Sc. in Technical Computer Science. I connect production machines to databases and turn their signals into figures that production managers can work with.'),
+    'hero-lead': ('M.Sc. Technische Informatik. Ich verbinde Produktionsanlagen mit Datenbanken und mache aus Signalen Kennzahlen, mit denen eine Produktionsleitung arbeiten kann.',
+                  'M.Sc. in Technical Computer Science. I connect production machines to databases and turn their signals into figures that production managers can work with.'),
     'btn-mail': ('E-Mail schreiben', 'Send an email'),
     'btn-proj': ('Projekte ansehen', 'See projects'),
     'status-1': ('Ab sofort verfügbar', 'Available now'),
@@ -331,41 +337,51 @@ PAGE = f'''<!DOCTYPE html>
 
   <header class="bar">
     <div class="wrap">
-      <a class="brand" href="#top">M. Bikineh</a>
-      <nav class="nav" aria-label="Hauptnavigation">
+      <a class="brand" href="#top"><img src="assets/icon.svg" width="30" height="30" alt=""><span class="brand-full">Mohammadhossein Bikineh</span><span class="brand-short">M. Bikineh</span></a>
+      <nav class="nav" id="menu" aria-label="{DE['nav-label']}" data-i18n-attr="aria-label:nav-label">
         <a href="#experience" data-i18n="nav-exp">{DE['nav-exp']}</a>
         <a href="#projects" data-i18n="nav-proj">{DE['nav-proj']}</a>
         <a href="#skills" data-i18n="nav-skills">{DE['nav-skills']}</a>
         <a href="#education" data-i18n="nav-edu">{DE['nav-edu']}</a>
-        <a href="#contact" data-i18n="nav-contact">{DE['nav-contact']}</a>
+        <a class="nav-contact" href="#contact" data-i18n="nav-contact">{DE['nav-contact']}</a>
       </nav>
-      <button class="lang" id="lang" type="button" aria-label="{DE['lang-switch']}">EN</button>
+      <div class="bar-end">
+        <div class="seg" role="group" aria-label="{DE['lang-group']}" data-i18n-attr="aria-label:lang-group">
+          <button type="button" data-lang="de" aria-pressed="true">DE</button><button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="btn btn-primary btn-sm cta-top" href="#contact" data-i18n="nav-contact">{DE['nav-contact']}</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="burger" aria-hidden="true"></span><span data-i18n="menu">{DE['menu']}</span></button>
+      </div>
     </div>
   </header>
 
   <main id="main">
     <section class="hero" id="top">
       <div class="wrap">
-        <div class="hero-grid">
-          <div>
-            {tx('hero-h1', 'h1')}
+        <div class="hero-card">
+          <figure class="portrait">
+            <picture>
+              <source srcset="assets/portrait.webp" type="image/webp">
+              <img src="assets/portrait.jpg" width="480" height="480" alt="{DE['portrait-alt']}" data-i18n-attr="alt:portrait-alt" fetchpriority="high">
+            </picture>
+            <figcaption class="avail"><span class="pulse" aria-hidden="true"></span><span data-i18n="status-1">{DE['status-1']}</span></figcaption>
+          </figure>
+          <div class="hero-text">
+            <h1 class="name">Mohammadhossein Bikineh</h1>
+            <ul class="roles">
+              <li data-i18n="role-1">{DE['role-1']}</li><li data-i18n="role-2">{DE['role-2']}</li><li data-i18n="role-3">{DE['role-3']}</li>
+            </ul>
+            {tx('hero-h1', 'p', 'tagline')}
             {hx('hero-lead', 'p', 'lead')}
             <div class="actions">
               <a class="btn btn-primary" href="mailto:{MAIL}" data-i18n="btn-mail">{DE['btn-mail']}</a>
               <a class="btn btn-quiet" href="#projects" data-i18n="btn-proj">{DE['btn-proj']}</a>
             </div>
             <ul class="status">
-              <li class="on" data-i18n="status-1">{DE['status-1']}</li>
               <li data-i18n="status-2">{DE['status-2']}</li>
               <li data-i18n="status-3">{DE['status-3']}</li>
             </ul>
           </div>
-          <figure class="portrait">
-            <picture>
-              <source srcset="assets/portrait.webp" type="image/webp">
-              <img src="assets/portrait.jpg" width="480" height="480" alt="{DE['portrait-alt']}" data-i18n-attr="alt:portrait-alt" fetchpriority="high">
-            </picture>
-          </figure>
         </div>
 
         <div class="path" aria-labelledby="path-h2">
