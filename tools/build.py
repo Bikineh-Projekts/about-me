@@ -161,8 +161,8 @@ C = {
     'ai-h': ('Arbeiten mit KI', 'Working with AI'),
     'ai-p1': ('Ich setze Claude und Claude Code im Alltag als Werkzeug ein: für Recherche, Code-Reviews und Automatisierung. Ein Beispiel ist meine eigene Jobsuche, die ich mit Python, GitHub und Claude Code automatisiert habe, mit Deduplizierung, Excel-Berichten und Passungsprüfung gegen meinen Lebenslauf.',
               'I use Claude and Claude Code as everyday tools for research, code reviews and automation. One example is my own job search, which I automated with Python, GitHub and Claude Code, including deduplication, Excel reports and a fit check against my CV.'),
-    'ai-p2': ('Was die KI liefert, prüfe ich selbst gegen Code, Daten und Quellen. Auch diese Website ist so entstanden: ohne Framework, mit selbst gehosteter Schrift und ohne Tracking.',
-              'I check what the AI produces against the code, the data and the sources myself. This website was built the same way: no framework, a self-hosted font and no tracking.'),
+    'ai-p2': ('Was die KI liefert, prüfe ich selbst gegen Code, Daten und Quellen.',
+              'I check what the AI produces against the code, the data and the sources myself.'),
 
     'edu-h2': ('Ausbildung & Nachweise', 'Education & certificates'),
     'edu-col1': ('Studium', 'Degrees'), 'edu-col2': ('Zertifikate', 'Certificates'),
@@ -194,8 +194,8 @@ C = {
     'avail-1': ('Ab sofort, in Vollzeit.', 'Immediately, full-time.'),
     'avail-2': ('Wohnort Rostock, deutschlandweit umzugsbereit, Remote oder Hybrid möglich.', 'Based in Rostock, open to relocating anywhere in Germany, remote or hybrid possible.'),
     'avail-3': ('Deutsch C1, Englisch B2, Persisch Muttersprache.', 'German C1, English B2, Persian native.'),
-    'foot-1': ('© 2026 Mohammadhossein Bikineh. Von Hand gebaut mit HTML, CSS und JavaScript, mit Unterstützung von Claude Code. Kein Framework, keine Cookies, kein Tracking.',
-               '© 2026 Mohammadhossein Bikineh. Hand-built with HTML, CSS and JavaScript, with help from Claude Code. No framework, no cookies, no tracking.'),
+    'foot-1': ('© 2026 Mohammadhossein Bikineh. Keine Cookies, kein Tracking.',
+               '© 2026 Mohammadhossein Bikineh. No cookies, no tracking.'),
     'foot-2': ('Schrift: Archivo, SIL Open Font License, selbst gehostet. Stand: November 2026.',
                'Typeface: Archivo, SIL Open Font License, self-hosted. Updated November 2026.'),
 }
